@@ -1,0 +1,14 @@
+<div id=''>
+	<div>
+		<button onclick=" $('#prupldr input[type=file]').click()" >Choose Image</button>
+		<span ><form method="post" action='/userprofile/changeimage' enctype="multipart/form-data" id='prupldr'>
+			<input type="hidden" name="user" value="{{user_id}}" />
+			<input type="file" class='hidden' autocomplete='off' name="image" onchange="(new window.prupldr(this, {'status':'#upl_pr','form':document.forms.prupldr,'img_thumb':'#photo_id img', 'target':'profile_image_wrap' }) )" id="upl_fl"/>
+			<input type="hidden" name="csrfmiddlewaretoken" value="{{csrf_token}}">
+		</form>
+		</span>
+	</div>
+	<div id="im_upl">
+		
+	</div>
+</div>

@@ -1,0 +1,80 @@
+{% extends 'layout/anonymous.html'%}
+
+{% block title %}Fook login | User Login{% endblock%}
+{% block main%}
+<div class="drishya">
+	<div class="madhya">
+		<div class="border-all" id="page-header">	
+			<div id="login_pane" class="inline-block loginVw" >
+				<div class="heading" style="margin:5px 0"> Login Here</div>
+				<div id="signin_form" class=" signin" style="margin:0;">						
+					<div class="block">
+						<div class="message">
+							<div class="info">
+							{% if messages %}			
+								{% for message in messages %}						
+								<div class="ui-widget messages">
+									<div style="margin-bottom: 10px; padding: 0 .7em;" class="ui-state-highlight ui-corner-all">
+										<p><span style="float: left; margin-right: .3em;" class="ui-icon ui-icon-info"></span>					
+											{{ message }}					
+										</p>
+									</div>
+								</div>
+								{% endfor %}
+							{% endif %}
+							</div>
+						</div>						
+					</div>
+					<form action="/signin" method="POST">
+						<div class='hidden'>{%csrf_token%}</div>
+						<div class="block">
+							<div class="inline-block lbl">
+								Username 
+							</div>
+							<div class="inline-block ">
+								<input type="text" placeholder="Username or Email" name="username" required='true' />		
+								{{form.username.errors | striptags}}
+							</div>														
+						</div>							
+						<div class="block">
+							<div class="inline-block lbl">
+								Password
+							</div>
+							<div class="inline-block ">
+								<input type="password" name="password" placeholder="Password" required='true' />
+								{{form.password.errors | striptags}}
+							</div>													
+						</div>		
+						<div class="">
+							<div class="inline-block lbl"></div>
+							<div class="inline-block"><input type="submit" value="Login"></div>
+						</div>							
+						<div>
+							<div class="inline-block lbl"></div>
+							<div class="inline-block"><a href="javascript:void(0);">Don't Remember Password?</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
+				<div id='ftr' style="text-align:center;width:600px;" class="border-all">
+					<a href="/index">
+						<div class="mn_bx">
+							Home
+						</div>
+					</a>
+					<a href="javascript:void(0);">
+						<div class="mn_bx">
+							About
+						</div>
+					</a>
+					<a href="javascript:void(0);">
+						<div class="mn_bx">
+							Help
+						</div>
+					</a>
+					&copy; copyright by Fook,Inc.
+				</div>	
+		</div>
+	</div>
+</div>
+{% endblock%}

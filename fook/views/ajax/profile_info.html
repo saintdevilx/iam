@@ -1,0 +1,43 @@
+<div class="block padd_all">
+	<span class='block hdlne'>
+		Basic Info
+		<span class='float_right'>	
+			{%if me%}
+			<a href="javascript:void(0);" data-event='pr_edt'  data-category='pr' onclick=" var ph = new window.ph_viewer((this), {'title':'Edit User Info'}); ph.show();ph.load();">
+				<i class='ui-icon ui-icon-pencil inline-block' title='Edit Basic Info'></i>
+			</a>
+			{%endif%}
+		</span>
+	</span>
+	<span class='block '>
+		<span class='info-lbl inline-block'>Name</span>
+		<span class='info-vl'> {{info.user.first_name}} {{info.user.last_name}}</span>
+	</span>
+	<span class='block '>
+		<span class='info-lbl inline-block'>Gender</span>
+		<span class='info-vl'> {%ifequal info.gender 'm'%}Male{%endifequal%}{%ifequal info.gender 'f'%}Female{%endifequal%}</span>
+	</span>
+	<span class='block ' >
+		<span class='info-lbl _fl'>Birthday</span>
+		<span class='info-vl'> 
+			<span class='inline-block'>
+			{%if info.birthday%}{{info.birthday}} {%endif%}
+			{%if me%}
+			<span class='inline-block'>
+			<span id="birthday_edit_form" style='display:none;'>
+			<form action="/userprofile/update?type=birthday" method="POST" onsubmit="return ajxfrm(this,null)"><span id="birthday_edit" class='inline-block'></span><input type="submit" value="Update" class="btn" /></form></span></span>
+			<a href="javascript:void(0);"  onclick="Profile.birthday();">
+				<i class='ui-icon ui-icon-pencil inline-block' title='Edit Birthday'></i>
+			</a>
+			{%endif%}
+			</span>
+		</span>		
+	</span>
+	<span class='block' style='margin-top:5px;border-top:1px solid #C5C5C5;'>
+		<span class='inline-block info-lbl'></span>
+		<span class='inline-block info-lbl'>	
+			<a href="javascript:void(0);" onclick=" Profile.more_info(this,{{info.user_id}})"><b>More</b></a>
+		</span>
+	</span>
+	<span id="prfl_mnu_vw"></span>
+</div>

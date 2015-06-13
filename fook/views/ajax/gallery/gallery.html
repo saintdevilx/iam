@@ -1,0 +1,28 @@
+{%spaceless%}
+<div id="basic_info" style="padding:10px;">
+	{%if not page%}
+	<div class="inline-block " style="padding: 10px; display:block;min-height:400px;">
+		<div class="heading">
+			<span >Gallery Albums</span>
+			{%if me%}
+			<span class='float_right link-btn' onclick="var ph =new window.ph_viewer(this,{'title':'Create New Album' }) ;ph.show();ph.load();" data-image='{{g.image}}' data-title='{{g.name}}' style="cursor:pointer;" data-event='page' data-category='page' data-view='al_crt' >Create Album</span>
+			{%endif%}
+		</div>
+		<div class="small_padd"></div>
+	{%endif%}
+	{%if empty %}
+		<div style="text-align:center; color:#097599" class="block">
+			<h2>
+				<span class='block'>No Album found  </span>
+				{%ifequal author  uid%}
+				<br>
+				<span class='block'> Create Album and share your memories with your besties</span>
+				{%endifequal%}
+			</h2>
+		</div>
+	{%else%}				
+		{%include 'ajax/gallery/_albums.html'%}			
+	{%endif%}
+	</div>
+</div>	
+{%endspaceless%}

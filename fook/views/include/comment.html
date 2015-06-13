@@ -1,0 +1,14 @@
+{%load thumbnail%}
+{%load static from staticfiles%}
+<span class="block border-btm padd_all">
+    <span class="inline-block" style="overflow:hidden;height:30px;">
+      {%thumbnail row.profile_image|default:no_profile_pic.jpg 45x45  crop as thumb%}		
+      <img src="{%static thumb%}">
+      {{row.first_name}} {{row.last_name}}
+    </span>
+    <span style="line-height: 20px; vertical-align: top;" class="inline-block">
+  		<span class="block">
+  			{{row.comment}}
+  		</span>
+	</span>
+</span>

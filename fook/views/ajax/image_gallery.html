@@ -1,0 +1,20 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+<div id="img-glry" >
+	{%if albums%}
+	{%for img in albums%}
+	<div class="prthmb">
+		<a href="#" onclick="var ph =new window.ph_viewer(this,{'title':'' });ph.show( );ph.load( 'this._photoviewer({{img.id}})' );" data-image='{{g.image}}' data-user="{{img.user_id}}" data-title='{{g.name}}' data-al="{{img.id}}" data-event='im_vw' data-category='gallery' >
+			{%thumbnail img.image 200x300 crop as thumb%}
+			{%if thumb%}
+				<img src="{%static thumb%}" alt='{{img.caption}}' width=200 height=300>
+			{%endif%}
+		</a>
+	</div>
+	{%endfor%}
+	{%else%}
+	<div class="inline-block padd_all">
+	 No albums available
+	</div>
+	{%endif%}
+</div>

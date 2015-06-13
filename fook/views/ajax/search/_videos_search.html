@@ -1,0 +1,25 @@
+{%spaceless%}
+{%load thumbnail%}
+{%load static from staticfiles%}
+<div id="search_videos_list">
+	<div class="">
+		{%for r in results%}
+			<div class="video">						
+				<div class="thumb">
+					<a href="javascript:void(0);" class="vid_thumb" data-vid="{{r.video.token}}" onclick="Player.play(this);" title="{{r.video.title}}">
+						{%thumbnail r.video.thumbnail 250x150 as thumb%}
+						<img src="{%static thumb%}" width="250" height="150" />
+					</a>										
+					<span class="vid_info">
+						<div class="vid_title">{{r.video.title | truncatechars:500}}</div>
+						<div class="vid_duration">{{r.video.duration}}</div>
+						<div>
+							by:<a href="javascript:void(0);" onclick="nav.open('/viewprofile/{{r.user.id}}');return false;"> {{r.user.first_name}} {{r.user.last_name}} </a>
+						</div>
+					</span>
+				</div>
+			</div>
+		{%endfor%}
+	</div>
+</div>
+{%endspaceless%}

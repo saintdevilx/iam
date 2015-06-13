@@ -1,0 +1,57 @@
+			    <ul style="padding:0">      
+			      <li>
+			      	<span class="menu_icon"><img src--="/media/icon-feeds.jpeg" /></span>
+			        <span class="menu_text"><a href='/feeds' onclick="return  nav.open('/feeds')">Feeds</a></span>
+			      </li>
+			      <li>
+			      	<span class="menu_icon"><img src="/media/icon-profile.jpeg" /></span>
+			        <span class="menu_text"><a href='/profile' onclick="return nav.open('/profile')">Profile</a></span>
+			      </li>		      
+			      <li>
+			      	<span class="menu_icon"><img src="/media/icon-friend.jpeg" /></span>
+			        <span class="menu_text"><a href='/friends' onclick="return nav.open('/friends')">Friends</a>
+			        	<div class="inline-block " >
+							<div id='frReqCnt_wrap' class="hidden">
+								<a href="#" onclick='request_menu(ge("frnd_req_lst"))'   >
+									<div class="count_wrap small_padd">
+										<span id='frReqCnt' class='inline-block'></span>
+									</div>
+								</a>				
+							</div>
+						</div>
+						<span class="block">
+						  <span >			    
+						    <span  class="rbn_lst  hidden" id="frnd_req_lst" style="font-weight: normal;z-index:100;">
+							    <span class='hdlne _bckf8 _req'>
+									<span>
+										<a href="/friends">Friends</a>
+									</span>
+									<span>
+										<a href="/friends/find">Suggestions</a>
+									</span>
+								</span>
+						    </span>
+						  </span>
+						</span></span>
+			      </li>
+			      <li>
+			      	<span class="menu_icon"><img src="/media/icon-message.jpeg" /></span>
+			        <span class="menu_text"><a href='/messages' onclick="return nav.open('/messages')">Message</a></span>
+			      </li>
+			      <li>
+			      	<span class="menu_icon"><img src="/media/icon-photo.jpeg" /></span>
+			        <span class="menu_text"><a href='/gallery' onclick="return nav.open('/gallery')">Gallery</a></span>
+			      </li>
+			      <li>
+			      	<span class="menu_icon"><img src="/media/icon-music.png" /></span>
+			        <span class="menu_text"><a>Music</a></span>
+			      </li>
+			      <li>
+			      	<span class="menu_icon"><img src="/media/icon-video.jpeg" /></span>
+			        <span class="menu_text"><a href='/videos' onclick="return nav.open('/videos')">Video</a></span>
+			      </li>      
+			      <li>
+			        <a href='/settings' onclick="return nav.open('/settings')">Settings</a>
+			      </li> 
+			      <li> <a href="/logout">Logout</a></li>     
+			    </ul>

@@ -1,0 +1,114 @@
+{%load static from staticfiles%}
+{% load fook_tags%}		
+{% load thumbnail%}		
+<div class="posts ">					
+			<div class="post-widget">				
+
+				<div class="hidden">
+				{% ifequal post.user_id userid%}
+					<div class="inline-block small_padd float_right">
+						<a href="javascript:void(0);"><span class="ui-icon ui-icon-pencil " style="padding:0 10px;" title='edit'></span>
+						</a>								
+					</div>
+					<div class="inline-block small_padd float_right">
+						<a href="javascript:void(0);"><span class="ui-icon ui-icon-close " style="padding:0 10px;" title='remove'></span></a>
+					</div>							
+				{%endifequal%}
+				</div>			
+				<div id='act-desc' class='hdlne' style="border-bottom:none;">
+					{% ifequal post.act 1 %}	
+						{%ifequal post.target_id post.pid%}{%else%}
+							Posted on <a href="/viewprofile/{{post.target_id}}">Friend</a>						
+						{%endifequal%}
+					{%else%}					
+						<a href="/viewprofile/{{post.id}}" data-category_id="{{post.id}}" data-category="page" data-event="page_info">{{post.first_name}} {{post.last_name}}</a>	
+					{%endifequal%}
+					<span class='feed-label'>
+						{% ifequal post.act 1 %}						
+							<!--Added new post							-->
+						{%endifequal%}							 
+						{%ifequal post.act 2%}
+							added new photos
+						{%endifequal%}							 
+						{%ifequal post.act 3%}
+							Liked Post
+						{%endifequal%}							 
+						{%ifequal post.act 4%}
+							shared post
+						{%endifequal%}	
+						{%ifequal post.act 7%}
+							Commented 
+						{%endifequal%}	
+					</span>					
+
+				</div>	
+				<div id='feed_info'>
+					<div id='post-by' class="float_left">
+						{%if post.pfname%}
+						<div id='poster'>
+							<div class="poster-info">
+								<a href="/viewprofile/{{post.pid}}" class=""> 
+									<span class='poster-img'>
+										{%thumbnail post.poster_image|default:'no_profile_pic.jpg' 50x50 crop as thumb%}										
+										<img src="{%static thumb%}"  >
+									</span>
+									<span class='poster-name block'>{{post.pfname}} {{post.plname}}</span>
+								</a>
+							</div>							
+						</div>			
+						{%endif%}	
+					</div>			
+					<div class="float_left small_padd feed-bx">
+						<div class="feed-text">
+							<p>
+								{% thumbnail post.attachment 400x250 crop as thumb%}				
+								{%if thumb %}				
+								<div class="ui-widget feed-img">
+									<img src="{%static thumb.url%}"  />			
+								</div>
+								{%endif%}
+								{{post.post_description | truncatechars:300 }}	
+							</p>
+						</div>
+						<div class='post-operation '>	
+							<div class="inline-block small_padd">		
+								<span class='inline-block'>
+								{% if post.is_like%}							
+									<a id="et" onclick="return likers.unlike(this)" href="#" onclick="return false;"  data-category='post'  data-type='' data-type_id='{{post.post_type}}' data-act='{{post.act}}' data-post='{{post.post_id}}' data-count='{{post.likes}}' data-likeid='{{post.is_like}}'>Unlike</a>	
+								{% else%}
+									<span class="ui-icon ui-icon-carat-1-n"></span>
+									<a onclick=" return likers.like(this)" href="#" onclick="return false;"  data-category='post'  data-post='{{post.post_id}}'  data-type_id='{{post.post_type}}'>Like </a>
+								{% endif %}								
+								</span>
+								<span class='like-count inline-block small_padd'>
+									<span class='inline-block'>
+										{%ifequal post.likes 0%}{%else%}
+										<a href="#"  onclick="likers.get({{post.post_id}}, {{post.post_type}}); return false;">
+										<span id='likecounts'>{{post.likes}}</span>
+										</a>
+										{%endifequal%}
+									</span>
+								</span>
+							</div>
+							<div class=" inline-block small_padd">
+								<a href="javascript:void(0);" onclick="lstcomment({{post.post_id}},this,'{{post.post_type}}');">comment </a>
+							</div>
+
+
+							<span class='small-font float_right' title='{{post.created | mytimesince}} ago'>{{post.created | mytimesince}} </span>
+							<span style='clear:both;'></span>
+
+						</div>	
+					</div>
+				<span id='cmt_ar'  class='cmnt inline-block hidden' >
+					<span id='cmnt_lst' class='hidden'></span>
+					<span class='cmnt small_padd block'>
+						<span class='placeholder small_padd' id='pl_cmt{{post.post_id}}'>Your comment</span>
+						<textarea placehodler='Add comment...' name='cmt_txt' class=" inline-block small_padd" rows='1' data-label="pl_cmt{{post.post_id}}"></textarea>						
+						<a  class="nrml-font inline-block small_padd" style="background:#f6f6f6;border:1px solid #CCC;padding:5px 3px;vertical-align:top;" href="javascript:void(0);" onclick="comment(this)"  data-post='{{post.post_id}}' data-user='{{user_id}}' data-post_type="{{post.post_type}}">comment</a>
+					</span>
+				</span>	
+
+				</div>				
+			</div>
+</div>

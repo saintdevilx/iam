@@ -1,0 +1,281 @@
+{% extends 'layout/anonymous.html'%}
+{% block title %} Fook {% endblock%}
+
+{% block main %}	
+	<div id="view_port" class="drishya">
+		<div class="madhya">
+			<div id="page-header" class=" index inline-block float_left border-all" >
+				<div id="middle_layout" >
+					<div id="search_pane" class="hidden list-item">
+						<form onsubmit="return falses;" action="search">
+							<div class="form_row">
+								<input type="text" name="q" value="" placeholder="Search Anything you want" autocomplete="off">
+								<input type="submit" value="search">
+							</div>						
+						</form>	
+					</div>
+					<div class="hdlne noti_pane ">Welcome</div>
+					<div  class="block padd_all" >
+						<div id='' class="padd_all   ">
+							<div id="login_pane" class="inline-block loginVw" >
+								<div class="heading" style="margin:5px 0"> Login Here</div>
+								<div id="signin_form" class=" signin" >						
+									<form action="/signin" method="POST">
+										<div class='hidden'>{%csrf_token%}</div>
+										<div class="block">
+											<div class="inline-block lbl">
+												Username 
+											</div>
+											<div class="inline-block ">
+												<input type="text" placeholder="Username or Email" name="username" required='true' />		
+												{{form.username.errors | striptags}}
+											</div>														
+										</div>							
+										<div class="block">
+											<div class="inline-block lbl">
+												Password
+											</div>
+											<div class="inline-block ">
+												<input type="password" name="password" placeholder="Password" required='true' />
+												{{form.password.errors | striptags}}
+											</div>													
+										</div>		
+										<div class="">
+											<div class="inline-block lbl"></div>
+											<div class="inline-block"><input type="submit" value="Login"></div>
+										</div>							
+										<div>
+											<div class="inline-block lbl"></div>
+											<div class="inline-block"><a href="javascript:void(0);">Don't Remember Password?</a></div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div id="signup_pane" class="inline-block"   >
+								<div  class="list-item" >		
+									<div class="signupVw">
+										<div class="block">
+											<div class="hdlne">Sign Up </div>
+										</div>
+										<div class="block">
+											<form  action="/signup" method="post" enctype="multipart/form-data">	
+												<div class='register' >
+													<div class='block'>
+														{%csrf_token%}
+														<div class='block {% if form.page_name.errors %} error {% endif%}'>		
+															<div class="inline-block lbl">First Name</div>
+															<div class="inline-block">
+																<input name='first_name' required='true' type="text" maxlength="30" placeholder="First Name" autocomplete="off" />
+															</div>
+															<div class="inline-block">{{form.first_name.errors | striptags}}		</div>
+														</div>
+													</div>
+													<div class='block'>
+														<div class="inline-block lbl">Last Name</div>
+														<div class='inline-block {% if form.last_name.errors %} error {% endif%}'>
+															<div class="inline-block">
+																<input name='last_name' required='true' type="text" maxlength="30" placeholder="Last Name" autocomplete="off" />
+															</div>
+															<div class="inline-block">{{form.last_name.errors | striptags}}</div>
+														</div>
+													</div>									
+													<div class='block'>				
+														<div class="inline-block lbl">
+															Birthday
+														</div>
+														<div class='inline-block {% if profile_form.birthday.errors %} error {% endif %}'>
+															<div class="inline-block"><div class="inline-block">
+															<select name="birthday_month" id="id_birthday_month">
+																<option value="0">Month</option>
+																<option value="1">January</option>
+																<option value="2">February</option>
+																<option value="3">March</option>
+																<option value="4">April</option>
+																<option value="5">May</option>
+																<option value="6">June</option>
+																<option value="7">July</option>
+																<option value="8">August</option>
+																<option value="9">September</option>
+																<option value="10">October</option>
+																<option value="11">November</option>
+																<option value="12">December</option>
+																</select>
+																<select name="birthday_day" id="id_birthday_day">
+																<option value="0">Day</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+																<option value="6">6</option>
+																<option value="7">7</option>
+																<option value="8">8</option>
+																<option value="9">9</option>
+																<option value="10">10</option>
+																<option value="11">11</option>
+																<option value="12">12</option>
+																<option value="13">13</option>
+																<option value="14">14</option>
+																<option value="15">15</option>
+																<option value="16">16</option>
+																<option value="17">17</option>
+																<option value="18">18</option>
+																<option value="19">19</option>
+																<option value="20">20</option>
+																<option value="21">21</option>
+																<option value="22">22</option>
+																<option value="23">23</option>
+																<option value="24">24</option>
+																<option value="25">25</option>
+																<option value="26">26</option>
+																<option value="27">27</option>
+																<option value="28">28</option>
+																<option value="29">29</option>
+																<option value="30">30</option>
+																<option value="31">31</option>
+																</select>
+																<select name="birthday_year" id="id_birthday_year">
+																<option value="0">Year</option>
+																<option value="1955">1955</option>
+																<option value="1956">1956</option>
+																<option value="1957">1957</option>
+																<option value="1958">1958</option>
+																<option value="1959">1959</option>
+																<option value="1960">1960</option>
+																<option value="1961">1961</option>
+																<option value="1962">1962</option>
+																<option value="1963">1963</option>
+																<option value="1964">1964</option>
+																<option value="1965">1965</option>
+																<option value="1966">1966</option>
+																<option value="1967">1967</option>
+																<option value="1968">1968</option>
+																<option value="1969">1969</option>
+																<option value="1970">1970</option>
+																<option value="1971">1971</option>
+																<option value="1972">1972</option>
+																<option value="1973">1973</option>
+																<option value="1974">1974</option>
+																<option value="1975">1975</option>
+																<option value="1976">1976</option>
+																<option value="1977">1977</option>
+																<option value="1978">1978</option>
+																<option value="1979">1979</option>
+																<option value="1980">1980</option>
+																<option value="1981">1981</option>
+																<option value="1982">1982</option>
+																<option value="1983">1983</option>
+																<option value="1984">1984</option>
+																<option value="1985">1985</option>
+																<option value="1986">1986</option>
+																<option value="1987">1987</option>
+																<option value="1988">1988</option>
+																<option value="1989">1989</option>
+																<option value="1990">1990</option>
+																<option value="1991">1991</option>
+																<option value="1992">1992</option>
+																<option value="1993">1993</option>
+																<option value="1994">1994</option>
+																<option value="1995">1995</option>
+																<option value="1996">1996</option>
+																<option value="1997">1997</option>
+																<option value="1998">1998</option>
+																<option value="1999">1999</option>
+																<option value="2000">2000</option>
+																</select></div>
+															</div>
+														</div>
+													</div>		
+													<div class='block'>				
+														<div class="inline-block lbl">
+															Gender
+														</div>
+														<div class='inline-block {% if profile_form.gender.errors %} error {% endif %}'>
+															<div class="inline-block">
+															<select name="gender" id="id_gender">
+																<option selected="selected" value="">Select Gender</option>
+																<option value="m">Male</option>
+																<option value="f">Female</option>
+																</select>
+															</div>
+															<div class="inline-block">{{ profile_form.gender.errors | striptags }} </div>
+														</div>
+													</div>		
+													<div class='block'>				
+														<div class="inline-block lbl">
+															Email
+														</div>					
+														<div class='inline-block {% if form.email.errors %} error {% endif %}'>
+															<div class="inline-block"><input name='email' required='true' type="email" maxlength="50" placeholder="Email" autocomplete="off" /></div>
+															<div class="inline-block">{{ form.email.errors | striptags }} </div>
+														</div>
+													</div>
+													<div class='block'>				
+														<div class="inline-block lbl">
+																Username
+														</div>					
+														<div class='inline-block {% if form.username.errors %} error{% endif%}'>
+															<div class="inline-block"><input name='username' required='true' type="text" maxlength="30" placeholder="Username" autocomplete="off" /></div>
+															<div class="inline-block">{{ form.username.errors | striptags }}</div>
+														</div>
+													</div>
+													<div class='block'>
+														<div class="inline-block lbl">
+															Password
+														</div>					
+														<div class='inline-block {% if form.password.errors %} error{% endif%}'>
+															<div class="inline-block"><input name='password' type="password" maxlength="30" placeholder="Password" required='true' autocomplete="off" /></div>
+															<div class="inline-block">{{ form.password.errors | striptags }}</div>
+														</div>
+													</div>			
+													<div class="block">	
+														<div class="lbl inline-block"></div>	
+														<div class='inline-block'>
+															<div class="block"><input type="submit" value="Join"></div>
+														</div>
+													</div>
+												</div>		
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+
+				</div>
+				<div id="features_div" style="padding: 35px 30px;clear:both;display:none;">
+						<div class="list-item heading">Connect With Your Friends And Family.</div>
+						<div class="list-item">Search Your Local And Make Few Friends </div>
+						<div class="list-item">Promote Your Business </div>
+						<div class="list-item">And Have A Happy Visit. </div>
+				</div>
+			
+				<div id='ftr' style="text-align:center;width:600px;" class="border-all">
+					<a href="/index">
+						<div class="mn_bx">
+							Home
+						</div>
+					</a>
+					<a href="javascript:void(0);">
+						<div class="mn_bx">
+							About
+						</div>
+					</a>
+					<a href="javascript:void(0);">
+						<div class="mn_bx">
+							Help
+						</div>
+					</a>
+					&copy; copyright by Fook,Inc.
+				</div>	
+			</div>
+			<div id="right_pane" class="inline-block float_left hidden">			
+				<div class="heading">Trending News</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
+

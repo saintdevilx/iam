@@ -1,0 +1,28 @@
+{%spaceless%}
+{%load static from staticfiles%}
+{%load thumbnail%}
+	{%for g in gallery%}						
+		<div class="inline-block gallery" >
+			<div class="imgthub">
+			<div class="list-item thumb" >			
+				{%ifequal g.album.user_id uid%}<a href="javascript:void(0);" onclick="gallery.remove(this,{{g.id}},{{g.album_id}})" title="Remove this image" class="remove"><i class='ui-icon ui-icon-trash block'></i></a>{%endifequal%}
+				<span class='block'>
+					{%thumbnail g.image 150x100 crop as thumb%}
+					{%if thumb%}
+					<a href="#" onclick="var ph =new window.ph_viewer(this,{'title':'' });ph.show( );ph.load( 'this._photoviewer({{g.id}})' );" data-image='{{g.image}}' data-user="{{uid}}" data-title='{{g.name}}' data-al="{{g.id}}" data-event='im_vw' data-category='gallery' >
+						<img src="{%static thumb%}"     />
+					</a>
+					{%endif%}
+				</span>
+				<span class="gllry_thmb_info">
+				  <span class="glry_blck_info"></span>
+					<span class="glry_inf_lnk">
+					    <span class='small_padd'>Likes .{{g.likes}}</span>
+					    <span class='small_padd'>comments.{{g.comments}}</span>
+					</span>
+				</span>
+			</div>
+			</div>
+		</div>											
+	{%endfor%}
+{%endspaceless%}	

@@ -1,0 +1,57 @@
+{%spaceless%}
+{%load static from staticfiles%}
+{%load thumbnail%}
+{% load fook_tags%}	
+{%load emoticons_tags%}
+{%for row in comments%}
+<span class="block  ">
+    <span class="inline-block" style="overflow:hidden;height:30px;">
+      {%thumbnail row.user.profile_image|default:"no_profile_pic.jpg" 45x45  crop as thumb%}		
+      <img src="{%static thumb%}" title="{{row.first_name}} {{row.last_name}}">      
+    </span>
+    <span style="" class="inline-block cmt_t">
+  		<span class="block">
+  			<b>{{row.user.user.first_name}} {{row.user.user.last_name}}</b> 
+        {%emoticons%}
+        {{row.comment.msg}}
+        {%endemoticons%}
+  		</span>
+  		<span class="block cmnt_opts ">
+  			<span class='time cntr'><span>{{row.comment.created | mytimesince}}</span></span>
+        <span class='cntr'>        
+          <span>            
+            {% if row.is_liked%}
+              <a id="evt" href="#" data-type_id='109979991' onclick="return likers.unlike(this)" data-post='{{row.comment.id}}' data-category='' data-act='' data-likeid="{{row.is_liked}}" data-count='{{row.comment.count}}'>
+                Unlike 
+              </a>
+            {%else%}
+              <a  href="#" data-type_id='109979991' onclick="return likers.like(this)"  data-post='{{row.comment.id}}' data-category=''>
+                Like 
+              </a>
+            {%endif%}
+          </span>
+          <span class='like-count inline-block small_padd'>
+            <span class='inline-block'>
+              {%ifequal row.comment.likes 0%}{%else%}
+              <a href="#"  onclick="likers.get({{row.comment.id}}, '109979991'); return false;">
+              <span id='likecounts'>{{row.comment.likes}}</span>
+              </a>
+              {%endifequal%}
+            </span>
+          </span>            
+        </span>
+        <span class='cmnt_del'>{%ifequal uid row.user.id%}<a href="javascript:void(0);">Delete</a>{%endifequal%}</span>
+  		</span>
+	</span>
+</span>
+{%endfor%}
+  {%if has_more%}
+  <span class='pager'>
+  <div class="cmnt_pager" id='comment_pager_{{post}}'>
+    <span>
+      <a href="javascript:void(0);" onclick="return moreComments(this,{ 'page':{{page}},'length':{{total}},'post':{{post}},'type':{{ptype}} })" >View Previous comments</a>
+    </span>
+  </div>
+  </span>
+  {%endif%}
+{%endspaceless%}

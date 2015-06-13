@@ -1,0 +1,39 @@
+{%spaceless%}
+{%load static from staticfiles%}
+<div id="basic_info" style="padding:10px;">
+{%load thumbnail%}
+	<div class="inline-block " id='album_lst' style="padding: 10px;display:block; min-height:400px;">
+		{%if not page%}
+		<div class="heading">
+			 {{album_name}}( {{count}} Photos)
+			{%ifequal uid author%}
+				<a class='float_right link-btn' onclick="var ph =new window.ph_viewer(this,{'title':'Add Photos' }) ;ph.show();ph.load();"  data-title='add Photos'  data-event='al_ad_ph' data-category='galy' data-album='{{album}}' >+add photos</a>
+			{%endifequal%}
+		</div>
+		{%endif%}
+		{%if gallery%}			
+			<div id='galry_imgs'>
+				{%include 'ajax/gallery/_gallery.html'%}
+			</div>						
+				<div class="block">
+					<div id='paginator'>
+						<button onclick="gallery.paginate( this, {{author}}, {{alid}})" class="btn">More Images</button>
+					</div>
+				</div>	
+		{%else%}
+			<div class="inline-block">
+				<span class='hdlne'>This album has no photo to show
+				{%ifequal uid user.id %}
+					<span>
+						You can add Photos to this album
+						<h4>
+							<a class='float_right link-btn' onclick="var ph =new window.ph_viewer(this,{'title':'Add Photos' }) ;ph.show();ph.load();"  data-title='add Photos'  data-event='al_ad_ph' data-category='galy' data-album='{{album}}' >+add photos</a>
+						</h4>
+					</span>
+				{%endifequal%}
+				</span>
+			</div>
+		{%endif%}
+	</div>
+</div>					
+{%endspaceless%}

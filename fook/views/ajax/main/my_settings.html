@@ -1,0 +1,169 @@
+<div id="main_content">
+	<div id='my_settings'>
+		<div class="padd_all  tb" id='postSettings'>
+			<div class="tbbar">
+				<div class=" ">
+					<span class="tabs tbhd">
+						<a href="javascript:void(0);" onclick="return nav.open('/settings?st=general');">General</a>
+					</span>
+					<span class="tabs tbhd">
+						<a href="javascript:void(0);" onclick="return nav.open('/settings?st=privacy');">Privacy</a>
+					</span>
+					<span class="tabs tbhd">
+						<a href="javascript:void(0);"  onclick="return nav.open('/settings?st=profile');">Profile</a>
+					</span>
+					<span class="tabs tbhd">
+						<a href="javascript:void(0);"  onclick="return nav.open('/settings?st=block');">Block People</a>
+					</span>						
+				</div>
+				<div style="border-bottom:1px solid #D5D5D5;margin:5px 0"></div>
+			</div>
+			<div  id='tb_content'>
+				{%ifequal st 'general'%}
+					<div class="tbcnt">
+						<div class="hdlne">	Change Password</div>
+						<div>
+							<form action="/userprofile/changepassword" method="POST" onsubmit="return Settings.ChangePass(this);">
+								<div>
+									<input type="password" name='curr_pass' placeholder='Current Password' title='Old Passwrd' required="required"/>
+								</div>
+								<div><input type="password" name='new_pass' placeholder='New Password' title='New Password' required="required"/></div>
+								<div><input type="password" name='confirm_pass' placeholder='Confirm New Password' title='Confirm New Password' required="required"/></div>
+								<div><input type="submit" value="Change Password" class="btn" /></div>
+							</form>
+						</div>
+					</div>
+					<div class="tbcnt">
+						<div class="hdlne">	Change Username</div>
+						<div>
+							<form action="/userprofile/changeusername" method="POST" onsubmit="return Settings.changeUsername(this);">
+								<div>
+									<div class="edit_input">
+										<noabbr>http://www.fook.com/</noabbr>
+										<input type="text" name='username' placeholder='username' value="{{settings.username}}" autocomplete="off" title='Username' data-username="{{settings.username}}"/>
+									</div>
+								</div>
+								<div><input type="submit"  class='btn' value="Change Username" /></div>		
+							</form>
+						</div>
+					</div>
+					<div class="tbcnt">
+						<div class="hdlne">	Block Users</div>
+						<div>
+							<form action="/user/block" method="POST" >
+								<div>
+									<input type="text" name='users' value='' />
+								</div>
+								<div><input type="submit"  class='btn' value="Block Users" /></div>		
+							</form>
+						</div>
+					</div>					
+				{%endifequal%}
+
+				{%ifequal st 'profile'%}
+					<div class="tbcnt">
+						<div class="hdlne">Profile Settings</div>
+						<div>
+							<form action="/userprofile/changepassword" method="POST" onsubmit="return Settings.ChangePass(this);">
+								<div>
+									<input type="password" name='old' placeholder='Old Password' />
+								</div>
+								<div><input type="password" name='new' placeholder='New Password' /></div>
+								<div><input type="password" name='confirm' placeholder='Confirm New Password' /></div>
+								<div><input type="submit" value="Change Password" class="btn" /></div>
+							</form>
+						</div>
+					</div>
+				{%endifequal%}
+
+				{%ifequal st 'privacy'%}					
+					<div class="tbcnt">
+						<div class="hdlne">	Privacy Settings</div>
+						<div class="settings_wrap hdlne" style="margin:5px 0;">
+							<div class="settings_privacy">								
+								<div class="stng_row">
+									<span class='lbl'>Post visibility to</span>
+									<span>
+									<select id="post_visibility">
+									<option value="all">Everyone</option>
+									<option value="friends">Friends</option>
+									<option value="fof">Friends of Friends</option>
+									<option value="me">Nobody</option>									
+									</select>
+									</span>
+								</div>
+								<div class="stng_row">
+									<span class='lbl'>Birthday Reminder</span><span>
+										<select id="bday_visibility">
+											<option value="on">on</option>
+											<option value="off">off</option>								
+										</select>									
+									</span>
+								</div>
+								<div class="stng_row">
+									<span class='lbl'>Photos Visibility</span>
+									<span>
+										<select id="photos_visibility">
+											<option value="all">Everyone</option>
+											<option value="frnd">Friends</option>
+											<option value="fof">Friends of Friends</option>
+											<option value="me">Nobody</option>									
+										</select>
+									</span>
+								</div>
+								<div class="stng_row">
+									<span class='lbl'>Post on your profile </span>
+									<span>
+										<select id="photos_visibility">
+											<option value="all">Everyone</option>
+											<option value="frnd">Friends</option>
+											<option value="fof">Friends of Friends</option>
+											<option value="me">Nobody</option>									
+										</select>
+									</span>
+								</div>
+								<div class="stng_row">
+									<span class='lbl'>View post on my profile</span>
+									<span>
+										<select id="photos_visibility">
+											<option value="all">Everyone</option>
+											<option value="frnd">Friends</option>
+											<option value="fof">Friends of Friends</option>
+											<option value="me">Nobody</option>									
+										</select>
+									</span>
+								</div>	
+								<div class="stng_row">
+									<span class='lbl'>Comment on my post </span>
+									<span>
+										<select id="photos_visibility">
+											<option value="all">Everyone</option>
+											<option value="frnd">Friends</option>
+											<option value="fof">Friends of Friends</option>
+											<option value="me">Nobody</option>									
+										</select>
+									</span>
+								</div>																						
+							</div>
+						</div>
+					</div>
+				{%endifequal%}
+				{%ifequal st 'blocked'%}					
+					<div class="tbcnt">
+						<div class="hdlne">	Blocked People</div>
+						<div>
+							<form action="/userprofile/changepassword" method="POST" onsubmit="return Settings.ChangePass(this);">
+								<div>
+									<input type="password" name='old' placeholder='Old Password' />
+								</div>
+								<div><input type="password" name='new' placeholder='New Password' /></div>
+								<div><input type="password" name='confirm' placeholder='Confirm New Password' /></div>
+								<div><input type="submit" value="Change Password" class="btn" /></div>
+							</form>
+						</div>
+					</div>
+				{%endifequal%}
+			</div>				
+		</div>			
+	</div>
+</div>

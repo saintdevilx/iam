@@ -1,0 +1,75 @@
+{% extends 'layout/default'%}
+{% block title%}Page Profile{% endblock%}
+{% block main%}
+{%load thumbnail%}
+<style type="text/css">
+	.middle{margin: 10px 5px;}
+	.page-info{margin:10px 5%;}
+	.page-title{position:relative;display:table;padding:5px;}
+	.follower-count{position:absolute;left:6%;margin:10px;padding:5px;font-size: 10px;}
+	.inner-text{font: 10px halvetica normal;color: #cccccc;}
+	.heading-text{font-size: 12px;font-weight: bold;font-family: halvetica;}
+	.pageInfoLeft {width: 350px;text-align: left;}
+</style>
+	<div class="block" id='page-header'>
+		<div id="center_div" class="block">
+			{%include 'include/header_menu.html'%}
+		</div>
+			<div  class="padd_all">
+				<div class="block">
+					<div class="hdlne">
+						{{page_info.page_name}}
+					</div>
+				</div>
+				<div id='pageInfoImage'  class="padd_all float_left">
+					<div  >
+						<div class="float_left">
+						<div class="" >	
+							<div class=''>
+								{% thumbnail page_info.page_profile 50x50 as cover%}
+								{% if cover%}							
+								<img src="{{STATIC_URL}}/{{cover.url}}"  class="page-cover-image" title="{{page_info.page_name}}" />			
+								{% else%}
+								<img src="{{STATIC_URL}}/no_profile_pic.jpg"  class="page-cover-image" title="{{page_info.page_name}}" width="90%" height="200" />			
+								{% endif%}
+							</div>										
+							<div  class="inline-block">
+								<div class=' medium-font list-item'  ></div>				
+								<div class='page-type small-font list-item' >{{page_info.page_type}}</div>	
+								<div class='list-item small-font' >followers({{page_info.follower}})</div>
+							</div>
+							<!--span id='chgpic' class='ui-state-default ui-corner-all widget-button'>
+							change cover					
+							</span>
+							<form action="/change_cover" method="POST" enctype="multipart/form-data"  name='coverchange'>
+									<input name='cover_pic'  type="file" >		
+									<input name="page" type="hidden" value="{{page_info.id}}">
+									<input type="submit" value="update">				
+							</form-->
+						</div>	
+						</div>
+					</div>
+				</div>
+				<div class="pageInfoLeft float_right">
+					<div class="block">
+							<div id="page_info"class="block ">
+								<div class=' hdlne'>About</div>
+								<div class="block">
+									<p>{{page_info.page_description}}</p>
+								</div>
+							</div>
+					</div>						
+				</div>
+				<div class="clear"></div>
+			</div>	
+			<div id="post-list" class="newrow">
+				<div class="posts-list">			
+					{% for post in posts %}
+					{% include 'include/post_list.html'%}
+					{%endfor%}
+				</div>
+			</div>
+	</div>
+
+
+{%endblock%}

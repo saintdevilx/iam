@@ -1,0 +1,13 @@
+{%extends 'layout/default'%}
+{%block title%}{%endblock%}
+
+{%block main%}
+		<div id="page-header" class="border-all">
+			<div id="center_div">
+			{%include 'include/header_menu.html'%}
+			</div>
+			<div class="rendered">
+				{{html}}
+			</div>
+		</div>
+{%endblock%}

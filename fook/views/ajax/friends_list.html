@@ -1,0 +1,25 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+<div id="img-glry" class="small_padd">
+	{%if friends%}
+		{%for f in friends%}
+		<a href="/viewprofile/{{f.user__id}}" class="small_padd">
+			<div class="inline-block">
+				{%thumbnail f.profile_image|default:'no_profile_pic.jpg' 50x50 crop as thumb%}
+				{%if thumb%}
+					<span class='list-item'>
+						<img src="{%static thumb%}" alt='{{img.caption}}' width="50" height="50">
+					</span>
+				{%endif%}
+				<span class="list-item">
+					{{f.user__first_name}} {{f.user__last_name}}
+				</span>
+			</div>
+		</a>
+		{%endfor%}
+	{%else%}
+	<div class="inline-block padd_all">
+		No Friends 
+	</div>
+	{%endif%}
+</div>

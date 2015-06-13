@@ -1,0 +1,40 @@
+{%extends 'layout/default'%}
+{%block title%} Create Page{%endblock%}
+
+{%block main%}
+	<div class="" id="page-header">
+		<div id='center_div'>
+			{%include 'include/header_menu.html'%}
+		</div>
+		<div class="block padd_all border-all">
+			<div class="block">
+				<div class="hdlne">Create Page</div>
+			</div>
+			<div class="padd_all" id='page_create'>
+				<div class="block">
+					<form action="/page/create" onsubmit="return window.ajxfrm(this)" >
+						<div class="block">
+							<span class='placeholder small_padd' id='pl_page_name'>Choose a page name</span>
+							<input type="text" name="page_name" data-label="pl_page_name" />
+						</div>
+						<div class="block">
+							<span class='placeholder small_padd' id='pl_page_type'>Choose Category</span>
+							<input type="text" name="page_type" />
+						</div>
+						<div class="block">
+							<span class='placeholder small_padd'>About your Page</span>
+							<textarea name="page_description" style="resize:none;" maxlength="300" /></textarea>
+						</div>
+						<div class="block">
+							<span class='placeholder small_padd'></span>
+						</div>						
+						<div>
+							<input type="submit" value="Create" class="btn" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+{%endblock%}

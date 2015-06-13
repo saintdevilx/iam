@@ -1,0 +1,20 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+<div class="block" id='frnd_suggestion'>
+	<div class="">
+		{%for fr in friends%}
+		<div id="fr_suggestion_fr{{fr.id}}">
+			<div class="float_right"><a href="#" onclick="ge('fr_suggestion_fr{{fr.id}}').remove();"><i class='ui-icon ui-icon-close block' title='Hide'></i></a>
+			</div>
+			<div class="small_padd cntr">
+				<div class=" ">{%thumbnail fr.image|default:'no_profile_pic.jpg' 50x50 crop as thumb%}<img src="{%static thumb %}" /></div>
+				<div class="block  small_padd">
+					<div class=" block"><a href="/viewprofile/{{fr.id}}">{{fr.first_name}} {{fr.last_name}}</a></div>
+					<div>{{fr.tag}}</div>
+					<div class="inline-block btn"><a href="#" onclick="Friend.addFriend(this,{{fr.id}})">Add Friend</a></div>
+				</div>				
+			</div>
+		</div>
+		{%endfor%}
+	</div>
+</div>

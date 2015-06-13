@@ -1,0 +1,45 @@
+	<div class="hdlne _bckf8 small_padd">
+		<div class="">Messages</div>
+	</div>
+	{%if id%}
+	<span class='ttl_br act-link'>Conversation 
+		<span class='float_right'>
+			<a href="/delete_conversation">
+				<i class='ui-icon-trash ui-icon' title='Delete Conversation' style='padding:3px 10px;'></i>
+			</a>
+		</span>
+	</span>	
+	{%endif%}
+	<div id="messages" class="" style="margin:10px 25px;">
+		<span class='msg-wrpr'>		
+		{%include 'ajax/messages/message_list.html'%}
+		{%if not conversations%}						
+			<div class="ntfy">
+				You have no messages and you have not started conversation.<br>
+				Start Conversation by sending messages to your close one and make your friendship Stronger and last longing.
+			</div>
+		{%endif%}				
+		</span>				
+		<div id="frlst" style="">
+			<div class="txtbxwrpr  border-all" style="background:#F8F8F8;">
+				<form action="/send_message" method="post" enctype="multipart/form-data" style="margin:0;">
+					<span class="">
+						<div class="block lbw border-all" id='reciever_input_wrap'>
+							<div class="hidden"><input type="hidden" id='reciever' autocomplete='off' name="recv" value="{{id}}"  /></div>
+							<input type="text" autocomplete="off" placeholder="Type Friend name" style="width:auto;" onkeypress="Message.init(this)"  data-wrap="reciever_input_wrap" data-input="reciever" data-choosen="recvlst" />				
+							</div>
+							<div class="hidden">{%csrf_token%}</div>
+						<span id='recvlst'>
+							
+						</span>
+
+						<div class="block ">
+							<span class='placeholder padd_all' id='pl_msg'>Your Message ...</span>
+							<textarea rows="2"  onkeypress="" style="resize:none;width:550px;border:none;" name="msg" class='padd_all' data-label='pl_msg'></textarea>
+						</div>
+					</span>
+				 <div class="block lbw border-all"><button type="submit">Send</button></div>
+				</form>
+			</div>
+		</div>	
+	</div>

@@ -1,0 +1,33 @@
+{%load static from staticfiles%}
+{% load thumbnail%}
+
+<div class="list-item" id='frnd_request'>
+	{%for request in requests%}
+		<div class="{%if rbn %} block small_padd {%else%}inline-block{%endif%}">
+			<a href="/viewprofile/{{request.user.id}}" class="mn_lst inline-block">
+				<div class="">			
+					{% thumbnail request.profile_image|default:'no_profile_pic.jpg' 50x50 crop as thumb%}
+					{% if thumb%}
+					<img src="{%  static thumb %}" />
+					{%endif%}
+				</div>
+			</a>
+			<div class="inline{%if rbn %}-block{%endif%} va-tp" >
+				<span class="list-item">
+					<span class="name">{{request.first_name}} {{request.last_name}}</span>
+				</span>
+				<a href="javascript:void(0);" class="inline-block" onclick="Friend.accept(this,{{request.fid}},{{request.id}});" ><span class=" btn">Accept</span></a> 
+				<a href="javascript:void(0);" class="inline-block" onclick="Friend.avoid(this,{{request.fid}});" ><span class="btn" href="#" >Avoid</span></a> 
+			</div>			
+		</div>
+	{%endfor%}
+</div>
+
+{%if requests%}
+{%else%}
+<div class="list-item">
+	<div class="inline-block padd_all">
+		Currently You have no friend request pending.
+	</div>
+</div>
+{%endif%}

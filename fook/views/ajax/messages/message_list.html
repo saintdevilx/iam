@@ -1,0 +1,27 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+{%for msg in conversations%}
+<div class="message_wrap">
+	<div class="message_block">
+		<div class="sender_info _fl">
+			<div class="thumb">
+				<span class=''>
+				{%thumbnail msg.image 50x50 crop as thumb%}
+				 <img src="{%static thumb.url%}" width="50" height="50">
+				</span>
+			</div>
+		</div>
+		<div class="message_info">
+			<div class="block">				
+				<a href="/messages/{{msg.msg.sender_id}}" onclick2="nav.open('/messages/{{msg.msg.sender_id}}')">{{msg.msg.first_name}} {{msg.msg.last_name}}</a>								
+			</div>
+			<div class="message_text">
+				{{msg.msg.content}}				
+			</div>
+			<div class="time">
+				{{msg.msg.created}}
+			</div>
+		</div>
+	</div>
+</div>
+{%endfor%}

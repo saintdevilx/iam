@@ -1,0 +1,60 @@
+{%load thumbnail%}
+{%load static from staticfiles%}
+<div class="frnd_vw_prt" >
+	<div class="_bckf8 small_padd hdlne">
+		<div class="inline-block  small_padd" >
+			<div class="inline-block ">
+				<a  href="/friends" onclick="return nav.open('/friends')">Friends</a>
+			</div>
+			<div class="inline-block">
+				<div id='frnd-srch-form' class="">	
+					<input type="text" name='q' placeholder='Search' autocomplete='off' 
+					onkeyup="return Friend.search(this,'frnd-srch-lst')" />
+					</form>
+				</div>
+				<div id='frnd-srch-lst' style="position: absolute; border: 1px solid rgb(238, 238, 238); padding: 5px; background: none repeat scroll 0px 0px rgb(226, 227, 255); overflow-y: auto; width: 150px; max-height: 250px;display:none;"></div>
+			</div>
+			{%if me%}
+				<div class="inline-block">
+					<a  href="/friends/find" onclick="return nav.open('/friends/find',{'target':'friends-list'})" >Suggestions</a>
+				</div>
+			{%endif%}
+		</div>
+	</div>
+
+	<div class="block  small_padd" >
+		<div id="friends-list" >
+		{%for friend in friends_list%}		
+			<div class="frnd_wrap">
+				<div class="frnd_block"> 
+					<div class="frnd-img float_left">
+						<a href="/viewprofile/{{friend.user__id}}">
+							<div class="inline-block">
+								{% thumbnail friend.profile_image|default:'no_profile_pic.jpg' 100x100 crop as thumb%}
+								{%if thumb%}<img src="{%static thumb%}" width="{{thumb.width}}" height="{{thumb.height}}" />{%endif%}
+							</div>		
+						</a>
+					</div>								
+					<div class="inline-block label" >
+						<a href="/viewprofile/{{friend.user__id}}">
+							<div class="small_padd">
+								{{friend.user__first_name}}  {{friend.user__last_name}}	
+							</div>
+						</a>		
+						<div class="list-item">								
+							<!-- class="" data-fid='{{friend.id}}' data-event="unfrnd" data-category="friend" id="unfrnd{{friend.id}}" data-friend_id="{{friend.user.id}}" -->
+								<a href="#" onclick="return Friend.unfriend(this,'{{friend.fid}}');">Unfriend</a>	
+						</div>		
+						<div class="list-item">
+							<button>
+								<a href="#" class="" >Message</a>
+							</button>
+						</div>															
+					</div>											
+				</div>			
+			</div>		
+		{%endfor%}
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>

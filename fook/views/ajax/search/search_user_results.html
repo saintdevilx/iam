@@ -1,0 +1,31 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+<div class="search-results">
+<span>
+	{%if results%}
+		{%for r in results%}
+		<span class='list-item ' id='rslt_item'>
+			<a href='/viewprofile/{{r.user.user_id}}'>	<span class='result-item'>
+			<span class='result-item-image' style='max-height:50px;overflow:hidden;'>
+				{%thumbnail r.user.profile_image|default:"no_profile_pic.jpg" 45x45 crop as thumb %}
+				<img src='{%static thumb%}'  class='result-image' style='max-width:50px;'/>				
+			</span>
+			<span class='result-info  '>
+				<span class='page-type item'>
+					{{r.user.user__first_name}} {{r.user.user__last_name}}
+				</span>
+				<span class='other'>
+				{%if r.other.hometown %}
+				<span > From {{r.other.hometown.page_name}} </span>
+				{%elif r.other.cur_city%}
+				<span >  Lives in {{r.other.cur_city.page_name}} </span>
+				{%elif r.other.education%}
+				<span > Study at {{r.other.education.page_name}} </span>
+				{%endif%}
+				</span>
+			<span class='item'> </span></span></span></a>
+		</span>
+		{%endfor%}		
+	{%endif%}
+</span>
+</div>

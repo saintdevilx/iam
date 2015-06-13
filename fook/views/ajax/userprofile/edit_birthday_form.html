@@ -1,0 +1,28 @@
+<form action="/userprofile/update?type=birthday" onsubmit="return window.ajxfrm(this,null)" method="POST">
+<div class="block padd_all">
+	<input type="hidden" name="user" value="{{user}}" />
+	<span class='block '>
+		<span class='info-lbl inline-block'>Birthday</span>
+		<span class='info-vl inline-block'> 
+			<span class='inline-block'>
+				<select name="bday_day">
+				{%for day in days%}
+					<option value="{{day}}">{{day}}</option>
+				{%endfor%}
+				</select>
+				<select name="bday_month">
+				{%for month in months%}
+					<option value="{{month}}">{{month}}</option>
+				{%endfor%}
+				</select>
+				<select name="bday_year">
+				{%for yr in years%}
+					<option value="{{yr}}">{{yr}}</option>
+				{%endfor%}
+				</select>
+			</span>			
+		</span>
+	</span>	
+	<button type="submit"> Save</button>
+</div>
+</form>

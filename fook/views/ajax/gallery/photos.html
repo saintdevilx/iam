@@ -1,0 +1,10 @@
+{%load thumbnail%}
+{%load static from staticfiles %}
+{%for photo in photos%}
+	<div class="photo_wrap">
+		<div>{%thumbnail photo.image|default:'no_profile_pic.jpg' 200x200 crop as thumb%}
+			<a href="/photos?id={{photo.id}}&user={{usr}}" onclick="return Photo.open();"><img src="{%static thumb.url%}" width="200" height="200">	</a>
+		</div>
+	</div>
+{%endfor%}
+{%if hasMore%}<a href="/photos?user={{usr}}&page={{next}}"></a>{%endif%}

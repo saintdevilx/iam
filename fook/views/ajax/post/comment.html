@@ -1,0 +1,26 @@
+{%load thumbnail%}
+{%load static from staticfiles%}
+{%load thumbnail%}
+{%load fook_tags%}
+<span class="block  ">
+    <span class="inline-block" style="overflow:hidden;height:30px;">
+    	<a href="/viewprofile/{{profile.user__id}}">
+      	{%thumbnail profile.profile_image|default:"no_profile_pic.jpg" 45x45  crop as thumb%}		
+      	<img src="{%static thumb%}" title="{{profile.user__first_name}} {{profile.uer__last_name}}">      
+      </a>
+    </span>
+    <span style="" class="inline-block cmt_t">
+  		<span class="block">
+  			{{comment.msg}}
+  		</span>
+  		<span class="block">
+  			<span class='inline-block time'>{{comment.created | mytimesince}}</span>
+	        <span class='inline-block'>        
+	          <span>
+	              <a  href="#" data-type_id='109979991' onclick="return likers.like(this)"  data-post='{{row.id}}' data-category=''>
+	                Like 
+	          </span>                    
+	        </span>
+  		</span>
+	</span>
+</span>

@@ -1,0 +1,25 @@
+{%if tags%}
+	{%for t in tags%}
+	<div class="block">
+		<span class='list-items'>
+			<a href="javascript:void(0);" data-ex='1' data-tgid='{{t.id}}' data-tg='{{t.tag_name}}' >
+				<span  class='small_padd block hdlne'>
+					{{t.tag_name}}
+				</span>		
+			</a>	
+		</span>
+	</div>
+	{%endfor%}
+{%else%}
+<div class="block">
+	<span class='inline-block'>
+		<span class'block'>
+		<a onclick="addTag()" data-ex='0' data-tg='{{tag}}' data-id='{{t.id}}' >
+				<span  class='small_padd block hdlne'>
+					Add {{tag}} 
+				</span>		
+			</a>	
+		</span>
+	</span>
+</div>
+{%endif%}

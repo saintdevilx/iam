@@ -1,0 +1,69 @@
+{%load static from staticfiles%}
+<div id="pic_viewer">
+  <div style="margin:0 9px" class="float_left">
+    <span style="">
+      	<div id="im_ls">	
+      		<div id='im_ls'>
+				<span id='im_ls{{img.id}}' class=''>
+					<img src="{%static img.image %}"   >
+				</span>
+			</div>
+  		</div>
+    </span>
+    <div id="al-info">
+      <div class="inline-block float_left">
+      	<div class="block link-btn">
+         <a href="/viewprofile/{{img.uid}}"> {{img.first_name}} {{img.last_name}}</a>
+        </div>
+      	<div class="block">{{img.created}}</div>
+      </div>  
+      <div style="border: 0px solid rgb(238, 238, 238); height: 50px; margin: 0px 15px; width: 400px;" class="inline-block padd_all ">
+        <div class="block">
+          {%if img.caption%}
+            {{img.caption}}
+          {%else%}
+            {%ifequal img.uid user.id%}
+              Add caption
+            {%endifequal%}
+          {%endif%}
+        </div>
+        <div class="inline-block small_padd">
+          <span>
+            {%if liked%}
+              <a  href="#"  onclick="return likers.unlike(this)" data-category='post'  data-likeid='{{liked.0.id}}' data-type='' data-type_id='{{type}}'  data-post='{{img.id}}' data-count='{{img.likes}}' data-act=''>Unlike</a>
+            {% else%}
+              <a onclick="return likers.like(this)" data-category='post'  data-post='{{img.id}}'  data-type_id='{{type}}}' href="#"> Like</a>
+            {%endif%}
+          </span>
+          <span class='like-count inline-block small_padd'>
+            <span class='inline-block'>
+              {%ifequal img.likes 0%}{%else%}
+              <a href="#"  onclick="likers.get({{img.id}}, {{type}}); return false;">
+              <span id='likecounts'>{{img.likes}}</span>
+              </a>
+              {%endifequal%}
+            </span>
+          </span>
+        </div>
+        <div class="inline-block small_padd">
+          <a href="#" onclick="gallery.listcomments(this,{{img.id}} {%if type%},{{type}}{%endif%} )">Comment</a>
+          <span id='cmnt_count'>
+            {%if img.comments%}{{img.comments}}{%endif%}
+          </span>
+        </div>        
+      </div>
+      <div class="inline-block float_right">
+      	<div class="block link-btn">{{img.name}} <small>{{img.image_count}}</small></div>
+      </div>
+    </div>
+  </div>
+  <span class="cmnt inline-block hidden" id="cmt_ar">
+          <span class="" id="cmnt_lst">
+  </span>
+  <span class=" small_padd block">
+    <span class='placeholder small_padd'>Add Comment</span>
+    <textarea rows="1" class=" inline-block small_padd" name="cmt_txt" placehodler="Add comment..."></textarea>           
+    <a  data-post="{{img.id}}" data-post_type='{{type}}' onclick="comment(this)" href="javascript:void(0);" style="background:#f6f6f6;border:1px solid #CCC;padding:5px 3px;vertical-align:top;" class="nrml-font inline-block small_padd">comment  </a>
+  </span>
+</span>
+</div>

@@ -1,0 +1,9 @@
+{%for l in location%}
+	<div class="locRow">
+		<div class="label">
+			<a href="#" onclick="Profile.chooseLocation('{{l.country_name}}',{{l.id}})" >
+				{{l.country_name}}
+			</a>
+		</div>
+	</div>
+{%endfor%}

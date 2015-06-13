@@ -1,0 +1,16 @@
+{%spaceless%}
+{%load static from staticfiles%}
+{%load fook_tags%}
+{%load thumbnail%}
+<div class="inline-block ">
+	<div style="padding:5px 0;" class="list-item heading"> 				
+		{%for l in lst%}
+			{%my_thumbnail l.image size="150x100" crop=True dir="" %}
+			{% thumbnail l.image 150x100 crop as thumb %}
+			{%if thumb%}
+				<img src="{%static thumb %}" />
+			{%endif%}
+		{%endfor%}
+	</div>
+</div>
+{%endspaceless%}

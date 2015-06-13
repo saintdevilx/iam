@@ -1,0 +1,64 @@
+{%load thumbnail%}
+{%load static from staticfiles %}	
+	<div class="block">
+		<div class="page-header">
+			<div class="hdlne _bckf8">
+				<div class="cntr">Videos</div>
+			</div>		
+			<div class="videos  padd_all">
+			{%if me%}
+				{%include 'ajax/video/addVideo.html'%}
+			{%endif%}
+			{%if videos%}			
+				{%for video in videos%}							
+					<div class="video" id="video_{{video.id}}">						
+						<div class="thumb" title="{{video.title}}">		
+								<a href="javascript:void(0);" class="vid_thumb" data-vid="{{video.token}}" onclick="Player.play(this);">															
+								{%thumbnail video.thumbnail 250x150 as thumb%}
+								<img src="{%static thumb%}" width="250" height="150" />
+								<a href="javascript:void(0);" onclick="Video.remove({{video.id}},event)"><div class="remove"><i class='block ui-icon ui-icon-trash'></i></div></a>
+								<span style='' class='block'></span>
+								<span class='player_wrap'></span>					
+								</a>
+								<div>
+									<div class="vid_info"></div>
+									<div class="vid_title">{{video.title}}</div>								
+									<div class="vid_duration">{{video.duration}}</div>
+								</div>
+						</div>
+						<div class="">
+							<div class="inline-block ">
+								<div class="inline-block">
+									<div class="like-action">
+									{%if is_like %}<a href="#" onclick="return likers.unlike(this)">Unlike</a>
+									{%else%}<a href="#" onclick="return likers.like(this);" data-post="{{video.id}}" data-type_id="109979993" data-category="video"> Like</a>	
+									{%endif%}
+									</div>
+								</div>
+								<div id="like-count" class="inline-block">{%ifnotequal video.likes 0%} 
+									<a href="#"  onclick="likers.get({{video.id}},109979993); return false;"><span id='likecounts'>{{video.likes}} </span></a>{%endifnotequal%}</div>
+							</div>
+							<div class="inline-block small_padd">
+								<a href="#" onclick="lstcomment({{video.id}});">Comment</a>
+							</div>
+							<div class="inline-block small_padd">
+								<div class="inline-block">
+									<a href="#" >
+										<div class="inline-block">Views</div>
+										<div class="inline-block">{{video.views}}</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				{%endfor%}
+			{%else%}
+				<div class="block">
+					<div class="block">
+						<h1>No Video Found</h1>
+					</div>
+				</div>
+			{%endif%}
+			</div>
+		</div>
+	</div>

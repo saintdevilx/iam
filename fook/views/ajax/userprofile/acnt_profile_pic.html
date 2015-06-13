@@ -1,0 +1,4 @@
+{%load thumbnail%}
+{%load static from staticfiles%}
+{%thumbnail u.profile_image 50x50 crop as thumb%}
+<img src="{%static thumb%}" width="40" height="40" />

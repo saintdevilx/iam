@@ -1,0 +1,22 @@
+{%load static from staticfiles %}
+{%load thumbnail%}
+	{%for v in videos%}
+	<a href="javascript:void(0);" onclick="Player.play(this)" data-vid="{{v.token}}" class="inline-block">
+		<div class="_video_wrap">
+			<div class="_video">				
+				<div class="_title">{{v.name}}{{v.title}}</div>				
+				{%thumbnail v.thumbnail|default:"no_profile_pic.jpg" 150x100 crop as thumb%}
+				<div class="thumb"><img src="{%static thumb%}" width="{{thumb.width}}" height="{{thumb.height}}" /></div>				
+				<div class="al_des">					
+					<div class=""><div class="_likes">{{v.likes}} Likes</div><div class="im_cnt">{{v.views}} views</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</a>
+	{%endfor%}
+	{%if empty%}
+		<div class="album">
+			No Album Found
+		</div>
+	{%endif%}

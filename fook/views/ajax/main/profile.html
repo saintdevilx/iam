@@ -1,0 +1,104 @@
+{%spaceless%}
+{% load thumbnail%}		
+{%load static from staticfiles%}
+<script type="text/javascript">
+	var bootload = { 'user':{'id':'{{uid}}','name':'{{user.first_name}} {{user.last_name}} '},essential:['Profile.loadProfile({{user_info.id}}{%if not me%},false{%endif%})'] };booter();		
+</script>
+<div id='profile'>
+	<div class="hdlne _bckf8">
+		<span>{{username}}</span>
+	</div>
+	<div style="margin-top:0px;" id="basic_info">
+	<div class="profile_wrap inline-block">
+		<div class="profile_pic inline-block _fl" >
+			{%if me%}<a class="trnsbtn small_padd" data-event="page" data-view="prupldr" data-category="profile" data-user="124" onclick="Profile.change_profile(this);" href="javascript:void(0);">Change Profile Picture </a>{%endif%}
+			<span id="profile_image_wrap">
+				<a href="javascript:void(0);" onclick="viewPhoto(this,{'al':'{{profile.current_profile}}','user':{{user_info.id}},'type':'109979992' })">
+					{% thumbnail profile.profile_image|default:'no_profile_pic.jpg' 200x300 crop  as thumb%}
+					{% if thumb%}<img src="{%static thumb%}" width="200" height="300" id="profile_img">{%else%}	<img height="300" width="200" src="{%static no_profile_pic.jpg%}" />{%endif%}
+				</a>
+			</span>
+				{%if me%}{%else%}
+				<div class="list-item" >
+					<div class="block  small_padd profile_option">
+						{%if fstatus %}								
+							<div class="_fl small_padd btn">
+								<div class="block">
+									<span class='_fl'>{{fstatus}}</span>
+									<span class='_fr'>
+										<a href="javascript:void(0);" onclick="Friend.toggleMenu(this)"><i class='block ui-icon ui-icon-triangle-1-s'></i></a>
+									</span>
+								</div>
+								<span class="frndopt_ friendOpt" style='display:none;'>
+								    <div class="lbw frndopt border-all">      
+											<span><a onclick="Friend.unfriend(this, 24 ,103);" class="" href="javascript:void(0);">UnFriend</a></span>
+								    </div>
+									</span>
+							</div>
+						{%else%}									
+							<div class=" small_padd float_left btn">
+								<a href="javascript:void(0);" id="addfriend" onclick="return Friend.addFriend(this,'{{user_info.id}}')">Add Friend</a>
+							</div>									
+						{%endif%}
+							<div class="_fr btn small_padd">
+									<a href="javascript:void(0);" onclick="message_send(this);" class="" >Message</a>
+							</div>
+							<div class="clear"></div>							
+					</div>
+				</div>
+				{%endif%}
+		</div>
+		<span id="glry-img" class="inline-block">					
+			{%if me%}
+			  <a data-album="6" data-category="galy" data-event="al_ad_ph" data-title="add Photos" onclick="var ph =new window.ph_viewer(this,{'title':'Add Photos' }) ;ph.show();ph.load();" href="javascript:void(0);"><span class="trnsbtn" >Add Photo</span></a>
+			{%endif%}	
+		</span>
+		<div class="clear"></div>
+	</div>
+	<div class="profile-nav">
+		<div class="profile_tb_wrap">
+			<a href="javascript:void(0);" onclick="return Profile.info({{user_info.id}})"><span class='profile_tb'>Info</span></a><a href="javascript:void(0);" onclick="return Profile.activity({{user_info.id}})"><span class='profile_tb'>News</span></a><a href="javascript:void(0);" onclick="return Profile.photo('{{user_info.id}}')"><span class='profile_tb'>Photo</span></a><a href="javascript:void(0);" onclick="return nav.open('/profile/video')"><span class='profile_tb'>Video</span></a>				
+		</div>
+	</div>
+	<div id="content_pane">
+		<div class="divider"></div>
+		<div class="info _pinfo_wrap">
+			<div class="_pr_tukda " onclick="return Profile.enableEditing();">
+				<span class='hdl'>About <div class="_fr"></div> </span>
+				<span class='block'>
+					<span class="_pinfo " title="Birthday">  
+					 	<span style="text-align:center;"><i class="ui-icon ui-icon-calendar block"></i></span>
+						{%if profile.birthday%}
+							<a>	<span class="">{{profile.birthday}}</span> </a>
+						{%else%}
+							Not added
+						{%endif%}
+					</span>				
+				</span>
+			</div>
+		</div>	
+		<div class="divider"></div>
+		<div class="albums" id='albums_wrap'>
+			<div class="_pr_tukda ">
+				<a href="{%if me%}{%else%}/{{profile.user_id}}{%endif%}/gallery"><span class='hdl'>Albums</span></a>
+				<span id='profileAlbumList' class="_palbms" ></span>
+			</div>
+		</div>	
+		<div class="divider"></div>
+		<div class="frnd" id='friends_wrap'>
+			<div class="_pr_tukda ">
+				<a href="{%if me%}{%else%}/{{profile.user_id}}{%endif%}/friends"><span class='hdl'>Friends</span></a>
+				<span id='profileFriendList' class="_pfriends" title="Albums"></span>
+			</div>
+		</div>	
+		<div class="divider"></div>
+		<div class="video" id='video_wrap'>
+			<div class="_pr_tukda ">
+				<a href="{%if me%}{%else%}/{{profile.user_id}}{%endif%}/videos"><span class='hdl'>Video</span></a>
+				<span class="_pvideo" id="profileVideoList" title="videos">  </span>
+			</div>
+		</div>	
+	</div>
+</div>		
+</div>
+{%endspaceless%}

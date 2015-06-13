@@ -1,0 +1,127 @@
+{% extends 'layout/anonymous.html'%}
+{% block metatext%} Join Fook . Signup new User Registration.{% endblock%}
+{% block title %} Fook- User Registration | Join Fook | New Users{% endblock%}
+{% block main%}
+	<div class="drishya">
+		<div class="madhya">
+			<div class="border-all" id='page-header'>
+				<div class="hdlne padd_all" style="background:#F8F9FA">
+					<span style="color:#666;">Experience Your Own Kind Of Social Networking. </span>
+				</div>
+				<div class="signupVw">
+					<div class="block">
+						<div class="hdlne">Sign Up </div>
+					</div>
+					<div class="block">
+						<form  action="/signup" method="post" enctype="multipart/form-data">	
+							<div class='register' >
+								<div class='hidden'>{%csrf_token%}</div>
+								<div class='block'>
+									<div class='block {% if form.page_name.errors %} error {% endif%}'>		
+										<div class="inline-block lbl">First Name</div>
+										<div class="inline-block">
+											<input name='first_name' required='true' type="text" maxlength="30" placeholder="First Name" autocomplete="off" />
+										</div>
+										<div class="inline-block">{{form.first_name.errors | striptags}}		</div>
+									</div>
+								</div>
+								<div class='block'>
+									<div class="inline-block lbl">Last Name</div>
+									<div class='inline-block {% if form.last_name.errors %} error {% endif%}'>
+										<div class="inline-block">
+											<input name='last_name' required='true' type="text" maxlength="30" placeholder="Last Name" autocomplete="off" />
+										</div>
+										<div class="inline-block">{{form.last_name.errors | striptags}}</div>
+									</div>
+								</div>									
+								<div class='block'>				
+									<div class="inline-block lbl">
+										Birthday
+									</div>
+									<div class='inline-block {% if profile_form.birthday.errors %} error {% endif %}'>
+										<div class="inline-block">{{profile_form.birthday }}</div>
+										<div class="class="inline-block>{{ profile_form.birthday.errors | striptags }} </div>
+									</div>
+								</div>		
+								<div class='block'>				
+									<div class="inline-block lbl">
+										Gender
+									</div>
+									<div class='inline-block {% if profile_form.gender.errors %} error {% endif %}'>
+										<div class="inline-block">{{profile_form.gender }}</div>
+										<div class="inline-block">{{ profile_form.gender.errors | striptags }} </div>
+									</div>
+								</div>		
+								<div class='block'>				
+									<div class="inline-block lbl">
+										Email
+									</div>					
+									<div class='inline-block {% if form.email.errors %} error {% endif %}'>
+										<div class="inline-block"><input name='email' required='true' type="email" maxlength="50" placeholder="Email" autocomplete="off" /></div>
+										<div class="inline-block">{{ form.email.errors | striptags }} </div>
+									</div>
+								</div>
+								<div class='block'>				
+									<div class="inline-block lbl">
+											Username
+									</div>					
+									<div class='inline-block {% if form.username.errors %} error{% endif%}'>
+										<div class="inline-block"><input name='username' required='true' type="text" maxlength="30" placeholder="Username" autocomplete="off" /></div>
+										<div class="inline-block">{{ form.username.errors | striptags }}</div>
+									</div>
+								</div>
+								<div class='block'>
+									<div class="inline-block lbl">
+										Password
+									</div>					
+									<div class='inline-block {% if form.password.errors %} error{% endif%}'>
+										<div class="inline-block"><input name='password' type="password" maxlength="30" placeholder="Password" required='true' autocomplete="off" /></div>
+										<div class="inline-block">{{ form.password.errors | striptags }}</div>
+									</div>
+								</div>			
+								<div class="block">	
+									<div class="lbl inline-block"></div>	
+									<div class='inline-block'>
+										<div class="block"><input type="submit" value="Join"></div>
+									</div>
+								</div>
+								<div class="block padd_all">
+									<div class="lbl inline-block"></div>
+									<div class="inline-block">
+										<div> <b>OR</b></div>
+										<div class="block">
+											<a href="/signin">
+												<b class='link-btn' style='font-size:1.09em;'>
+												LOGIN if You already have account</b>
+											</a>
+										</div>						
+									</div>						
+								</div>
+							</div>		
+						</form>
+					</div>
+				</div>
+				<div id='ftr' style="text-align:center;width:600px;" class="border-all">
+					<a href="/index">
+						<div class="mn_bx">
+							Home
+						</div>
+					</a>
+					<a href="javascript:void(0);">
+						<div class="mn_bx">
+							About
+						</div>
+					</a>
+					<a href="javascript:void(0);">
+						<div class="mn_bx">
+							Help
+						</div>
+					</a>
+					&copy; copyright by Fook,Inc.
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	
+{% endblock %}

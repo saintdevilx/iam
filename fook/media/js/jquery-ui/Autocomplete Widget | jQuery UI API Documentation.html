@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="js multiplebgs boxshadow cssgradients wf-klavikaweb-i7-active wf-klavikaweb-n7-active wf-sourcecodepro-n4-active wf-sourcecodepro-n7-active wf-active" lang="en-US"><!--<![endif]--><head data-live-domain="api.jqueryui.com">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/ados.js" async="" type="text/javascript"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Autocomplete Widget | jQuery UI API Documentation</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org">
+	<meta name="description" content="jQuery: The Write Less, Do More, JavaScript Library">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="shortcut icon" href="http://api.jqueryui.com/jquery-wp-content/themes/api.jqueryui.com/i/favicon.ico">
+
+	<link rel="stylesheet" href="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/base.css">
+	<link rel="stylesheet" href="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/style.css">
+
+	<script src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/ga.js" async="" type="text/javascript"></script><script src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/modernizr.js"></script>
+
+	<script src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery.js"></script>
+	<script>window.jQuery || document.write(unescape('%3Cscript src="//api.jqueryui.com/jquery-wp-content/themes/jquery/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+	<script src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/plugins.js"></script>
+	<script src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/main.js"></script>
+
+	<script src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/wde1aof.js"></script>
+	<style type="text/css">.tk-source-code-pro{font-family:"source-code-pro",sans-serif;}.tk-klavika-web{font-family:"klavika-web",sans-serif;}</style><link href="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/d.css" rel="stylesheet"><script>try{Typekit.load();}catch(e){}</script>
+
+<meta name="generator" content="WordPress 4.0">
+
+</head>
+<body class="api jquery-ui single single-post postid-9 single-format-standard single-author singular">
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links l_tinynav1">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/CLA/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+																			<li><a href="http://jssummit.com/">Nov 18 - 20 | JavaScript Summit</a></li>
+													<li><a href="http://jqueryuk.com/2015/?source=jqorg-listing">Mar 6 | jQuery UK 2015</a></li>
+												</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="http://jqueryui.com/" title="jQuery UI API Documentation">jQuery UI API Documentation</a></h2>
+
+		<aside><div id="broadcast"><a href="http://engine.adzerk.net/r?e=eyJhdiI6MjIyMzYsImF0IjoxMzE0LCJidCI6MCwiY20iOjcxOTMyLCJjaCI6ODM2OCwiY3IiOjE5OTc3NSwiZGkiOiIyOTZlYThmMDc5ZTY0MGU1OTQ1MzhiODRjMTQyYTk0ZSIsImRtIjoxLCJmYyI6MjUxODg2LCJmbCI6MTI3ODc0LCJpcCI6IjEwNi4yMTkuMTQxLjQxIiwibnciOjU0NDksInBjIjowLCJwciI6MjE5MzcsInJ0IjoxLCJyZiI6Imh0dHA6Ly9qcXVlcnl1aS5jb20vYXV0b2NvbXBsZXRlLyIsInN0Ijo1MzgyOSwidWsiOiJ1ZTEtMjdiZTkwOTljYTIyNDljNGJkNmZiZmJkMjllZTYwZDYiLCJ0cyI6MTQxNjA1NTQ4MzA1OCwiYmYiOnRydWUsInVyIjoiaHR0cHM6Ly9qcXVlcnkub3JnL2RvbmF0ZS8ifQ&amp;s=XXVzZF-PlqTxPP_P90Peo1yovp8" rel="nofollow" target="_blank" title="Support the jQuery Foundation"><img src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/bc85dff2b3dc44ddb9650e1659b1ad1e.png" title="Support the jQuery Foundation" alt="Support the jQuery Foundation" height="100" border="0" width="400"></a><img src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/i.gif" style="position:absolute;" height="0px" border="0" width="0px"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu l_tinynav2">
+<li class="menu-item"><a href="http://jqueryui.com/demos/">Demos</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/download/">Download</a></li>
+<li class="menu-item current"><a href="http://api.jqueryui.com/">API Documentation</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/themeroller/">Themes</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/development/">Development</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/support/">Support</a></li>
+<li class="menu-item"><a href="http://blog.jqueryui.com/">Blog</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/about/">About</a></li>
+	</ul><select class="tinynav tinynav2" id="tinynav2"><option selected="selected">Navigate...</option><option value="http://jqueryui.com/demos/">Demos</option><option value="http://jqueryui.com/download/">Download</option><option value="http://api.jqueryui.com/">API Documentation</option><option value="http://jqueryui.com/themeroller/">Themes</option><option value="http://jqueryui.com/development/">Development</option><option value="http://jqueryui.com/support/">Support</option><option value="http://blog.jqueryui.com/">Blog</option><option value="http://jqueryui.com/about/">About</option></select>
+</div>
+
+		<form method="get" class="searchform" action="//api.jqueryui.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search jQuery UI API Documentation</span>
+		<input name="s" placeholder="Search" type="text">
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+<div class="content-right twelve columns">
+	<div id="content">
+					
+<article id="post-9" class="post-9 post type-post status-publish format-standard hentry category-widgets">
+	<header class="entry-header">
+		<h1 class="entry-title">Autocomplete Widget</h1>
+		<hr>
+				<div class="entry-meta">
+			Categories: <span class="category"><a href="http://api.jqueryui.com/category/widgets/">Widgets</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<article id="autocomplete1" class="entry widget"><h2 class="section-title">
+<span>Autocomplete Widget</span><span class="version-details">version added: 1.8</span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>Description: </strong>Autocomplete enables users
+ to quickly find and select from a pre-populated list of values as they 
+type, leveraging searching and filtering.</p>
+<section id="quick-nav"><header><h2>QuickNav<a href="#entry-examples">Examples</a>
+</h2></header><div class="quick-nav-section">
+<h3>Options</h3>
+<div><a href="#option-appendTo">appendTo</a></div>
+<div><a href="#option-autoFocus">autoFocus</a></div>
+<div><a href="#option-delay">delay</a></div>
+<div><a href="#option-disabled">disabled</a></div>
+<div><a href="#option-minLength">minLength</a></div>
+<div><a href="#option-position">position</a></div>
+<div><a href="#option-source">source</a></div>
+</div>
+<div class="quick-nav-section">
+<h3>Methods</h3>
+<div><a href="#method-close">close</a></div>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-disable">disable</a></div>
+<div><a href="#method-enable">enable</a></div>
+<div><a href="#method-instance">instance</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-search">search</a></div>
+<div><a href="#method-widget">widget</a></div>
+<br><h3>Extension Points</h3>
+<div><a href="#method-_renderItem">_renderItem</a></div>
+<div><a href="#method-_renderMenu">_renderMenu</a></div>
+<div><a href="#method-_resizeMenu">_resizeMenu</a></div>
+</div>
+<div class="quick-nav-section">
+<h3>Events</h3>
+<div><a href="#event-change">change</a></div>
+<div><a href="#event-close">close</a></div>
+<div><a href="#event-create">create</a></div>
+<div><a href="#event-focus">focus</a></div>
+<div><a href="#event-open">open</a></div>
+<div><a href="#event-response">response</a></div>
+<div><a href="#event-search">search</a></div>
+<div><a href="#event-select">select</a></div>
+</div></section><div class="longdesc" id="entry-longdesc">
+		<p>Any field that can receive input can be converted into an Autocomplete, namely, <code>&lt;input&gt;</code> elements, <code>&lt;textarea&gt;</code> elements, and elements with the <code>contenteditable</code> attribute.</p>
+
+		<p>By giving an Autocomplete field focus or entering something into 
+it, the plugin starts searching for entries that match and displays a 
+list of values to choose from. By entering more characters, the user can
+ filter down the list to better matches.</p>
+
+		<p>This can be used to choose previously selected values, such as 
+entering tags for articles or entering email addresses from an address 
+book. Autocomplete can also be used to populate associated information, 
+such as entering a city name and getting the zip code.</p>
+
+		<p>You can pull data in from a local or remote source: Local is good 
+for small data sets, e.g., an address book with 50 entries; remote is 
+necessary for big data sets, such as a database with hundreds or 
+millions of entries to select from. To find out more about customizing 
+the data source, see the documentation for the <a href="#option-source"><code>source</code></a> option.</p>
+
+		<h3>Keyboard interaction</h3>
+
+		<p>When the menu is open, the following key commands are available:</p>
+		<ul>
+			<li>
+<code>UP</code>: Move focus to the previous item. If on first item, move focus to the input. If on the input, move focus to last item.</li>
+			<li>
+<code>DOWN</code>: Move focus to the next item. If on last item, move focus to the input. If on the input, move focus to the first item.</li>
+			<li>
+<code>ESCAPE</code>: Close the menu.</li>
+			<li>
+<code>ENTER</code>: Select the currently focused item and close the menu.</li>
+			<li>
+<code>TAB</code>: Select the currently focused item, close the menu, and move focus to the next focusable element.</li>
+			<li>
+<code>PAGE UP</code>/<code>PAGE DOWN</code>: Scroll through a page of items (based on height of menu). <em>It's generally a bad idea to display so many items that users need to page.</em>
+</li>
+		</ul>
+
+		<p>When the menu is closed, the following key commands are available:</p>
+		<ul>
+			<li>
+<code>UP</code>/<code>DOWN</code>: Open the menu, if the <a href="#option-minLength"><code>minLength</code></a> has been met.</li>
+		</ul>
+
+		<div>
+	<h3 id="theming">Theming</h3>
+
+	<p>The autocomplete widget uses the <a href="http://api.jqueryui.com/theming/css-framework/">jQuery UI CSS framework</a> to style its look and feel. If autocomplete specific styling is needed, the following CSS class names can be used:</p>
+</div>
+
+		<ul>
+			<li>
+<code>ui-autocomplete</code>: The <a href="http://api.jqueryui.com/menu/#theming">menu</a> used to display matches to the user.</li>
+			<li>
+<code>ui-autocomplete-input</code>: The input element that the Autocomplete widget was instantiated with.</li>
+		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="http://api.jqueryui.com/category/ui-core/">UI Core</a></li>
+			<li><a href="http://api.jqueryui.com/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="http://api.jqueryui.com/position/">Position</a></li>
+			<li><a href="http://api.jqueryui.com/menu/">Menu</a></li>
+		</ul>
+	</div>
+<h3>Additional Notes:</h3>
+<div class="longdesc"><ul>
+<li>
+			This widget requires some functional CSS, otherwise it won't work. If
+ you build a custom theme, use the widget's specific CSS file as a 
+starting point.
+		</li>
+<li>
+			This widget manipulates its element's value programmatically, therefore a native <code>change</code> event may not be fired when the element's value changes.
+		</li>
+</ul></div>
+<section id="options"><header><h2>Options</h2></header><div id="option-appendTo" class="api-item first-item">
+<h3>appendTo<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Selector">Selector</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>null</code>
+</div>
+<div>
+				<p>Which element the menu should be appended to. When the value is <code>null</code>, the parents of the input field will be checked for a class of <code>ui-front</code>. If an element with the <code>ui-front</code>
+ class is found, the menu will be appended to that element. Regardless 
+of the value, if no element is found, the menu will be appended to the 
+body.</p>
+				<div class="warning">
+<strong>Note:</strong> The <code>appendTo</code> option should not be changed while the suggestions menu is open.</div>
+</div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the <code>appendTo</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({ appendTo: <span class="string">"#someElem"</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>appendTo</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> appendTo = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"appendTo"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"appendTo"</span>, <span class="string">"#someElem"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-autoFocus" class="api-item">
+<h3>autoFocus<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>If set to <code>true</code> the first item will automatically be focused when the menu is shown.</div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the <code>autoFocus</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({ autoFocus: <span class="literal">true</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>autoFocus</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> autoFocus = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"autoFocus"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"autoFocus"</span>, <span class="literal">true</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-delay" class="api-item">
+<h3>delay<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Integer">Integer</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>300</code>
+</div>
+<div>The delay in milliseconds between when a keystroke occurs and when a
+ search is performed. A zero-delay makes sense for local data (more 
+responsive), but can produce a lot of load for remote data, while being 
+less responsive.</div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the <code>delay</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({ delay: <span class="number">500</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>delay</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> delay = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"delay"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"delay"</span>, <span class="number">500</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-disabled" class="api-item">
+<h3>disabled<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Disables the autocomplete if set to <code>true</code>.</div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the <code>disabled</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({ disabled: <span class="literal">true</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>disabled</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> disabled = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"disabled"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"disabled"</span>, <span class="literal">true</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-minLength" class="api-item">
+<h3>minLength<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Integer">Integer</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>1</code>
+</div>
+<div>The minimum number of characters a user must type before a search 
+is performed. Zero is useful for local data with just a few items, but a
+ higher value should be used when a single character search could match a
+ few thousand items.</div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the <code>minLength</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({ minLength: <span class="number">0</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>minLength</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> minLength = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"minLength"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"minLength"</span>, <span class="number">0</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-position" class="api-item">
+<h3>position<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Object">Object</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>{ my: "left top", at: "left bottom", collision: "none" }</code>
+</div>
+<div>Identifies the position of the suggestions menu in relation to the associated input element. The <code>of</code> option defaults to the input element, but you can specify another element to position against. You can refer to the <a href="http://api.jqueryui.com/position/">jQuery UI Position</a> utility for more details about the various options.</div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the <code>position</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({ position: { my : <span class="string">"right top"</span>, at: <span class="string">"right bottom"</span> } });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>position</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> position = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"position"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"position"</span>, { my : <span class="string">"right top"</span>, at: <span class="string">"right bottom"</span> } );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-source" class="api-item">
+<h3>source<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Array">Array</a> or <a href="http://api.jquery.com/Types/#String">String</a> or <a href="http://api.jquery.com/Types/#Function">Function</a>( <a href="http://api.jquery.com/Types/#Object">Object</a> request, <a href="http://api.jquery.com/Types/#Function">Function</a> response( <a href="http://api.jquery.com/Types/#Object">Object</a> data ) )</span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>none; must be specified</code>
+</div>
+<div>
+				Defines the data to use, must be specified.
+				<p>Independent of the variant you use, the label is always treated 
+as text. If you want the label to be treated as html you can use <a href="https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/src/autocomplete/jquery.ui.autocomplete.html.js">Scott González' html extension</a>. The demos all focus on different variations of the <code>source</code> option - look for one that matches your use case, and check out the code.</p>
+			</div>
+<strong>Multiple types supported:</strong><ul>
+<li>
+<strong>Array</strong>: 
+					An array can be used for local data. There are two supported formats:
+					<ul>
+						<li>An array of strings: <code>[ "Choice1", "Choice2" ]</code>
+</li>
+						<li>An array of objects with <code>label</code> and <code>value</code> properties: <code>[ { label: "Choice1", value: "value1" }, ... ]</code>
+</li>
+					</ul>
+					The label property is displayed in the suggestion menu. The value 
+will be inserted into the input element when a user selects an item. If 
+just one property is specified, it will be used for both, e.g., if you 
+provide only <code>value</code> properties, the value will also be used as the label.
+				</li>
+<li>
+<strong>String</strong>: When a string is used, the Autocomplete plugin 
+expects that string to point to a URL resource that will return JSON 
+data. It can be on the same host or on a different one (must provide 
+JSONP). The Autocomplete plugin does not filter the results, instead a 
+query string is added with a <code>term</code> field, which the server-side script should use for filtering the results. For example, if the <code>source</code> option is set to <code>"http://example.com"</code> and the user types <code>foo</code>, a GET request would be made to <code>http://example.com?term=foo</code>. The data itself can be in the same format as the local data described above.</li>
+<li>
+<strong>Function</strong>: 
+					The third variation, a callback, provides the most flexibility and 
+can be used to connect any data source to Autocomplete. The callback 
+gets two arguments:
+					<ul>
+						<li>A <code>request</code> object, with a single <code>term</code> property, which refers to the value currently in the text input. For example, if the user enters <code>"new yo"</code> in a city field, the Autocomplete term will equal <code>"new yo"</code>.</li>
+						<li>A <code>response</code> callback, which expects a single 
+argument: the data to suggest to the user. This data should be filtered 
+based on the provided term, and can be in any of the formats described 
+above for simple local data. It's important when providing a custom 
+source callback to handle errors during the request. You must always 
+call the <code>response</code> callback even if you encounter an error. This ensures that the widget always has the correct state.</li>
+					</ul>
+					<p>When filtering data locally, you can make use of the built-in <code>$.ui.autocomplete.escapeRegex</code> function. It'll take a single string argument and escape all regex characters, making the result safe to pass to <code>new RegExp()</code>.</p>
+				</li>
+</ul>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the <code>source</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({ source: [ <span class="string">"c++"</span>, <span class="string">"java"</span>, <span class="string">"php"</span>, <span class="string">"coldfusion"</span>, <span class="string">"javascript"</span>, <span class="string">"asp"</span>, <span class="string">"ruby"</span> ] });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>source</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> source = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"source"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"source"</span>, [ <span class="string">"c++"</span>, <span class="string">"java"</span>, <span class="string">"php"</span>, <span class="string">"coldfusion"</span>, <span class="string">"javascript"</span>, <span class="string">"asp"</span>, <span class="string">"ruby"</span> ] );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div></section><section id="methods"><header><h2>Methods</h2></header><div id="method-close"><div class="api-item first-item">
+<h3>close()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>Closes the Autocomplete menu. Useful in combination with the <a href="#method-search"><code>search</code></a> method, to close the open menu.</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the close method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"close"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-destroy"><div class="api-item">
+<h3>destroy()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+		Removes the autocomplete functionality completely. This will return the element back to its pre-init state.
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the destroy method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"destroy"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-disable"><div class="api-item">
+<h3>disable()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+		Disables the autocomplete.
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the disable method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"disable"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-enable"><div class="api-item">
+<h3>enable()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+		Enables the autocomplete.
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the enable method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"enable"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-instance"><div class="api-item">
+<h3>instance()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#Object">Object</a></span>
+</h3>
+<div>
+		<p>Retrieves the autocomplete's instance object. If the element does not have an associated instance, <code>undefined</code> is returned.</p>
+
+		<p>Unlike other widget methods, <code>instance()</code> is safe to call on any element after the autocomplete plugin has loaded.</p>
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the instance method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"instance"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-option">
+<div class="api-item">
+<h3>option( optionName )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#Object">Object</a></span>
+</h3>
+<div>Gets the value currently associated with the specified <code>optionName</code>.</div>
+<ul><li>
+<div><strong>optionName</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The name of the option to get.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> isDisabled = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"disabled"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div class="api-item">
+<h3>option()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#PlainObject">PlainObject</a></span>
+</h3>
+<div>Gets an object containing key/value pairs representing the current autocomplete options hash.</div>
+<ul><li><div class="null-signature">This signature does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> options = $( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div class="api-item">
+<h3>option( optionName, value )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>Sets the value of the autocomplete option associated with the specified <code>optionName</code>.</div>
+<ul>
+<li>
+<div><strong>optionName</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The name of the option to set.</div>
+</li>
+<li>
+<div><strong>value</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>A value to set for the option.</div>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, <span class="string">"disabled"</span>, <span class="literal">true</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div class="api-item">
+<h3>option( options )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>Sets one or more options for the autocomplete.</div>
+<ul><li>
+<div><strong>options</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>A map of option-value pairs to set.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"option"</span>, { disabled: <span class="literal">true</span> } );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+</div>
+<div id="method-search"><div class="api-item">
+<h3>search(  [value ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>Triggers a <a href="#event-search"><code>search</code></a> event 
+and invokes the data source if the event is not canceled. Can be used by
+ a selectbox-like button to open the suggestions when clicked. When 
+invoked with no parameters, the current input's value is used. Can be 
+called with an empty string and <code>minLength: 0</code> to display all items.</div>
+<ul><li>
+<div><strong>value</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div></div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the search method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"search"</span>, <span class="string">""</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-widget"><div class="api-item">
+<h3>widget()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+</h3>
+<div>Returns a <code>jQuery</code> object containing the menu element. 
+Although the menu items are constantly created and destroyed, the menu 
+element itself is created during initialization and is constantly 
+reused.</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the widget method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete( <span class="string">"widget"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div></section><section id="extension-points"><header><h2>Extension Points</h2></header><p>
+				The autocomplete widget is built with the
+				<a href="http://api.jqueryui.com/jQuery.widget/">widget factory</a> and can be
+				extended. When extending widgets, you have the ability to override or add to the
+				behavior of existing methods. The following methods are provided as extension points
+				with the same API stability as the <a href="#methods">plugin methods</a> listed
+				above. For more information on widget extensions, see
+				<a href="http://learn.jquery.com/jquery-ui/widget-factory/extending-widgets/">Extending
+				Widgets with the Widget Factory</a>.
+			</p>
+<hr>
+<div id="method-_renderItem"><div class="api-item first-item">
+<h3>_renderItem( ul, item )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+</h3>
+<div>
+				<p>Method that controls the creation of each option in the widget's menu. The method must create a new <code>&lt;li&gt;</code> element, append it to the menu, and return it.</p>
+			</div>
+<ul>
+<li>
+<div><strong>ul</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a>
+</div>
+<div>The <code>&lt;ul&gt;</code> element that the newly created <code>&lt;li&gt;</code> element must be appended to.</div>
+</li>
+<li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul>
+<li>
+<div><strong>label</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The string to display for the item.</div>
+</li>
+<li>
+<div><strong>value</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The value to insert into the input when the item is selected.</div>
+</li>
+</ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Add the item's value as a data attribute on the <code>&lt;li&gt;</code>.</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>_renderItem: <span class="keyword">function</span>( ul, item ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">return</span> $( <span class="string">"&lt;li&gt;"</span> )</code></div></div><div class="container"><div class="line"><code>    .attr( <span class="string">"data-value"</span>, item.value )</code></div></div><div class="container"><div class="line"><code>    .append( item.label )</code></div></div><div class="container"><div class="line"><code>    .appendTo( ul );</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-_renderMenu"><div class="api-item">
+<h3>_renderMenu( ul, items )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Method that controls building the widget's menu. The method is passed an empty <code>&lt;ul&gt;</code> and an array of items that match the user typed term. Creation of the individual <code>&lt;li&gt;</code> elements should be delegated to <code>_renderItemData()</code>, which in turn delegates to the <a href="#method-_renderItem"><code>_renderItem()</code></a> extension point.
+			</div>
+<ul>
+<li>
+<div><strong>ul</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a>
+</div>
+<div>An empty <code>&lt;ul&gt;</code> element to use as the widget's menu.</div>
+</li>
+<li>
+<div><strong>items</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Array">Array</a>
+</div>
+<div>An Array of items that match the user typed term. Each item is an Object with <code>label</code> and <code>value</code> properties.</div>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Add a CSS class name to the odd menu items.</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>_renderMenu: <span class="keyword">function</span>( ul, items ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> that = <span class="keyword">this</span>;</code></div></div><div class="container"><div class="line"><code>  $.each( items, <span class="keyword">function</span>( index, item ) {</code></div></div><div class="container"><div class="line"><code>    that._renderItemData( ul, item );</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code>  $( ul ).find( <span class="string">"li:odd"</span> ).addClass( <span class="string">"odd"</span> );</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-_resizeMenu"><div class="api-item">
+<h3>_resizeMenu()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>Method responsible for sizing the menu before it is displayed. The menu element is available at <code>this.menu.element</code>.</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Always display the menu as 500 pixels wide.</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>_resizeMenu: <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">this</span>.menu.element.outerWidth( <span class="number">500</span> );</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div></section><section id="events"><header><h2>Events</h2></header><div id="event-change" class="api-item first-item">
+<h3>change( event, ui )<span class="returns">Type: <code>autocompletechange</code></span>
+</h3>
+<div>Triggered when the field is blurred, if the value has changed.</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul><li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>The item selected from the menu, if any. Otherwise the property is <code>null</code>.</div>
+</li></ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the change callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  change: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompletechange event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompletechange"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-close" class="api-item">
+<h3>close( event, ui )<span class="returns">Type: <code>autocompleteclose</code></span>
+</h3>
+<div>Triggered when the menu is hidden. Not every <code>close</code> event will be accompanied by a <code>change</code> event.</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+</li>
+</ul>
+<p><em>Note: The <code>ui</code> object is empty but included for consistency with other events.</em></p>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the close callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  close: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompleteclose event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompleteclose"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-create" class="api-item">
+<h3>create( event, ui )<span class="returns">Type: <code>autocompletecreate</code></span>
+</h3>
+<div>
+		Triggered when the autocomplete is created.
+	</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+</li>
+</ul>
+<p><em>Note: The <code>ui</code> object is empty but included for consistency with other events.</em></p>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the create callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  create: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompletecreate event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompletecreate"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-focus" class="api-item">
+<h3>focus( event, ui )<span class="returns">Type: <code>autocompletefocus</code></span>
+</h3>
+<div>
+				Triggered when focus is moved to an item (not selecting). The 
+default action is to replace the text field's value with the value of 
+the focused item, though only if the event was triggered by a keyboard 
+interaction.
+				<p>Canceling this event prevents the value from being updated, but does not prevent the menu item from being focused.</p>
+			</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul><li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>The focused item.</div>
+</li></ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the focus callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  focus: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompletefocus event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompletefocus"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-open" class="api-item">
+<h3>open( event, ui )<span class="returns">Type: <code>autocompleteopen</code></span>
+</h3>
+<div>Triggered when the suggestion menu is opened or updated.</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+</li>
+</ul>
+<p><em>Note: The <code>ui</code> object is empty but included for consistency with other events.</em></p>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the open callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  open: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompleteopen event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompleteopen"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-response" class="api-item">
+<h3>response( event, ui )<span class="returns">Type: <code>autocompleteresponse</code></span>
+</h3>
+<div>Triggered after a search completes, before the menu is shown. Useful for local manipulation of suggestion data, where a custom <a href="#option-source"><code>source</code></a>
+ option callback is not required. This event is always triggered when a 
+search completes, even if the menu will not be shown because there are 
+no results or the Autocomplete is disabled.</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul><li>
+<div><strong>content</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Array">Array</a>
+</div>
+<div>Contains the response data and can be modified to change the 
+results that will be shown. This data is already normalized, so if you 
+modify the data, make sure to include both <code>value</code> and <code>label</code> properties for each item.</div>
+</li></ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the response callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  response: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompleteresponse event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompleteresponse"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-search" class="api-item">
+<h3>search( event, ui )<span class="returns">Type: <code>autocompletesearch</code></span>
+</h3>
+<div>Triggered before a search is performed, after <a href="#option-minLength"><code>minLength</code></a> and <a href="#option-delay"><code>delay</code></a> are met. If canceled, then no request will be started and no items suggested.</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+</li>
+</ul>
+<p><em>Note: The <code>ui</code> object is empty but included for consistency with other events.</em></p>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the search callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  search: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompletesearch event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompletesearch"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-select" class="api-item">
+<h3>select( event, ui )<span class="returns">Type: <code>autocompleteselect</code></span>
+</h3>
+<div>
+				Triggered when an item is selected from the menu. The default action
+ is to replace the text field's value with the value of the selected 
+item.
+				<p>Canceling this event prevents the value from being updated, but does not prevent the menu from closing.</p>
+			</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul><li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>An Object with <code>label</code> and <code>value</code> properties for the selected option.</div>
+</li></ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Initialize the autocomplete with the select callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  select: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the autocompleteselect event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"autocompleteselect"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></section><section class="entry-examples" id="entry-examples"><header><h2>Examples:</h2></header><div class="entry-example" id="example-0">
+<h4>Example: <span class="desc">A simple jQuery UI Autocomplete</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+						<div class="line n16">16</div>
+					
+						<div class="line n17">17</div>
+					
+						<div class="line n18">18</div>
+					
+						<div class="line n19">19</div>
+					
+						<div class="line n20">20</div>
+					
+						<div class="line n21">21</div>
+					
+						<div class="line n22">22</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>autocomplete demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/ui/1.11.2/jquery-ui.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"autocomplete"</span>&gt;</span>Select a programming language: <span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"autocomplete"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">"#autocomplete"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  source: [ <span class="string">"c++"</span>, <span class="string">"java"</span>, <span class="string">"php"</span>, <span class="string">"coldfusion"</span>, <span class="string">"javascript"</span>, <span class="string">"asp"</span>, <span class="string">"ruby"</span> ]</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"><iframe height="250" width="100%"></iframe></div>
+</div>
+<div class="entry-example" id="example-1">
+<h4>Example: <span class="desc">Using a custom source callback to match only the beginning of terms</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+						<div class="line n16">16</div>
+					
+						<div class="line n17">17</div>
+					
+						<div class="line n18">18</div>
+					
+						<div class="line n19">19</div>
+					
+						<div class="line n20">20</div>
+					
+						<div class="line n21">21</div>
+					
+						<div class="line n22">22</div>
+					
+						<div class="line n23">23</div>
+					
+						<div class="line n24">24</div>
+					
+						<div class="line n25">25</div>
+					
+						<div class="line n26">26</div>
+					
+						<div class="line n27">27</div>
+					
+						<div class="line n28">28</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>autocomplete demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/ui/1.11.2/jquery-ui.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"autocomplete"</span>&gt;</span>Select a programming language: <span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"autocomplete"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> tags = [ <span class="string">"c++"</span>, <span class="string">"java"</span>, <span class="string">"php"</span>, <span class="string">"coldfusion"</span>, <span class="string">"javascript"</span>, <span class="string">"asp"</span>, <span class="string">"ruby"</span> ];</code></div></div><div class="container"><div class="line"><code>$( <span class="string">"#autocomplete"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>  source: <span class="keyword">function</span>( request, response ) {</code></div></div><div class="container"><div class="line"><code>          <span class="keyword">var</span> matcher = <span class="keyword">new</span> RegExp( <span class="string">"^"</span> + $.ui.autocomplete.escapeRegex( request.term ), <span class="string">"i"</span> );</code></div></div><div class="container"><div class="line"><code>          response( $.grep( tags, <span class="keyword">function</span>( item ){</code></div></div><div class="container"><div class="line"><code>              <span class="keyword">return</span> matcher.test( item );</code></div></div><div class="container"><div class="line"><code>          }) );</code></div></div><div class="container"><div class="line"><code>      }</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"><iframe height="250" width="100%"></iframe></div>
+</div></section>
+</div></article>	</div><!-- .entry-content -->
+
+</article><!-- #post-9 -->
+			</div>
+
+	
+<div id="sidebar" class="widget-area" role="complementary">
+	<aside id="categories" class="widget">
+		<h3 class="widget-title">jQuery UI 1.11</h3>
+		<ul>
+				<li class="cat-item cat-item-2"><a href="http://api.jqueryui.com/category/effects/">Effects</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://api.jqueryui.com/category/effects-core/">Effects Core</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://api.jqueryui.com/category/interactions/">Interactions</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://api.jqueryui.com/category/overrides/">Method Overrides</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://api.jqueryui.com/category/methods/">Methods</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://api.jqueryui.com/category/selectors/">Selectors</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://api.jqueryui.com/category/theming/">Theming</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://api.jqueryui.com/category/ui-core/">UI Core</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://api.jqueryui.com/category/utilities/">Utilities</a>
+</li>
+	<li class="cat-item cat-item-3 current-cat"><a href="http://api.jqueryui.com/category/widgets/">Widgets</a>
+</li>
+		</ul>
+	</aside>
+
+	<aside id="categories" class="widget">
+		<h3 class="widget-title">Other Versions</h3>
+		<ul>
+			<li><a href="http://api.jqueryui.com/1.10/">jQuery UI 1.10</a></li><li><a href="http://api.jqueryui.com/1.9/">jQuery UI 1.9</a></li><li><a href="http://api.jqueryui.com/1.8/">jQuery UI 1.8</a></li>		</ul>
+	</aside>
+</div>
+</div>
+	</div>
+</div>
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<!--<li>
+						<a href="http://link.packtpub.com/SHnqUf">
+							<img src="//api.jqueryui.com/jquery-wp-content/themes/jquery/content/books/jquery-ui-1.8.jpg" alt="jQuery UI 1.8: The User Interface Library for jQuery by Dan Wellman" width="92" height="114">
+							<span class="book-title">jQuery UI 1.8: The User Interface Library for jQuery</span>
+							<cite>Dan Wellman</cite>
+						</a>
+					</li>-->
+					<li>
+						<a href="http://www.manning.com/vantoll/">
+							<span><img src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery-ui-in-action.jpg" alt="jQuery UI in Action by TJ VanToll" height="114" width="92"></span>
+							<strong>jQuery UI in Action</strong><br>
+							<cite>TJ VanToll</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://link.packtpub.com/PG9pAC">
+							<img src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery-ui-themes.jpg" alt="jQuery UI Themes by Adam Boduch" height="114" width="92">
+							<span class="book-title">jQuery UI Themes</span>
+							<cite>Adam Boduch</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.packtpub.com/jquery-userinterface-cookbook/book">
+							<img src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery-ui-cookbook.jpg" alt="jQuery UI Cookbook by Adam Boduch" height="114" width="92">
+							<span class="book-title">jQuery UI Cookbook</span>
+							<cite>Adam Boduch</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/using-jquery-ui/">Forum</a></li>
+			<li><a class="icon-wrench" href="http://api.jqueryui.com/">API</a></li>
+			<li><a class="icon-twitter" href="https://twitter.com/jqueryui">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2014 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://mediatemple.net/" rel="nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com/" rel="nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1076265-1']);
+    _gaq.push(['_setDomainName', 'api.jqueryui.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script type="text/javascript" src="Autocomplete%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/comment-reply.js"></script>
+
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

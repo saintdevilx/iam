@@ -1,0 +1,22 @@
+
+<form action="/userprofile/update?type=basic" onsubmit="return window.ajxfrm(this,null)" method="POST">
+<div class="inline-block padd_all">
+	<input type="hidden" name="user" value="{{user}}" />
+	<span class='block '>
+		<span class='info-lbl inline-block'>Name</span>
+		<span class='info-vl inline-block'> 
+			<span class='inline-block'>
+				{{pr_user_form.first_name}}
+			</span>
+			<span class='inline-block'>
+				{{pr_user_form.last_name}}
+			</span>
+		</span>
+	</span>
+	<span class='block '>
+		<span class='info-lbl inline-block'>Gender</span>
+		<span class='info-vl inline-block'> {{pr_form.gender}}</span>
+	</span>
+</div>
+<button type="submit"> Save</button>
+</form>

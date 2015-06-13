@@ -1,0 +1,22 @@
+{%load thumbnail%}
+{%load static from staticfiles%}
+{%if video%}
+<div class="video">						
+	<div class="thumb"><a href="javascript:void(0);" class="vid_thumb" data-vid="{{video.token}}" onclick="Player.play(this);">{%thumbnail video.thumbnail 250x150 as thumb%}
+			<img src="{%static thumb%}" width="250" height="150" />
+			<span style='' class='block'></span>
+			<span class='player_wrap'></span>					
+			</a>
+			<div class="vid_info">
+			<div class="vid_title">{{video.title}}</div>
+			<div class="vid_duration">{{video.durtion}}</div>
+			</div>
+	</div>
+</div>
+<form action="/video/edit" method="POST" onsubmit="return Video.edit(this);">
+	<div class="hidden">{%csrf_token%}</div>
+	<div class="hidden"><input type="hidden" name="vid" value="{{video.id}}" /></div>
+	<div class="hidden"><input type="text" name="title" value="" placeholder="Add Video Title" data-placeholder="" /></div>
+	<input type="submit" value="Save" />
+</form>
+{%endif%}

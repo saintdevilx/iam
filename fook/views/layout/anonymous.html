@@ -1,0 +1,47 @@
+{%load static from staticfiles%}
+<html>
+	<head>
+		<meta text="{% block metatext %}{% endblock%}">
+		<meta keywords="{% block metakeyword %}{% endblock%}">
+		<title>{% block title %}{% endblock %}</title>
+		<!--link rel="stylesheet" href="{{STATIC_URL}}/js/jquery-ui/jquery-ui.min.css"-->
+		<link rel="stylesheet" href="{{STATIC_URL}}/css/devil.css">
+		<script type="text/javascript" src="{{STATIC_URL}}/js/jquery.js"></script>		
+		<script type="text/javascript" src="{{STATIC_URL}}/js/fook_core.js"></script>
+		<!--script type="text/javascript" src="{{STATIC_URL}}/js/jquery-ui/jquery-ui.js"></script-->
+	
+	</head>
+	<body onresize="resizeDoc();"  onload="resizeDoc();" >
+		<div class="topbar-wrapper">
+			<div class='topbar ui-state-default '>					
+				<div class="inline-block heading"> <a href="/signup">  Join </a> </div>
+				<div class="inline-block heading"> <a href="/signin">  Signin</a> </div>
+				<div class="inline-block heading">
+					<a href='#help'>Help</a>
+				</div>
+				<div class="inline-block heading">
+					<a href='#about'>About</a>
+				</div>
+			</div>
+		</div>
+
+			<div id="page-header">
+			<noscript>
+			<div class="ui-widget messages">
+				<div style="margin-top: 20px; padding: 0 .7em;" class="ui-state-highlight ui-corner-all">
+					<!--p><span style="float: left; margin-right: .3em;" class="ui-icon ui-icon-info"></span-->	Javascript is not Enabled . To enjoy Fook You must enable Javascript or Upgrade your Internet Browser and Have fun.					
+					</p>
+				</div>
+			</div>
+			</noscript>
+			</div>
+
+		<div class="main">
+			{% block main%}   {% endblock %}					
+		</div>
+
+		{% block footer%} 
+		<!--script type="text/javascript" src="{{STATIC_URL}}/js/ui.js"></script-->
+		{% endblock %}
+	</body>
+</html>

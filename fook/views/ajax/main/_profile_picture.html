@@ -1,0 +1,32 @@
+{%spaceless%}
+{%load static from staticfiles%}
+{%load thumbnail%}
+<div class="hdlne _bckf8 small_padd">
+	<div class="">Profile Images</div>
+</div>
+<div class=" padd_allx" id="profile_images_gallery">
+	<div class="pr_imgs">
+		<div class="">
+			{%for p in images%}
+				<span class="imgs">
+					<span class="img">
+						{%thumbnail p.image 200x300 crop as thumb%}		
+						{%if thumb%}
+							<a onclick="viewPhoto(this,{'user':'{{p.user_id}}','al':'{{p.id}}','type':'109979992' })" href="javascript:void(0);">
+							<img src="{%static thumb %}" width="{{thumb.width}}" height="{{thumb.height}}"></a>
+							<span class='abs'>
+								<span class='abs im_inf'></span>
+								<span class='abs img_count'>
+									<span class='lb'><span>Like<span>&nbsp;{{p.likes}}</span></span></span>
+									<span class='lb'><span>Comment<span>&nbsp;{{p.comments}}</span></span></span>
+									<span class='lb'><span>Share<span>&nbsp;{{p.share}}</span></span></span>
+								</span>
+							</span>
+						{%endif%}						
+					</span>
+				</span>
+			{%endfor%}
+		</div>
+	</div>
+</div>
+{%endspaceless%}

@@ -1,0 +1,58 @@
+<div class="block padd_all">
+	<span class='block hdlne'>
+		Education		
+		{%ifequal user info.user__id%}
+		<span class='_fr'>
+			<a href="javascript:void(0);"  class='uiEditEducation block ui-icon ui-icon-pencil'></a>
+		</span>
+		{%endifequal%}
+	</span>
+	<span class='block '>
+		{%ifequal user info.user__id%}
+		<span class='infoedit hidden' id='std_edt'>
+		</span>
+		{%endifequal%}
+		<span class='info-lbl inline-block'>Studied at </span>
+		<span class='info-vl' id='std_vl'> {{info.education}} </span>		
+	</span>
+	<span class='block hdlne'>
+			Contact Detail	
+	</span>
+	<span class='block '>
+		<span class='info-lbl inline-block'>Phone</span>
+		<span class='info-vl'>{{info.phone}} </span>
+	</span>
+	<span class='block '>
+		<span class='info-lbl inline-block'>Email</span>
+		<span class='info-vl'> {{info.user__email}} </span>
+	</span>
+	<span class='block hdlne'>
+			Residential Detail	
+	</span>
+	<span class='block '>
+		{%ifequal user info.user__id%}
+		<span class='_fr'>
+			<a href="javascript:void(0);"  class='uiEditHometown block ui-icon ui-icon-pencil'></a>
+		</span>
+		<span class='infoedit hidden' id='hmtwn' >
+		</span>
+		{%endifequal%}
+		<span class='info-lbl inline-block'>Hometown</span>
+		<span class='info-vl' id='hmtwn_vl'>
+			<div class="inline-block">
+				<span class='inline-block'>{{info.hometown}} </span>
+			</div>
+		</span>
+	</span>
+	<span class='block '>
+		{%ifequal user info.user__id%}
+		<span class='float_right'>
+			<a href="javascript:void(0);" class='uiEditCurrentCity block ui-icon ui-icon-pencil'></a>
+		</span>
+		<span class='infoedit hidden' id='crcty' >  
+		</span>
+		{%endifequal%}
+		<span class='info-lbl inline-block'>Current City</span>
+		<span class='info-vl' id='cr_vl'> {{info.cur_city}} </span>
+	</span>	
+</div>

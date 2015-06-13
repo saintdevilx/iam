@@ -1,0 +1,22 @@
+{%spaceless%}
+{%load thumbnail%}
+{%load static from staticfiles%}
+<span class='block'>
+	{% thumbnail post.attachments.0.attachment 480x280 crop as thumb%}	
+	<span class='block'>
+		<a href="javascript:void(0);" onclick="viewPhoto(this,{'user':{{uid}},'al':'{{at.id}}','type':'109979988','post':'{{post.posts.id}}' })" >
+			<div class="block"><img src="{%static thumb.url%}" alt="{{post.posts.post_description}}"></div>
+		</a>
+	</span>	
+</span>
+<span class='thmb_previews'>
+{%for at in post.attachments%}									
+	{% thumbnail at.attachment 100x100 crop as thumb%}	
+	<span class='thmb'>
+		<a href="javascript:void(0);" onclick="viewPhoto(this,{'user':{{uid}},'al':'{{at.id}}','type':'109979988','post':'{{post.posts.id}}' })" >
+			<div class="block"><img src="{%static thumb.url%}" alt="{{post.posts.post_description}}"></div>
+		</a>
+	</span>
+{%endfor%}	
+</span>
+{%endspaceless%}

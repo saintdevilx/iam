@@ -1,0 +1,11 @@
+{%extends 'layout/default'%}
+{%block title%}Videos{%endblock%}
+
+{%block main%}
+	<div class="block">
+		<form action="/video/add" enctype="multipart/form-data" method="POST">
+			<input type="file" name="video" />
+			<input type="submit" value="Upload" />
+		</form>		
+	</div>
+{%endblock%}

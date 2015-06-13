@@ -1,0 +1,11 @@
+{%spaceless%}
+{%load emoticons_tags%}
+<span id="emo_wrap" class='emo_list_wrap'>
+{#%emoticons%#}
+	{% emoticons_index as emoticons_list %} 
+		{% for emoticons in emoticons_list %}
+		<a href="javascript:void(0);" title="{{ emoticons.0 }}" data-text="{{ emoticons.0 }}"> {{ emoticons.0|emoticons }} &nbsp;</a>
+	{% endfor %}
+{#%endemoticons%#}
+</span>
+{%endspaceless%}

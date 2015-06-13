@@ -1,0 +1,45 @@
+{%extends 'layout/default'%}
+{% load fook_tags%}		
+
+{%block title%}
+ My Posts
+{%endblock%}
+
+{%block main%}
+
+	<div id='page-header' class="table-cell">
+		<div id="center_div" >		
+			<div class='postbox-wrapper' id='cnt_mnu'>	
+				{%include 'include/header_menu.html'%}			
+			</div>		
+		</div>	
+		<div id='main_content'>
+			{%include 'include/post_update_box'%}
+			<div id="postlist" >
+				<div class="posts-list ">
+					{%for post in posts%}
+						<div class="block border-all padd_all" id='post_{{post.id}}'>
+							<div id='post_wrap'>
+								<div id='post_text'>
+									<p>	{{post.post_description | truncatechars:300 }}	</p>
+								</div>
+								<div id='post_stats'>
+									<span class='inline-block'>{{post.created | mytimesince}}</span>
+									<span class='inline-block'>Likes {{post.voted}}</span>
+									<span class='inine-block'>Comments{{post.comment}}</span>
+									<span class='inine-block'>Views {{post.viewed}}</span>
+									<span class='inine-block'>Reported {{post.reported}}</span>		
+								</div>
+							</div>
+						</div>
+					{%endfor%}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{%endblock%}
+
+{%block footer%}
+{%endblock%}

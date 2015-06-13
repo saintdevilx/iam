@@ -1,0 +1,38 @@
+<div class="padd_all block" id="updateEducation">
+	<div class="hdlne">
+		Update Education 
+	</div>
+	<span class="block frm_wrap small_padd" >
+		<form action="/userprofile/editeducation" onsubmit="return Profile.updateEducation(this)" method="POST">
+			<div id="school_in_wrap">
+				<div id="school_input_wrap">
+					<span id="pl_school" class="placeholder small_padd">School</span>
+					<input type="text" autocomplete="off"  data-label="pl_school"  style="width:200px;"  id='school_input' name="school_name" class="uiSelector" data-wrap="school_input_wrap" data-input="school_id" data-choosen="school_choosen"  data-type="school"  value="" />
+				</div>
+				<div id='school_choosen'></div>							
+				<input name="school" value="" type="hidden" id='school_id' />				
+				<input name="city" value="" type="hidden" id='city_id' />				
+				<input name="state" value="" type="hidden" id='state_id' />				
+			</div>
+			<div class="hidden" id='hmtwn_info_wrap'>
+				<div id="city_wrap"><div id="city_input_wrap"><span id="pl_city" class="placeholder small_padd">City</span><input type="text" autocomplete="off"  data-label="pl_hmtwn"  style="width:200px;"  id='city_input' name="city_input" class="uiSelector" data-wrap="city_input_wrap" data-input="city_id" data-choosen="city_choosen"  data-type="city"  value="" /></div>
+				</div>
+				<div id='city_choosen'></div>
+				<div id='state_wrap'>
+					<div id='state_in_wrap'>
+						<span id="pl_state" class="placeholder small_padd">State</span>			
+						<input type="text" name="state_input" data-label='pl_state'autocomplete="off" id='state_input' value=""  class="uiSelector" style="width:200px;" data-wrap="state_in_wrap" data-input="state_id" data-choosen="state_choosen"  data-type="state" value="" />		
+					</div>					
+					<div id='state_choosen'></div>
+				</div>
+				<div id='country_wrap'>
+					<input type="hidden" name="country" data-label='pl_country' autocomplete="off" id='country_input' value="" />
+				</div>
+			</div>			
+			<div class="float_right">
+				<button type="submit" class="inline-block">Update</button>
+			</div>
+			<div class="clear"></div>
+		</form>
+	</span>
+</div>

@@ -1,0 +1,26 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+{%load fook_tags%}
+<div id='likers'>
+	<div class="hdlne _bckf8 small_padd">People who likes this</div>
+	<div class="liker_wrap">
+	{%for liker in likers%}
+		<div class="inline-block small_padd">
+			<div class="liker-info">
+				<div class="liker-img block">
+					{%thumbnail  liker.profile_image|default:'no_profile_pic.jpg' 80x80 crop as thumb%}
+					<img src="{%static thumb%}" />
+				</div>
+				<div class="liker-name inline-block">
+					<a href="/viewprofile/{{liker.id}}" class="list-item">
+						{{liker.first_name}} {{liker.last_name}}
+					</a>
+					<div class="list-item">
+						{{liker.created | mytimesince}}
+					</div>
+				</div>
+			</div>
+		</div>
+	{%endfor%}
+	</div>
+</div>

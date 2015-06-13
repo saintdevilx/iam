@@ -1,0 +1,114 @@
+{%spaceless%}
+<html>
+	<head>
+		<meta text="{% block metatext %}{% endblock%}">
+		<meta keywords="{% block metakeyword %}{% endblock%}">
+		<title>{% block title %}{% endblock %}</title>	
+		<link rel="stylesheet" href="{{STATIC_URL}}css/devil.css">
+		<link rel="stylesheet" href="{{STATIC_URL}}js/jquery-ui/jquery-ui.css">		
+		<script type="text/javascript" src="{{STATIC_URL}}js/jquery.js"></script>		
+		<script type="text/javascript" src="{{STATIC_URL}}js/enscroll-0.6.1.min.js"></script>		
+		<script type="text/javascript">	var fook = {user:{id:'{{user.id}}',name:'{{user.first_name}} {{user.last_name}}' },	login:'',host:'{{request.HTTP_HOST}}',timestamp:'{{timestamp}}',image:'' };	
+		</script>		
+		<script type="text/javascript" src="{{STATIC_URL}}js/fook_core.js"></script>	
+	</head>
+<body onload="resizeDoc()" onresize="resizeDoc()">
+	<div class="_bckf8x _viewport">
+		<div class="top-bar-wrap">
+			<div class="top-bar">
+				<table class="top-bar-table">
+					<tr>
+						<td>
+							<span style="width:155px;display:block;float:right">
+								<span id='notification_panel' title="notification" style='cursor:pointer;' onclick="Notification.toggle(this,event)">
+									<span class='_fl'>
+										<i class='ui-icon ui-icon-comment inline-block'></i>
+									</span>
+									<span class='_fl'>
+										<span id='notification_count' class='hidden'></span>
+									</span>
+									<span class='clear'></span>
+								</span>
+								<div id="notification_wrap">
+									<div class="hdlne _bckf8 small_padd">
+										<ul>
+											<li><a href="#">Current</a></li>
+											<li><a href="#">Older</a></li>
+											<li><a href="#">Filter</a></li>
+										</ul>
+										<span id="notification_count_wrap" >
+											<span id="notification_count"></span>
+										</span>
+									</div>
+									<div id="notification" class="border-all " ></div>
+									<span class='cntr _bckf8 padd_all cntr block'>
+										<a href="#">View All Notification</a>
+									</span>
+								</div>
+								</span>
+						</td>
+					<td>
+					<div id="search_pane" class="">
+					  <div class="search_input_wrap">
+					    <input id='search-bar' type="text" placeholder="Search" />
+					  </div>
+					  <div class="result_wrap_outer" id="result_wrap_outer" >
+					  	<ul class="">
+					  		<li><a href="javascript:void(0);" onclick="khoji.people();">People</a></li>
+					  		<li><a href="javascript:void(0);" onclick="khoji.video();">Video</a></li>
+					  		<li><a href="javascript:void(0);">Music</a></li>
+					  	</ul>
+					  	<div id='result_wrap' class=""></div>
+					  </div>
+					</div>
+					</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class=" bar">  
+			<div class="fixed_menu bluebar">
+			  <div class="acct_">
+			    <span class="pr_img" id='accnt_profile_pic_wrap' >
+			      <script type="text/javascript"> _sendreq({'event':'acnt_pic','category':'profile'} , null,function(a,b,c){
+			      	ge('accnt_profile_pic_wrap').innerHTML = b.html;
+			      },'/ajax_apis','GET');</script>
+			    </span>
+			    <div class='clear'></div>
+				<span class="">
+				  <a>{{user.first_name}} {{user.last_name}}</a>
+				</span>
+			  </div>
+				{%include 'include/fixed_menu.html'%}    
+			</div>
+		</div>
+		<div class="cp" id="content_view">
+			<div id="left_pane_fixed" style=""><div style=""><div class="left_pane" id="left_pane_wrap"></div></div></div>
+			<div class="center">
+				<div id='main_content'>
+					{%block main%}{%endblock%}
+				</div>				
+			</div>
+			<div class="right_pane">
+				<div class="_fl"  id='right_wrap'>
+				</div>
+				<div class="_fr">
+					<div id="charcha_wrap" class="border-all block"></div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<script type="text/javascript" src="{{STATIC_URL}}js/ui.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}/js/gupsup.js"></script>
+	<script type="text/javascript">
+	var bootload = { 'user':{'id':'{{user.id}}','name':'{{user.first_name}} {{user.last_name}} '},essential:['onStart.boot()','service()'] };
+	booter();
+	</script>	
+	<script>//Charcha.init({{user.id}});</script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/notification.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jplayer/jquery.jplayer.js"></script>
+	<script type="text/javascript"> var static_flash_player = "{{STATIC_URL}}js/jplayer"; </script>
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/pink.flag/css/jplayer.pink.flag.css">
+</body>
+</html>
+{%endspaceless%}

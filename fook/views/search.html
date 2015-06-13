@@ -1,0 +1,40 @@
+{%extends 'layout/default'%}
+{%load static from staticfiles%}
+{%load thumbnail%}
+{%block main%}
+		<div class="" id='page-header'>
+			<div class="search-results border-all small_padd">
+				<span class="list-item hdlne">Results for "{{q}}"</span>
+				<span class='block small_padd'>
+					{%if results%}		
+						{%for r in results%}
+						<span class='inline-block' id='rslt_item'>							
+								<span class='result-item'>
+									<a href='/viewprofile/{{r.user.user__id}}'>	
+										<span class='result-item-image' style='overflow:hidden;'>
+											{%thumbnail r.user.profile_image|default:"no_profile_pic.jpg" 80x80 crop as thumb %}
+											<img src='{%static thumb%}'  class='result-image' />				
+										</span>
+									</a>
+									<span class='result-info  '>
+										<a href='/viewprofile/{{r.user.user__id}}'>	
+											<span class='page-type item'>{{r.user.user__first_name}} {{r.user.user__last_name}}</span>
+										</a>
+										{%if r.other.hometown %}
+										<span > {{r.other.hometown.page_name}} </span>
+										{%elif r.other.cur_city%}
+										<span >  {{r.other.cur_city.page_name}} </span>
+										{%elif r.other.education%}
+										<span > {{r.other.education.page_name}} </span>
+										{%endif%}
+										<span class='item'> </span>
+									</span>
+								</span>							
+						</span>
+						{%endfor%}		
+					{%endif%}
+				</span>				
+			</div>
+		</div>
+
+{%endblock%}

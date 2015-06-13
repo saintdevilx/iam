@@ -1,0 +1,96 @@
+<div class="heading border-all" id="menu" >
+	<span style="display:block;">
+		<div class="inline-block">
+			<a href="/feeds" id='nav_home' default="false">
+			<span class='mn_bx'>
+				News
+			</span>
+			</a>
+		</div>
+		<div class="inline-block">
+			<a href="/profile"  id='nav_profile' default="false" onclick="return nav.open('/profile');">
+			<span class='mn_bx'>
+				Profile
+			</span>
+			</a>
+		</div>	
+		<div class="inline-block">
+			<a href="/gallery" id='gallery' default="false" onclick="return nav.open('/gallery');">
+			<span class='mn_bx'>
+				Gallery
+			</span>
+			</a>
+		</div>	
+		<div class="inline-block">
+			<span  style='padding:0 5px;width:auto;'>
+				<a href="/friends" onclick="return nav.open('/friends');">
+				<div class="inline-block mn_bx">
+					Friends
+				</div>
+				</a>
+				<div class="inline-block " >
+					<div id='frReqCnt_wrap' class="hidden">
+						<a href="#" onclick='request_menu(ge("frnd_req_lst"))'   >
+							<div class="count_wrap small_padd">
+								<span id='frReqCnt' class='inline-block'></span>
+							</div>
+						</a>				
+					</div>
+				</div>
+			</span>
+			<span class="block">
+			  <span >			    
+			    <span  class="rbn_lst  hidden" id="frnd_req_lst" style="font-weight: normal;z-index:100;">
+				    <span class='hdlne'>
+						<span>
+							<a href="/friends">Friends</a>
+						</span>
+						<span>
+							<a href="/friends/find">Suggestions</a>
+						</span>
+					</span>
+			    </span>
+			  </span>
+			</span>
+		</div>
+		<div class="inline-block">
+			<a href="/messages" id='nav_home' default="false" onclick="return nav.open('/message');">
+			<span class='mn_bx'>
+				Message
+			</span>
+			</a>
+			<span id='msgCnt' class='block' style='position:absolute'></span>
+		</div>	
+		<div class="inline-block">
+			<a href="#/music" >
+			<span class='mn_bx'>
+				Music
+			</span>
+			</a>
+		</div>
+		<div class="inline-block">
+			<a href="/videos" >
+			<span class='mn_bx'>
+				Videos
+			</span></a>
+		</div>
+		<div class="inline-block">
+			<a href="/groups" onclick="return false;">
+			<span class='mn_bx'>
+				Groups
+			</span></a>
+		</div>
+		<div class="inline-block">
+			<span class='mn_bx'>
+				<a href="/pages" onclick="return false;">Pages</a>
+			</span>
+		</div>
+		<div class="inline-block">
+			<a href="/settings" onclick="retun Settings.view(this);" >
+			<span class='mn_bx'>
+				Settings
+			</span>
+			</a>
+		</div>
+	</span>
+</div>

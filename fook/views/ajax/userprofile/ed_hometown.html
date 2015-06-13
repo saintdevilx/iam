@@ -1,0 +1,45 @@
+<div class="padd_all block" id="updateResidence">
+	<div class="hdlne">
+		Update {%ifequal type "hometown"%}Hometown
+				{%else%} Current City {%endifequal%} 
+	</div>
+	<span class="block frm_wrap small_padd" >
+		<form action="/userprofile/editresidence" onsubmit="return Profile.updateResidence(this)" method="POST">
+			<div id="hmtwn_in_wrap">
+				<div id="hmtwn_input_wrap" data-url="/findlocation?type=''">
+					<span id="pl_hmtwn" class="placeholder small_padd">
+						{%ifequal type "hometown"%}Hometown
+						{%else%}Current City
+						{%endifequal%}
+					</span>
+					<input type="text" autocomplete="off"  data-label="pl_hmtwn"  style="width:200px;"  id='hmtwn_input' name="city" class="uiSelector" data-wrap="hmtwn_input_wrap" data-input="hmtwn_id" data-choosen="hmtwn_choosen"  data-type="city"  value="" />
+				</div>
+				<div id='hmtwn_choosen'></div>
+				<input name="hmtwn" value="" type="hidden" id='hmtwn_id' />
+				{%ifequal type "hometown"%}
+				<input value="hometown" type="hidden" name="type" />
+				{%endifequal%}
+				{%ifequal type "cur_city"%}
+				<input value="cur_city" type="hidden" name="type" />
+				{%endifequal%}
+			</div>
+			<div class="hidden" id='hmtwn_info_wrap'>
+				<div id='state_wrap'>
+					<div id='city_in_wrap'>
+						<span id="pl_state" class="placeholder small_padd">State</span>			
+						<input type="text" name="state_input" data-label='pl_state'autocomplete="off" id='state_input' value=""  class="uiSelector" style="width:200px;" data-wrap="city_in_wrap" data-input="state_id" data-choosen="city_choosen"  data-type="state" value="" />
+						<input name="state" value="" type="hidden" id='state_id' />
+					</div>
+					<div id='city_choosen'></div>
+				</div>
+				<div id='country_wrap'>
+					<input type="hidden" name="country" data-label='pl_country' autocomplete="off" id='country_input' value="" />
+				</div>
+			</div>
+			<div class="float_right">
+				<button type="submit" class="inline-block">Update</button>
+			</div>
+			<div class="clear"></div>
+		</form>
+	</span>
+</div>

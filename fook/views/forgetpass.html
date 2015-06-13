@@ -1,0 +1,33 @@
+{%extends 'layout/anonymous.html'%}
+{%block title %}Forget Password{%endblock%}
+{%block main%}
+<div class="drishya">
+	<div class="madhya">
+		<div id="page-header" class="border-all padd_all">
+			<div class="block">
+				<div class="hdlne">
+					Forgot Your Password ? 
+					<small>We Are here to help you.</small>
+				</div>
+			</div>
+			<div class="padd_all">
+				<form action='/forgetpassword' method="POST"> 
+					<div class="inline-block">
+						<span class='small_padd'>Birthday(dd-mm-yy)</span>
+						<div id='dob'>							
+						</div>
+						<input type="hidden" name="birthday" data-label='pl_birthday' />
+					</div>
+					<div>
+						<span class='placeholder small_padd'>Email Address</span>
+						<input type="email" name="email" data-label='pl_email' />
+					</div>
+					<div>
+						<input type="submit" class="btn" value="Retrive Password" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}

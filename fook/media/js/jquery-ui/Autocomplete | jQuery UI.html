@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="js multiplebgs boxshadow cssgradients wf-klavikaweb-i7-inactive wf-klavikaweb-n7-inactive wf-sourcecodepro-n4-inactive wf-sourcecodepro-n7-inactive wf-inactive" lang="en-US"><!--<![endif]--><head data-live-domain="jqueryui.com">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="Autocomplete%20%7C%20jQuery%20UI_files/ados.js" async="" type="text/javascript"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Autocomplete | jQuery UI</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org">
+	<meta name="description" content="jQuery: The Write Less, Do More, JavaScript Library">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="shortcut icon" href="http://jqueryui.com/jquery-wp-content/themes/jqueryui.com/i/favicon.ico">
+
+	<link rel="stylesheet" href="Autocomplete%20%7C%20jQuery%20UI_files/base.css">
+	<link rel="stylesheet" href="Autocomplete%20%7C%20jQuery%20UI_files/style.css">
+
+	<script src="Autocomplete%20%7C%20jQuery%20UI_files/ga.js" async="" type="text/javascript"></script><script src="Autocomplete%20%7C%20jQuery%20UI_files/modernizr.js"></script>
+
+	<script src="Autocomplete%20%7C%20jQuery%20UI_files/jquery.js"></script>
+	<script>window.jQuery || document.write(unescape('%3Cscript src="//jqueryui.com/jquery-wp-content/themes/jquery/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+	<script src="Autocomplete%20%7C%20jQuery%20UI_files/plugins.js"></script>
+	<script src="Autocomplete%20%7C%20jQuery%20UI_files/main.js"></script>
+
+	<script src="Autocomplete%20%7C%20jQuery%20UI_files/wde1aof.js"></script>
+	<style type="text/css">.tk-source-code-pro{font-family:"source-code-pro",sans-serif;}.tk-klavika-web{font-family:"klavika-web",sans-serif;}</style><link href="Autocomplete%20%7C%20jQuery%20UI_files/d.css" rel="stylesheet"><script>try{Typekit.load();}catch(e){}</script>
+
+<meta name="generator" content="WordPress 4.0">
+
+</head>
+<body class="jquery-ui page page-id-11 page-template-default page-slug-autocomplete single-author singular">
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links l_tinynav1">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/CLA/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+																			<li><a href="http://jssummit.com/">Nov 18 - 20 | JavaScript Summit</a></li>
+													<li><a href="http://jqueryuk.com/2015/?source=jqorg-listing">Mar 6 | jQuery UK 2015</a></li>
+												</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></h2>
+
+		<aside><div id="broadcast"><a href="http://engine.adzerk.net/r?e=eyJhdiI6MjIyMzYsImF0IjoxMzE0LCJidCI6MCwiY20iOjE4NTM0MSwiY2giOjgzNjgsImNyIjo2NjUxMjUsImRpIjoiNWNjNTcyYWFhNjQyNDJjZmJmMjBkZGExNmVkODVkNTUiLCJkbSI6MSwiZmMiOjY4NzA3MSwiZmwiOjQwNzkyMiwiaXAiOiIxMDYuMjE5LjE0MS40MSIsIm53Ijo1NDQ5LCJwYyI6MCwicHIiOjIxOTM3LCJydCI6MSwic3QiOjUzODI5LCJ1ayI6InVlMS0yN2JlOTA5OWNhMjI0OWM0YmQ2ZmJmYmQyOWVlNjBkNiIsInRzIjoxNDE2MDU1NDQ0MDc4LCJiZiI6dHJ1ZSwidXIiOiJodHRwOi8vanF1ZXJ5dWsuY29tLzIwMTUvP3NvdXJjZT1qcW9yZy1iYW5uZXIifQ&amp;s=liSmiFPfBtz9DuKkGkz8g87wEJk" rel="nofollow" target="_blank" title="jQuery UK 2015 - 6 March 2015, Oxford, UK"><img src="Autocomplete%20%7C%20jQuery%20UI_files/c16ec4c0d59844678f67fbeb8369fbb1.png" title="jQuery UK 2015 - 6 March 2015, Oxford, UK" alt="jQuery UK 2015 - 6 March 2015, Oxford, UK" height="100" border="0" width="400"></a><img src="Autocomplete%20%7C%20jQuery%20UI_files/i.gif" style="position:absolute;" height="0px" border="0" width="0px"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu l_tinynav2">
+<li class="menu-item"><a href="http://jqueryui.com/demos/">Demos</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/download/">Download</a></li>
+<li class="menu-item"><a href="http://api.jqueryui.com/">API Documentation</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/themeroller/">Themes</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/development/">Development</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/support/">Support</a></li>
+<li class="menu-item"><a href="http://blog.jqueryui.com/">Blog</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/about/">About</a></li>
+	</ul><select class="tinynav tinynav2" id="tinynav2"><option selected="selected">Navigate...</option><option value="http://jqueryui.com/demos/">Demos</option><option value="http://jqueryui.com/download/">Download</option><option value="http://api.jqueryui.com/">API Documentation</option><option value="http://jqueryui.com/themeroller/">Themes</option><option value="http://jqueryui.com/development/">Development</option><option value="http://jqueryui.com/support/">Support</option><option value="http://blog.jqueryui.com/">Blog</option><option value="http://jqueryui.com/about/">About</option></select>
+</div>
+
+		<form method="get" class="searchform" action="//jqueryui.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search jQuery UI</span>
+		<input name="s" placeholder="Search" type="text">
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+
+<div class="content-right twelve columns">
+	<div id="content">
+				<h1 class="entry-title">Autocomplete</h1>
+		<hr>
+		
+		
+<p class="desc">Enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.</p>
+
+<div class="demo-list"><h2>Examples</h2><ul><li class=""><a href="http://jqueryui.com/resources/demos/autocomplete/default.html">Default functionality</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/folding.html">Accent folding</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/categories.html">Categories</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/combobox.html">Combobox</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/custom-data.html">Custom data and display</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/multiple.html">Multiple values</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/multiple-remote.html">Multiple, remote</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/remote.html">Remote datasource</a></li><li class="active"><a href="http://jqueryui.com/resources/demos/autocomplete/remote-jsonp.html">Remote JSONP datasource</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/remote-with-cache.html">Remote with caching</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/maxheight.html">Scrollable results</a></li><li><a href="http://jqueryui.com/resources/demos/autocomplete/xml.html">XML data parsed once</a></li></ul></div><iframe src="Autocomplete%20%7C%20jQuery%20UI_files/remote-jsonp.html" class="demo-frame"></iframe><div class="demo-description">
+<p>The Autocomplete widgets provides suggestions while you type into the
+ field. Here the suggestions are cities, displayed when at least two 
+characters are entered into the field.</p>
+<p>In this case, the datasource is the <a href="http://geonames.org/">geonames.org webservice</a>.
+ While only the city name itself ends up in the input after selecting an
+ element, more info is displayed in the suggestions to help find the 
+right entry. That data is also available in callbacks, as illustrated by
+ the Result area below the input.</p>
+</div><div class="view-source"><a tabindex="0"><i class="icon-eye-open"></i> view source</a><div style="display: block;"><div class="syntaxhighlighter xml ">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+						<div class="line n16">16</div>
+					
+						<div class="line n17">17</div>
+					
+						<div class="line n18">18</div>
+					
+						<div class="line n19">19</div>
+					
+						<div class="line n20">20</div>
+					
+						<div class="line n21">21</div>
+					
+						<div class="line n22">22</div>
+					
+						<div class="line n23">23</div>
+					
+						<div class="line n24">24</div>
+					
+						<div class="line n25">25</div>
+					
+						<div class="line n26">26</div>
+					
+						<div class="line n27">27</div>
+					
+						<div class="line n28">28</div>
+					
+						<div class="line n29">29</div>
+					
+						<div class="line n30">30</div>
+					
+						<div class="line n31">31</div>
+					
+						<div class="line n32">32</div>
+					
+						<div class="line n33">33</div>
+					
+						<div class="line n34">34</div>
+					
+						<div class="line n35">35</div>
+					
+						<div class="line n36">36</div>
+					
+						<div class="line n37">37</div>
+					
+						<div class="line n38">38</div>
+					
+						<div class="line n39">39</div>
+					
+						<div class="line n40">40</div>
+					
+						<div class="line n41">41</div>
+					
+						<div class="line n42">42</div>
+					
+						<div class="line n43">43</div>
+					
+						<div class="line n44">44</div>
+					
+						<div class="line n45">45</div>
+					
+						<div class="line n46">46</div>
+					
+						<div class="line n47">47</div>
+					
+						<div class="line n48">48</div>
+					
+						<div class="line n49">49</div>
+					
+						<div class="line n50">50</div>
+					
+						<div class="line n51">51</div>
+					
+						<div class="line n52">52</div>
+					
+						<div class="line n53">53</div>
+					
+						<div class="line n54">54</div>
+					
+						<div class="line n55">55</div>
+					
+						<div class="line n56">56</div>
+					
+						<div class="line n57">57</div>
+					
+						<div class="line n58">58</div>
+					
+						<div class="line n59">59</div>
+					
+						<div class="line n60">60</div>
+					
+						<div class="line n61">61</div>
+					
+						<div class="line n62">62</div>
+					
+						<div class="line n63">63</div>
+					
+						<div class="line n64">64</div>
+					
+						<div class="line n65">65</div>
+					
+						<div class="line n66">66</div>
+					
+						<div class="line n67">67</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>jQuery UI Autocomplete - Remote JSONP datasource<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/ui/1.11.2/jquery-ui.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"/resources/demos/style.css"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.ui-autocomplete-loading</span> <span class="rules">{</span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">background</span>:<span class="value"> white <span class="function">url(<span class="string">"images/ui-anim_basic_16x16.gif"</span>)</span> right center no-repeat;</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="id">#city</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">25</span>em;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>  $(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    <span class="function"><span class="keyword">function</span> <span class="title">log</span><span class="params">( message )</span> {</span></code></div></div><div class="container"><div class="line"><code>      $( <span class="string">"&lt;div&gt;"</span> ).text( message ).prependTo( <span class="string">"#log"</span> );</code></div></div><div class="container"><div class="line"><code>      $( <span class="string">"#log"</span> ).scrollTop( <span class="number">0</span> );</code></div></div><div class="container"><div class="line"><code>    }</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>    $( <span class="string">"#city"</span> ).autocomplete({</code></div></div><div class="container"><div class="line"><code>      source: <span class="keyword">function</span>( request, response ) {</code></div></div><div class="container"><div class="line"><code>        $.ajax({</code></div></div><div class="container"><div class="line"><code>          url: <span class="string">"http://gd.geobytes.com/AutoCompleteCity"</span>,</code></div></div><div class="container"><div class="line"><code>          dataType: <span class="string">"jsonp"</span>,</code></div></div><div class="container"><div class="line"><code>          data: {</code></div></div><div class="container"><div class="line"><code>            q: request.term</code></div></div><div class="container"><div class="line"><code>          },</code></div></div><div class="container"><div class="line"><code>          success: <span class="keyword">function</span>( data ) {</code></div></div><div class="container"><div class="line"><code>            response( data );</code></div></div><div class="container"><div class="line"><code>          }</code></div></div><div class="container"><div class="line"><code>        });</code></div></div><div class="container"><div class="line"><code>      },</code></div></div><div class="container"><div class="line"><code>      minLength: <span class="number">3</span>,</code></div></div><div class="container"><div class="line"><code>      select: <span class="keyword">function</span>( event, ui ) {</code></div></div><div class="container"><div class="line"><code>        log( ui.item ?</code></div></div><div class="container"><div class="line"><code>          <span class="string">"Selected: "</span> + ui.item.label :</code></div></div><div class="container"><div class="line"><code>          <span class="string">"Nothing selected, input was "</span> + <span class="keyword">this</span>.value);</code></div></div><div class="container"><div class="line"><code>      },</code></div></div><div class="container"><div class="line"><code>      open: <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>        $( <span class="keyword">this</span> ).removeClass( <span class="string">"ui-corner-all"</span> ).addClass( <span class="string">"ui-corner-top"</span> );</code></div></div><div class="container"><div class="line"><code>      },</code></div></div><div class="container"><div class="line"><code>      close: <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>        $( <span class="keyword">this</span> ).removeClass( <span class="string">"ui-corner-top"</span> ).addClass( <span class="string">"ui-corner-all"</span> );</code></div></div><div class="container"><div class="line"><code>      }</code></div></div><div class="container"><div class="line"><code>    });</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-widget"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"city"</span>&gt;</span>Your city: <span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"city"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  Powered by <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://geonames.org"</span>&gt;</span>geonames.org<span class="tag">&lt;/<span class="title">a</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-widget"</span> <span class="attribute">style</span>=<span class="value">"margin-top:2em; font-family:Arial"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  Result:</code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"log"</span> <span class="attribute">style</span>=<span class="value">"height: 200px; width: 300px; overflow: auto;"</span> <span class="attribute">class</span>=<span class="value">"ui-widget-content"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div></div>
+
+<p>Want to learn more about the autocomplete widget? Check out the
+<a href="http://api.jqueryui.com/autocomplete/">API documentation</a>.</p>	</div>
+	<div id="sidebar" class="widget-area" role="complementary">
+	<aside class="widget">
+		<h3 class="widget-title">Interactions</h3>
+		<ul>
+			<li><a href="http://jqueryui.com/draggable/">Draggable</a></li><li><a href="http://jqueryui.com/droppable/">Droppable</a></li><li><a href="http://jqueryui.com/resizable/">Resizable</a></li><li><a href="http://jqueryui.com/selectable/">Selectable</a></li><li><a href="http://jqueryui.com/sortable/">Sortable</a></li>		</ul>
+	</aside>
+	<aside class="widget">
+		<h3 class="widget-title">Widgets</h3>
+		<ul>
+			<li><a href="http://jqueryui.com/accordion/">Accordion</a></li><li><a href="http://jqueryui.com/autocomplete/">Autocomplete</a></li><li><a href="http://jqueryui.com/button/">Button</a></li><li><a href="http://jqueryui.com/datepicker/">Datepicker</a></li><li><a href="http://jqueryui.com/dialog/">Dialog</a></li><li><a href="http://jqueryui.com/menu/">Menu</a></li><li><a href="http://jqueryui.com/progressbar/">Progressbar</a></li><li><a href="http://jqueryui.com/selectmenu/">Selectmenu</a></li><li><a href="http://jqueryui.com/slider/">Slider</a></li><li><a href="http://jqueryui.com/spinner/">Spinner</a></li><li><a href="http://jqueryui.com/tabs/">Tabs</a></li><li><a href="http://jqueryui.com/tooltip/">Tooltip</a></li>		</ul>
+	</aside>
+	<aside class="widget">
+		<h3 class="widget-title">Effects</h3>
+		<ul>
+			<li><a href="http://jqueryui.com/addClass/">Add Class</a></li><li><a href="http://jqueryui.com/animate/">Color Animation</a></li><li><a href="http://jqueryui.com/easing/">Easing</a></li><li><a href="http://jqueryui.com/effect/">Effect</a></li><li><a href="http://jqueryui.com/hide/">Hide</a></li><li><a href="http://jqueryui.com/removeClass/">Remove Class</a></li><li><a href="http://jqueryui.com/show/">Show</a></li><li><a href="http://jqueryui.com/switchClass/">Switch Class</a></li><li><a href="http://jqueryui.com/toggle/">Toggle</a></li><li><a href="http://jqueryui.com/toggleClass/">Toggle Class</a></li>		</ul>
+	</aside>
+	<aside class="widget">
+		<h3 class="widget-title">Utilities</h3>
+		<ul>
+			<li><a href="http://jqueryui.com/position/">Position</a></li><li><a href="http://jqueryui.com/widget/">Widget Factory</a></li>		</ul>
+	</aside>
+</div>
+</div>
+
+	</div>
+</div>
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<!--<li>
+						<a href="http://link.packtpub.com/SHnqUf">
+							<img src="//jqueryui.com/jquery-wp-content/themes/jquery/content/books/jquery-ui-1.8.jpg" alt="jQuery UI 1.8: The User Interface Library for jQuery by Dan Wellman" width="92" height="114">
+							<span class="book-title">jQuery UI 1.8: The User Interface Library for jQuery</span>
+							<cite>Dan Wellman</cite>
+						</a>
+					</li>-->
+					<li>
+						<a href="http://www.manning.com/vantoll/">
+							<span><img src="Autocomplete%20%7C%20jQuery%20UI_files/jquery-ui-in-action.jpg" alt="jQuery UI in Action by TJ VanToll" height="114" width="92"></span>
+							<strong>jQuery UI in Action</strong><br>
+							<cite>TJ VanToll</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://link.packtpub.com/PG9pAC">
+							<img src="Autocomplete%20%7C%20jQuery%20UI_files/jquery-ui-themes.jpg" alt="jQuery UI Themes by Adam Boduch" height="114" width="92">
+							<span class="book-title">jQuery UI Themes</span>
+							<cite>Adam Boduch</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.packtpub.com/jquery-userinterface-cookbook/book">
+							<img src="Autocomplete%20%7C%20jQuery%20UI_files/jquery-ui-cookbook.jpg" alt="jQuery UI Cookbook by Adam Boduch" height="114" width="92">
+							<span class="book-title">jQuery UI Cookbook</span>
+							<cite>Adam Boduch</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/using-jquery-ui/">Forum</a></li>
+			<li><a class="icon-wrench" href="http://api.jqueryui.com/">API</a></li>
+			<li><a class="icon-twitter" href="https://twitter.com/jqueryui">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2014 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://mediatemple.net/" rel="nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com/" rel="nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1076265-1']);
+    _gaq.push(['_setDomainName', 'jqueryui.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script type="text/javascript" src="Autocomplete%20%7C%20jQuery%20UI_files/comment-reply.js"></script>
+
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

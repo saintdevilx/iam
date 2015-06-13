@@ -1,0 +1,5 @@
+{% extends 'layout/default'%}
+{% block title %} Registration completed{% endblock%}
+{% block  main %}  
+	<h3>Thanks for Registering with us</h3>
+{% endblock %}

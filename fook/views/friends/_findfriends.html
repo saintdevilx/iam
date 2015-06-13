@@ -1,0 +1,79 @@
+{%spaceless%}
+{%load static from staticfiles%}
+{%load thumbnail%}
+<div class="findfriends">
+
+	{%if not options%}
+		<div class="_bckf8 small_padd hdlne">
+		<div class="inline-block  small_padd" >
+			<div class="inline-block ">
+				<a  href="/friends" onclick="return nav.open('/friends')">Friends</a>
+			</div>
+			<div class="inline-block">
+				<div id='frnd-srch-form' class="">	
+					<input type="text" name='q' placeholder='Search' autocomplete='off' 
+					onkeyup="return Friend.search(this,'frnd-srch-lst')" />
+					</form>
+				</div>
+				<div id='frnd-srch-lst' style="position: absolute; border: 1px solid rgb(238, 238, 238); padding: 5px; background: none repeat scroll 0px 0px rgb(226, 227, 255); overflow-y: auto; width: 150px; max-height: 250px;display:none;"></div>
+			</div>
+			{%if me%}
+				<div class="inline-block">
+					<a  href="/friends/find" onclick="return nav.open('/friends/find',{'target':'friends-list'})" >Suggestions</a>
+				</div>
+			{%endif%}
+		</div>
+	</div>
+	<div class=" border-btm padd_all  bluebar" id='left_option_pane'>			
+	<span class='friend_find_filter'>
+			<span class='_fl'>
+				<span class='filter_input'>
+					<span id="hmtwn_choosen"></span>
+					<span id='hometown_filter_wrap'>
+						<input type="text" autocomplete="off" onfocus="Friend.filter(this)" onblur="" name="hmtwn_input" placeholder="Hometown" data-wrap="hometown_filter_wrap" data-choosen="hmtwn_choosen" data-input="hmtwn_filter_id" data-type="city">
+					</span>
+				</span>
+				<span class='filter_input'>
+					<span id='cur_city_choosen'></span>
+					<span id="cur_filter_wrap">
+						<input type="text" autocomplete="off" onfocus="Friend.filter(this)" onblur="" name="cur_city_input" placeholder="Current City" data-wrap="cur_filter_wrap" data-choosen="cur_city_choosen" data-input="cur_city_filter_id" data-type="city">
+					</span>		
+				</span>
+				<span class="filter_input">
+					<span id="school_choosen"></span>
+					<span id="school_filter_wrap">
+						<input type="text" autocomplete="off" onfocus="Friend.filter(this)" onblur="" name="school_input" placeholder="School or University" data-wrap="school_filter_wrap" data-choosen="school_choosen" data-input="school_filter_id" data-type="school" data-url='findeducation'>
+					</span>
+				</span>
+			</span>
+			<span class=''><form action="/friends/find" method="POST" onsubmit="return Friend.find(this);">
+				<span class='hidden'><input  type="hidden" name="csrfmiddlewaretoken" value="{{csrf_token}}" /></span>
+				<span><input type="hidden" autocomplete="off" name="hmtwn" value="" id="hmtwn_filter_id"></span>
+				<span><input type="hidden" autocomplete="off" name="cur_city" value="" id="cur_city_filter_id"></span>		
+				<span><input type="hidden" autocomplete="off" name="school" value="" id="school_filter_id"></span>
+				<span><select name="gender"><option value="">Gender</option><option value="f">Female</option><option value="m">Male</option></select></span>
+				<span><input type="submit" value="Find" /></span>
+				</form>
+			</span>			
+		</span>
+	</div>{%endif%}
+	<div class=" small_padd " id='find_friends_list'>
+		<div class="friends-list">		
+		{%for friend in friends%}
+			{{friend.found}}
+			<div class="friend-block inline-block padd_all">
+				<a href="/viewprofile/{{friend.id}}" class="block">
+				<div class="img float_left  ">
+					{%thumbnail friend.image|default:'no_profile_pic.jpg' 100x100 crop as thumb%}
+					<img src="{% static thumb%}" width="100" height="100" class="border-all" />		
+				</div>
+				</a>						
+				<div class="cntr">
+					<a onclick="nav.open('/viewprofile/{{friend.id}}'')" class="block" href="javascript:void(0);">
+					<div class="name ">{{friend.first_name}} {{friend.last_name}}</div></a><div class=" info">{{friend.tag}}</div><div class="small_padd info btn"><a href="#" onclick="Friend.addFriend(this,{{friend.id}})">Add to Friends</a></div></div>						
+			</div>
+		{%endfor%}												
+		</div>
+	</div>
+</div>
+{%endspaceless%}

@@ -1,0 +1,29 @@
+{%load static from staticfiles%}
+<script type="text/javascript">
+	clck_a('.page-suggestions a');
+</script>
+<div class="page-suggestions ui-widgets">
+	<div style="padding:5px;" class='heading'>Page Suggestions</div>
+	{% for page in pages%}
+	
+	 	<div id='row' class="box-row margin">
+	 		<div class='inline-block'>
+	 			<img src="{%static page.page_profile%}" style="max-width:45px;min-width:45px;width:45px;" />
+	 		</div>
+			<div class=" inline-block small-font" >							
+				<div class=" oneline-row list-item">
+					{{page.page_name}}
+				</div>
+				<div class="list-item">
+					{{page.page_type}}
+				</div>
+				<div class="list-item">
+					<div id=''class="widget-button  inline-block">
+						<a  href="javascript:void(0)" data-category_id="{{page.id}}" data-event="follow" data-category="page">Follow</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{% endfor%}
+</div>

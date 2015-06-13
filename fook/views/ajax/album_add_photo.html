@@ -1,0 +1,28 @@
+<div id='outer-wrp'>
+	<form method="POST" onsubmit="return window.ajxfrm(this,'#album_lst')" action="/album/addphoto">
+		<div class="hidden">
+			<input type="hidden" required='true' name='album' value="{{album}}" autocomplete='off'/>
+			{% csrf_token %}
+		</div>
+		<div class="inline-block">
+			<select name="visibility">
+				<option value='0'>Public</option>
+				<option value='1'>Private</option>
+				<option value='2'>Nobody</option>
+			</select>
+		</div>
+		<div id='upl' class="inline-block">
+			<button onclick=" ge('upl_fl').click();return false;">Add Photos</button>
+			<span id='sl_ct'></span>
+		</div>
+		<div id='im_upl' class="list-item im-drg-drp border-all"></div>
+		<div class="hdlne">
+			<span id='upl_pr'></span>			
+		</div>
+		<input name='submit' type="submit" value="Add Photos" />
+	</form>
+
+	<form method="POST" enctype="multipart/form-data" id='upldform'>
+	<input type="file" class="hidden" id='upl_fl' onchange="var el =$('#sl_ct'); var c= ((this).files.length)+' files selected to upload'; el.html(c); (new window.uploader(this, {'status':'#upl_pr','form':document.forms.upldform,'img_thumb':'#im_upl', 'target':'' }) ).start()" name='img_upl' multiple='true' />{% csrf_token %}
+	</form>
+</div>

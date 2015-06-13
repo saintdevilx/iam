@@ -1,0 +1,163 @@
+{%spaceless%}
+{%load static from staticfiles%}
+{%load emoticons_tags%}
+{% load fook_tags%}		
+{% load thumbnail%}		
+
+<div class="feednews">   
+ {%for post in posts%}
+	<div id="feeds{{post.act}}">
+		<div id='act-desc' class='hdlne' style="border-bottom:none;">
+			{% ifequal post.act_id 1 %}
+				{%if post.posts.target_id%} 
+				    {%ifnotequal post.actor.user_id post.posts.target_id %}Posted to <a href="javascript:void(0);" data-href="/viewprofile/{{post.posts.target_id}}" onclick="return nav.open('/viewprofile/{{post.posts.target_id}}')">Friend</a>	{%endifnotequal%}
+				{%endif%}
+			{%else%}
+			<a href="javascript:void(0);" data-href="/viewprofile/{{post.actor.user_id}}" onclick="return nav.open('/viewprofile/{{post.actor.user_id}}')">{{post.actor.user__first_name}} {{post.actor.user__last_name}}{%endifequal%}</a>	
+			{% ifequal post.act_id 1 %}		<!--Added new post-->{%endifequal%}
+			{%ifnotequal post.act_id 1 %}
+				<span class='feed-label'>			 
+				 {%ifequal post.act_id 2%}added new photos{%endifequal%}	
+				 {%ifequal post.act_id 3%}Liked Post		{%endifequal%}							 
+				 {%ifequal post.act_id 4%}shared post{%endifequal%}	
+				 {%ifequal post.act_id 7%} {%if post.act_count > 1%} and 
+				 	<a href ="#">{{post.act_count}} others</a>{%endif%}Commented 
+				 {%endifequal%}
+				 {%ifequal post.act_id 11%}Changed Profile Image{%endifequal%}
+				</span>
+			{%endifnotequal%}
+			<span class='_fr hidden'>						
+			{%ifequal post.author.user_id uid%} <a href="javascript:void(0);" onclick="Feeds.remove(this,{{post.post_id}},{{post.post_type}})"><i class='ui-icon ui-icon-close block'  title="Remove Post"></i></a>
+			{%endifequal%}</span>
+		</div>	
+	    <div class="act">
+	    	<div class="poster_info">
+			    <span class="pr_img">
+			      	<a href="/viewprofile/{{post.author.user_id}}" onclick="return nav.go('/viewprofile/{{post.author.user_id}}')" class=""> 
+						<span class='poster-img'>{%thumbnail post.author.profile_image|default:'no_profile_pic.jpg' 50x50 crop as thumb%}<img src="{%static thumb%}"  >
+						</span>									
+					</a>       
+			    </span>
+			</div>
+		    <div class="feed-info feed-bx">
+		        <span class="poster-info">
+		        	<a href="/viewprofile/{{post.author.user_id}}">
+		          		<span class='poster-name block'>{{post.author.user__first_name}} {{post.author.user__last_name}}</span>
+		          	</a>
+		        </span>
+		        <span class="feed">
+		          <span class="feed-text">
+		          {% emoticons %} 
+		          {{post.posts.post_description  | truncatechars:300 |linebreaksbr}}
+		          {% endemoticons %}
+		          </span>
+
+				  <span>
+					{%ifequal post.post_type 109979990%}				    
+				    	{%thumbnail post.gallery.image 480x280 crop as thumb%}				
+				    	<a href="javascript:void(0);" onclick="var ph =new window.ph_viewer(this,{'title':'' });ph.show( );ph.load( 'this._photoviewer({{post.gallery.id}})' );" data-category="gallery" data-event="im_vw" data-al="{{post.gallery.id}}" data-title="xxxxx" data-user="{{uid}}">
+				    	<div class="block"><img src="{%static thumb%}" /></div>
+				    	</a>
+				    {%endifequal%}
+					{%ifequal post.post_type 109979993%}				    
+				    	{%thumbnail post.video.thumbnail 480x280 crop as thumb%}				
+				    	<a href="javascript:void(0);" onclick="Player.play(this);" data-vid="{{post.video.token}}" data-title="{{post.video.title}}" >
+				    	<div class="block"><img src="{%static thumb%}" width="{{thumb.width}}" height="{{thumb.height}}" /></div>
+				    	<span class='vid_title'>{{post.video.title}}</span>
+				    	<span class='vid_duration _fr'>{{post.video.duration}}</span>
+				    	</a>
+
+				    {%endifequal%}
+			    	{%if post.attachments%}
+			    		<span class='attachment_slider'>
+							{%include 'ajax/post/attachment/attachment.html'%}
+						</span>
+					{%endif%}					
+
+					{%if post.profile_image%}
+					<div class="profile-img thmb">
+						<a href="javascript:void(0);" onclick="viewPhoto(this,{'user':{{uid}},'al':'{{post.profile_image.id}}','type':'109979992' })" >
+						{%thumbnail post.profile_image.image 480x280 crop as thumb%}
+						<img src="{%static thumb.url%}" />
+						</a>
+					</div>
+					{%endif%}
+				  </span>          
+		        </span>
+				<div class="feed_opt">
+				  <span>
+				    <span class="_time">{{post.created | mytimesince}}</span>
+				    <span class="_fr">
+					  <span>
+					    <span class='like-action'>								
+						{% if post.is_like%}							
+							<a id="et" onclick="return likers.unlike(this)" href="#" onclick="return false;"  data-category='post'  data-type='' data-type_id='{{post.post_type}}' data-act='{{post.act}}' data-post='{{post.post_id}}' data-count='{{post.post.likes}}' data-likeid='{{post.is_like}}'>Unlike</a>							
+						{% else%}
+							<span class="ui-icon ui-icon-carat-1-n"></span>
+							<a onclick=" return likers.like(this)" href="#" onclick="return false;"  data-category='post'  data-post='{{post.post_id}}'  data-type_id='{{post.post_type}}'>Like </a>
+						{% endif %}								
+						</span>
+						<span class='like-count inline-block '>
+							<span class='inline-block'>
+							{%if post.likes%}	
+								{%ifequal post.likes 0%}{%else%}
+								<a href="#"  onclick="likers.get({{post.post_id}}, {{post.post_type}}); return false;">
+									<span id='likecounts'>{{post.likes}}</span>
+								</a>
+								{%endifequal%}										
+							{%endif%}									
+							</span>
+						</span>
+					  </span>
+					  <span>
+
+						<a href="javascript:void(0);" onclick="lstcomment({{post.post_id}},this,'{{post.post_type}}',
+						{%if post.posts.comments%}									
+								{{post.posts.comments}} 
+							{%elif post.gallery.comments%}									
+								{{post.gallery.comments}} 
+							{%elif post.profile_image.comments%}
+								{{post.profile_image.comments}}
+							{%elif post.video.comments%}
+								{{post.video.comments}}
+							{%else%}0
+							{%endif%})">
+							<div class="inline-block">comment </div>
+							<span class='small_padd inline-block'>														
+							{%if post.posts.comments%}									
+								{{post.posts.comments}} 
+							{%elif post.gallery.comments%}									
+								{{post.gallery.comments}} 
+							{%elif post.profile_image.comments%}
+								{{post.profile_image.comments}}
+							{%elif post.video.comments%}
+								{{post.video.comments}}
+							{%endif%}
+							</span>
+						</a>
+					  </span>
+					  <span>
+					    <a>Share</a>
+					  </span>
+					</span>
+				  </span>
+				</div>
+				<span id='cmt_ar'  class='cmnt inline-block hidden' >
+					<span id='cmnt_lst' class='hidden'></span>
+					<span class='cmnt small_padd block'>
+						<span class='placeholder small_padd' id='pl_cmt{{post.post_id}}'>Your comment</span>
+						<textarea placehodler='Add comment...' name='cmt_txt' class=" inline-block small_padd" rows='1' data-label="pl_cmt{{post.post_id}}"></textarea>						
+						<a  class="nrml-font inline-block small_padd" style="background:#f6f6f6;border:1px solid #CCC;padding:5px 3px;vertical-align:top;" href="javascript:void(0);" onclick="comment(this)"  data-post='{{post.post_id}}' data-user='{{uid}}' data-post_type="{{post.post_type}}">comment</a>
+					</span>
+				</span>	
+		    </div>
+	    </div>
+  	</div>
+  {%endfor%}
+  {%if not posts%}
+  	<span class='block cntr'>
+  		<h3>No Feeds available</h3>
+  	</span>
+  {%endif%}
+ </div>
+{%endspaceless%}

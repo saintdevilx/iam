@@ -1,0 +1,7 @@
+{% extends 'layout/default'%}
+{% block title %} Search result-{{phrase}}{% endblock%}
+{% block main%}
+	<div class="">
+		Search Results- {{phrase}}
+	</div>
+{%endblock%}

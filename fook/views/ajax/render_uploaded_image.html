@@ -1,0 +1,10 @@
+{% spaceless %}
+{%load static from staticfiles%}
+{% load thumbnail%}
+{%load fook_tags%}
+{%if uploaded%}
+	{%for img in uploaded.url%}	
+	<div id="img_th{{datetime}}" class="inline-block ">{% my_thumbnail img.1 size="100x100" crop=True dir="temp"  %}<input type="hidden" name="gry[]" value="{{img.0}}" /></div>
+	{%endfor%}
+{%endif%}
+{% endspaceless %}

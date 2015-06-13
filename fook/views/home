@@ -1,0 +1,21 @@
+{%extends 'layout/default'%}
+{%block title%}Fook {%endblock%}
+{%block main%}
+	{% spaceless %}
+	<script type="text/javascript">
+		var bootload = { 'user':{'id':{{user.id}},'name':'{{user.first_name}} {{user.last_name}} '},
+			essential:['setTimeout(Feeds.init(""),100,false)'] };booter();
+	</script>
+	{%include 'include/post_update_box'%}
+	<div class="block" id='bootstrap'>				
+	</div>
+		{%include 'include/feed/filter.html'%}
+	<div id="postlist" >
+		<div class="posts-list "></div>	
+	</div>
+	<div class="block padd_all border-all" id='paginate'>
+		<a href="#" onclick="Feeds.loadMore(this)" class='cntr  block'>load more</a>
+	</div>
+	{% endspaceless %}
+{% endblock %}
+

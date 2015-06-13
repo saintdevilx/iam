@@ -1,0 +1,21 @@
+{%load static from staticfiles %}
+{%load thumbnail%}
+	{%for m in music%}
+	<a href="/music?id={{al.id}}" onclick="return nva.open('/music?id={{al.id}}')">
+		<div class="album_wrap">
+			<div class="album">				
+				<div class="capt">{{m.title}}</div>
+				<div class="btn">Play</div>
+				<div class="al_des">					
+					<div class=""><div class="_likes">{{al.likes}} Likes</div><div class="im_cnt">{{m.play_count}} Played</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</a>
+	{%endfor%}
+	{%if empty%}
+		<div class="album cntr">
+			No Music Found
+		</div>
+	{%endif%}

@@ -1,0 +1,33 @@
+{%load static from staticfiles%}
+{% load thumbnail%}
+<span class='hdlne' >
+	Mutual Friends <small>({{frnds.count}})</small>	
+		<span class='float_right'>
+		<small> 
+		 <a href="javascript:void(0);"> view all</a>
+		</small>
+	</span> 
+	<span class='clear'></span>
+</span>
+<div class="list-item small_padd" id='mtl_frnd_list' >
+{%ifequal frnds.count 0%}
+	<span class='padd_all block'>No Mutual Friends</span>
+{%endifequal%}
+{%for frnd in frnds.frnds%}
+	<div class="inline-block">
+		<div class="inline-block">			
+			<a href="/viewprofile/{{frnd.user_id}}">
+			{% thumbnail frnd.profile_image|default:'no_profile_pic.jpg' 50x50 as thumb%}
+			{% if thumb%}
+			<img src="{%static thumb%}" />
+			{%endif%}
+		</div>
+		<div class="inline">			
+			<div class="list-item">{{frnd.user.first_name}} {{frnd.user.last_name}}</div>
+		</div>
+		</a>
+	</div>
+{%endfor%}
+</div>
+
+

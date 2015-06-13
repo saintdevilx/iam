@@ -1,0 +1,30 @@
+{%load static from staticfiles%}
+<div id="basic_info" >
+		<div class="hdlne _bckf8 small_padd">
+			<span >Gallery Albums</span>
+			{%if me%}
+			<span class='float_right link-btn' onclick="var ph =new window.ph_viewer(this,{'title':'Create New Album' }) ;ph.show();ph.load();" data-image='{{g.image}}' data-title='{{g.name}}' style="cursor:pointer;" data-event='page' data-category='page' data-view='al_crt' >Create Album</span>
+			{%endif%}
+		</div>
+{%load thumbnail%}
+	<div class="inline-block " style="padding: 10px; display:block;min-height:400px;">
+		<div class="small_padd"></div>
+			<div class="inline-block profile_images albm">
+				<a href="javascript:void(0);" onclick="nav.open('/photos?user={{uid}}&type=profile')">Profile Image</a>
+				<span class='al_thmb block'></span>
+			</div>	
+	{%if empty %}
+		<div style="text-align:center; color:#097599" class="block">
+			<h2>
+				<span class='block'>No Album found  </span>
+				{%ifequal author  uid%}
+				<br>
+				<span class='block'> Create Album and share your memories with your besties</span>
+				{%endifequal%}
+			</h2>
+		</div>
+	{%else%}			
+		{%include 'ajax/gallery/_albums.html'%}				
+	{%endif%}
+	</div>
+</div>	

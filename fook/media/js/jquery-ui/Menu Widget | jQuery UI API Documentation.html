@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="js multiplebgs boxshadow cssgradients wf-klavikaweb-i7-active wf-klavikaweb-n7-active wf-sourcecodepro-n4-active wf-sourcecodepro-n7-active wf-active" lang="en-US"><!--<![endif]--><head data-live-domain="api.jqueryui.com">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/ados.js" async="" type="text/javascript"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Menu Widget | jQuery UI API Documentation</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org">
+	<meta name="description" content="jQuery: The Write Less, Do More, JavaScript Library">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="shortcut icon" href="http://api.jqueryui.com/jquery-wp-content/themes/api.jqueryui.com/i/favicon.ico">
+
+	<link rel="stylesheet" href="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/base.css">
+	<link rel="stylesheet" href="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/style.css">
+
+	<script src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/ga.js" async="" type="text/javascript"></script><script src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/modernizr.js"></script>
+
+	<script src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery.js"></script>
+	<script>window.jQuery || document.write(unescape('%3Cscript src="//api.jqueryui.com/jquery-wp-content/themes/jquery/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+	<script src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/plugins.js"></script>
+	<script src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/main.js"></script>
+
+	<script src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/wde1aof.js"></script>
+	<style type="text/css">.tk-source-code-pro{font-family:"source-code-pro",sans-serif;}.tk-klavika-web{font-family:"klavika-web",sans-serif;}</style><link href="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/d.css" rel="stylesheet"><script>try{Typekit.load();}catch(e){}</script>
+
+<meta name="generator" content="WordPress 4.0">
+
+</head>
+<body class="api jquery-ui single single-post postid-53 single-format-standard single-author singular">
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links l_tinynav1">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/CLA/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+																			<li><a href="http://jssummit.com/">Nov 18 - 20 | JavaScript Summit</a></li>
+													<li><a href="http://jqueryuk.com/2015/?source=jqorg-listing">Mar 6 | jQuery UK 2015</a></li>
+												</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="http://jqueryui.com/" title="jQuery UI API Documentation">jQuery UI API Documentation</a></h2>
+
+		<aside><div id="broadcast"><a href="http://engine.adzerk.net/r?e=eyJhdiI6MjIyMzYsImF0IjoxMzE0LCJidCI6MCwiY20iOjE1MjkwMiwiY2giOjgzNjgsImNyIjo0OTI1NzksImRpIjoiMDBmMTE2M2UzYzk5NDQxNTlkZTRkMDliM2Q5NDRlOWEiLCJkbSI6MSwiZmMiOjUzOTkxMCwiZmwiOjI4MjA2OCwiaXAiOiIxMDYuMjE5LjE0MS40MSIsIm53Ijo1NDQ5LCJwYyI6MCwicHIiOjIxOTM3LCJydCI6MSwicmYiOiJodHRwOi8vYXBpLmpxdWVyeXVpLmNvbS9hdXRvY29tcGxldGUvIiwic3QiOjUzODI5LCJ1ayI6InVlMS0yN2JlOTA5OWNhMjI0OWM0YmQ2ZmJmYmQyOWVlNjBkNiIsInRzIjoxNDE2MDU4OTg0NTQ5LCJiZiI6dHJ1ZSwidXIiOiJodHRwOi8vanNzdW1taXQuY29tLz91dG1fc291cmNlPWpxdWVyeXNpdGUmdXRtX21lZGl1bT1iYW5uZXImdXRtX2NhbXBhaWduPWpzc3VtbWl0MjAxNCJ9&amp;s=6fIawm4W4b33VUoS2Qsh_cYCih4" rel="nofollow" target="_blank" title="JavaScript Summit 2014"><img src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/32fae050709244a29f00c80c6735173c.jpg" title="JavaScript Summit 2014" alt="JavaScript Summit 2014" height="100" border="0" width="400"></a><img src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/i.gif" style="position:absolute;" height="0px" border="0" width="0px"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu l_tinynav2">
+<li class="menu-item"><a href="http://jqueryui.com/demos/">Demos</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/download/">Download</a></li>
+<li class="menu-item current"><a href="http://api.jqueryui.com/">API Documentation</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/themeroller/">Themes</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/development/">Development</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/support/">Support</a></li>
+<li class="menu-item"><a href="http://blog.jqueryui.com/">Blog</a></li>
+<li class="menu-item"><a href="http://jqueryui.com/about/">About</a></li>
+	</ul><select class="tinynav tinynav2" id="tinynav2"><option selected="selected">Navigate...</option><option value="http://jqueryui.com/demos/">Demos</option><option value="http://jqueryui.com/download/">Download</option><option value="http://api.jqueryui.com/">API Documentation</option><option value="http://jqueryui.com/themeroller/">Themes</option><option value="http://jqueryui.com/development/">Development</option><option value="http://jqueryui.com/support/">Support</option><option value="http://blog.jqueryui.com/">Blog</option><option value="http://jqueryui.com/about/">About</option></select>
+</div>
+
+		<form method="get" class="searchform" action="//api.jqueryui.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search jQuery UI API Documentation</span>
+		<input name="s" placeholder="Search" type="text">
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+<div class="content-right twelve columns">
+	<div id="content">
+					
+<article id="post-53" class="post-53 post type-post status-publish format-standard hentry category-widgets">
+	<header class="entry-header">
+		<h1 class="entry-title">Menu Widget</h1>
+		<hr>
+				<div class="entry-meta">
+			Categories: <span class="category"><a href="http://api.jqueryui.com/category/widgets/">Widgets</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<article id="menu1" class="entry widget"><h2 class="section-title">
+<span>Menu Widget</span><span class="version-details">version added: 1.9</span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>Description: </strong>
+		Themeable menu with mouse and keyboard interactions for navigation.
+	</p>
+<section id="quick-nav"><header><h2>QuickNav<a href="#entry-examples">Examples</a>
+</h2></header><div class="quick-nav-section">
+<h3>Options</h3>
+<div><a href="#option-disabled">disabled</a></div>
+<div><a href="#option-icons">icons</a></div>
+<div><a href="#option-items">items</a></div>
+<div><a href="#option-menus">menus</a></div>
+<div><a href="#option-position">position</a></div>
+<div><a href="#option-role">role</a></div>
+</div>
+<div class="quick-nav-section">
+<h3>Methods</h3>
+<div><a href="#method-blur">blur</a></div>
+<div><a href="#method-collapse">collapse</a></div>
+<div><a href="#method-collapseAll">collapseAll</a></div>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-disable">disable</a></div>
+<div><a href="#method-enable">enable</a></div>
+<div><a href="#method-expand">expand</a></div>
+<div><a href="#method-focus">focus</a></div>
+<div><a href="#method-instance">instance</a></div>
+<div><a href="#method-isFirstItem">isFirstItem</a></div>
+<div><a href="#method-isLastItem">isLastItem</a></div>
+<div><a href="#method-next">next</a></div>
+<div><a href="#method-nextPage">nextPage</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-previous">previous</a></div>
+<div><a href="#method-previousPage">previousPage</a></div>
+<div><a href="#method-refresh">refresh</a></div>
+<div><a href="#method-select">select</a></div>
+<div><a href="#method-widget">widget</a></div>
+<br><h3>Extension Points</h3>
+<div><a href="#method-_closeOnDocumentClick">_closeOnDocumentClick</a></div>
+<div><a href="#method-_isDivider">_isDivider</a></div>
+</div>
+<div class="quick-nav-section">
+<h3>Events</h3>
+<div><a href="#event-blur">blur</a></div>
+<div><a href="#event-create">create</a></div>
+<div><a href="#event-focus">focus</a></div>
+<div><a href="#event-select">select</a></div>
+</div></section><div class="longdesc" id="entry-longdesc">
+		<p>A menu can be created from any valid markup as long as the elements
+ have a strict parent/child relationship. The most commonly used element
+ is the unordered list (<code>&lt;ul&gt;</code>):</p>
+
+		<div class="syntaxhighlighter xml nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"menu"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3</code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-3<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-4<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-5<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 4<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 5<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+		<p>If you use a structure other than <code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code>, including using the same element for the menu and the menu items, use the <a href="#option-menus"><code>menus</code></a> option to specify a way to differentiate the two elements, e.g., <code>menus: "div.menuElement"</code>.</p>
+
+		<p>Any menu item can be disabled by adding the <code>ui-state-disabled</code> class to that element.</p>
+
+		<h3 id="icons">Icons</h3>
+
+		<p>To add icons to the menu, include them in the markup:</p>
+
+		<div class="syntaxhighlighter xml nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"menu"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon ui-icon-disk"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>Save<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+		<p>Menu automatically adds the necessary padding to items without icons.</p>
+
+		<h3 id="dividers">Dividers</h3>
+
+		<p>Divider elements can be created by including unlinked menu items that contain only spaces and/or dashes:</p>
+
+		<div class="syntaxhighlighter xml nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"menu"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>-<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+		<h3>Keyboard interaction</h3>
+
+		<ul>
+			<li>
+<code>ENTER</code>/<code>SPACE</code>: Invoke the focused menu item's action, which may be opening a submenu.</li>
+			<li>
+<code>UP</code>: Move focus to the previous menu item.</li>
+			<li>
+<code>DOWN</code>: Move focus to the next menu item.</li>
+			<li>
+<code>RIGHT</code>: Open the submenu, if available.</li>
+			<li>
+<code>LEFT</code>: Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
+			<li>
+<code>ESCAPE</code>: Close the current submenu and move focus to the parent menu item. If not in a submenu, do nothing.</li>
+		</ul>
+
+		<p>Typing a letter moves focus to the first item whose title starts 
+with that character. Repeating the same character cycles through 
+matching items. Typing more characters within the one second timer 
+matches those characters.</p>
+
+		<p>Disabled items can receive keyboard focus, but do not allow any other interaction.</p>
+
+		<div>
+	<h3 id="theming">Theming</h3>
+
+	<p>The menu widget uses the <a href="http://api.jqueryui.com/theming/css-framework/">jQuery UI CSS framework</a> to style its look and feel. If menu specific styling is needed, the following CSS class names can be used:</p>
+</div>
+
+		<ul>
+			<li>
+				<code>ui-menu</code>: The outer container of the menu. This element will additionally have a <code>ui-menu-icons</code> class if the menu contains icons.
+				<ul>
+					<li>
+						<code>ui-menu-item</code>: The container for individual menu items.
+						<ul>
+							<li>
+<code>ui-menu-icon</code>: The submenu icons set via the <a href="#option-icons"><code>icons</code></a> option.</li>
+						</ul>
+					</li>
+					<li>
+<code>ui-menu-divider</code>: Divider elements between menu items.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<h3>Dependencies</h3>
+		<ul>
+			<li><a href="http://api.jqueryui.com/category/ui-core/">UI Core</a></li>
+			<li><a href="http://api.jqueryui.com/jQuery.widget/">Widget Factory</a></li>
+			<li><a href="http://api.jqueryui.com/position/">Position</a></li>
+		</ul>
+	</div>
+<h3>Additional Notes:</h3>
+<div class="longdesc"><ul><li>
+			This widget requires some functional CSS, otherwise it won't work. If
+ you build a custom theme, use the widget's specific CSS file as a 
+starting point.
+		</li></ul></div>
+<section id="options"><header><h2>Options</h2></header><div id="option-disabled" class="api-item first-item">
+<h3>disabled<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Disables the menu if set to <code>true</code>.</div>
+<strong>Code examples:</strong><p>Initialize the menu with the <code>disabled</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({ disabled: <span class="literal">true</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>disabled</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> disabled = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"disabled"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"disabled"</span>, <span class="literal">true</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-icons" class="api-item">
+<h3>icons<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Object">Object</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>{ submenu: "ui-icon-carat-1-e" }</code>
+</div>
+<div>
+				Icons to use for submenus, matching <a href="http://api.jqueryui.com/theming/icons/">an icon provided by the jQuery UI CSS Framework</a>.
+				<ul>
+					<li>submenu (string, default: "ui-icon-carat-1-e")</li>
+				</ul>
+			</div>
+<strong>Code examples:</strong><p>Initialize the menu with the <code>icons</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({ icons: { submenu: <span class="string">"ui-icon-circle-triangle-e"</span> } });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>icons</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> icons = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"icons"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"icons"</span>, { submenu: <span class="string">"ui-icon-circle-triangle-e"</span> } );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-items" class="api-item">
+<h3>items<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>"&gt; *"</code>
+</div>
+<div>
+				<p>Selector for the elements that serve as the menu items.</p>
+				<div class="warning">
+<strong>Note:</strong> The <code>items</code> option should not be changed after initialization.</div>
+			<span class="version-details"> (version added: 1.11.0)</span>
+</div>
+<strong>Code examples:</strong><p>Initialize the menu with the <code>items</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({ items: <span class="string">".custom-item"</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get the <code>items</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> items = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"items"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-menus" class="api-item">
+<h3>menus<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>"ul"</code>
+</div>
+<div>
+				<p>Selector for the elements that serve as the menu container, including sub-menus.</p>
+				<div class="warning">
+<strong>Note:</strong> The <code>menus</code> option should not be changed after initialization. Existing submenus will not be updated.</div>
+			</div>
+<strong>Code examples:</strong><p>Initialize the menu with the <code>menus</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({ menus: <span class="string">"div"</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get the <code>menus</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> menus = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"menus"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-position" class="api-item">
+<h3>position<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#Object">Object</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>{ my: "left top", at: "right top" }</code>
+</div>
+<div>Identifies the position of submenus in relation to the associated parent menu item. The <code>of</code> option defaults to the parent menu item, but you can specify another element to position against. You can refer to the <a href="http://api.jqueryui.com/position/">jQuery UI Position</a> utility for more details about the various options.</div>
+<strong>Code examples:</strong><p>Initialize the menu with the <code>position</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({ position: { my: <span class="string">"left top"</span>, at: <span class="string">"right-5 top+5"</span> } });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get or set the <code>position</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> position = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"position"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// setter</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"position"</span>, { my: <span class="string">"left top"</span>, at: <span class="string">"right-5 top+5"</span> } );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div id="option-role" class="api-item">
+<h3>role<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types/#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>"menu"</code>
+</div>
+<div>
+				<p>Customize the ARIA roles used for the menu and menu items. The default uses <code>"menuitem"</code> for items. Setting the <code>role</code> option to <code>"listbox"</code> will use <code>"option"</code> for items. If set to <code>null</code>, no roles will be set, which is useful if the menu is being controlled by another element that is maintaining focus.</p>
+				<div class="warning">
+<strong>Note:</strong> The <code>role</code> option should not be changed after initialization. Existing (sub)menus and menu items will not be updated.</div>
+			</div>
+<strong>Code examples:</strong><p>Initialize the menu with the <code>role</code> option specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({ role: <span class="literal">null</span> });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Get the <code>role</code> option, after initialization:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// getter</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> role = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"role"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div></section><section id="methods"><header><h2>Methods</h2></header><div id="method-blur"><div class="api-item first-item">
+<h3>blur(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Removes focus from a menu, resets any active element styles and triggers the menu's <a href="#event-blur"><code>blur</code></a> event.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the menu to blur.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the blur method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"blur"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-collapse"><div class="api-item">
+<h3>collapse(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Closes the currently active sub-menu.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the menu to collapse.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the collapse method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"collapse"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-collapseAll"><div class="api-item">
+<h3>collapseAll(  [event ] [, all ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Closes all open sub-menus.
+			</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the menu to collapse.</div>
+</li>
+<li>
+<div><strong>all</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Boolean">Boolean</a>
+</div>
+<div>Indicates whether all sub-menus should be closed or only sub-menus 
+below and including the menu that is or contains the target of the 
+triggering event.</div>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the collapseAll method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"collapseAll"</span>, <span class="literal">null</span>, <span class="literal">true</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-destroy"><div class="api-item">
+<h3>destroy()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+		Removes the menu functionality completely. This will return the element back to its pre-init state.
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the destroy method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"destroy"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-disable"><div class="api-item">
+<h3>disable()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+		Disables the menu.
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the disable method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"disable"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-enable"><div class="api-item">
+<h3>enable()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+		Enables the menu.
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the enable method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"enable"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-expand"><div class="api-item">
+<h3>expand(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Opens the sub-menu below the currently active item, if one exists.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the menu to expand.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the expand method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"expand"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-focus"><div class="api-item">
+<h3>focus(  [event ], item )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Activates a particular menu item, begins opening any sub-menu if present and triggers the menu's <a href="#event-focus"><code>focus</code></a> event.
+			</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the menu item to gain focus.</div>
+</li>
+<li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a>
+</div>
+<div>The menu item to focus/activate.</div>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the focus method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"focus"</span>, <span class="literal">null</span>, menu.find( <span class="string">".ui-menu-item:last"</span> ) );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-instance"><div class="api-item">
+<h3>instance()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#Object">Object</a></span>
+</h3>
+<div>
+		<p>Retrieves the menu's instance object. If the element does not have an associated instance, <code>undefined</code> is returned.</p>
+
+		<p>Unlike other widget methods, <code>instance()</code> is safe to call on any element after the menu plugin has loaded.</p>
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the instance method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"instance"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-isFirstItem"><div class="api-item">
+<h3>isFirstItem()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Returns a boolean value stating whether or not the currently active item is the first item in the menu.
+			</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the isFirstItem method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> firstItem = $( <span class="string">".selector"</span> ).menu( <span class="string">"isFirstItem"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-isLastItem"><div class="api-item">
+<h3>isLastItem()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Returns a boolean value stating whether or not the currently active item is the last item in the menu.
+			</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the isLastItem method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> lastItem = $( <span class="string">".selector"</span> ).menu( <span class="string">"isLastItem"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-next"><div class="api-item">
+<h3>next(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Moves active state to next menu item.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the focus to move.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the next method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"next"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-nextPage"><div class="api-item">
+<h3>nextPage(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Moves active state to first menu item below the bottom of a scrollable menu or the last item if not scrollable.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the focus to move.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the nextPage method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"nextPage"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-option">
+<div class="api-item">
+<h3>option( optionName )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#Object">Object</a></span>
+</h3>
+<div>Gets the value currently associated with the specified <code>optionName</code>.</div>
+<ul><li>
+<div><strong>optionName</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The name of the option to get.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> isDisabled = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"disabled"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div class="api-item">
+<h3>option()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#PlainObject">PlainObject</a></span>
+</h3>
+<div>Gets an object containing key/value pairs representing the current menu options hash.</div>
+<ul><li><div class="null-signature">This signature does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> options = $( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div class="api-item">
+<h3>option( optionName, value )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>Sets the value of the menu option associated with the specified <code>optionName</code>.</div>
+<ul>
+<li>
+<div><strong>optionName</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The name of the option to set.</div>
+</li>
+<li>
+<div><strong>value</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>A value to set for the option.</div>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, <span class="string">"disabled"</span>, <span class="literal">true</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div class="api-item">
+<h3>option( options )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>Sets one or more options for the menu.</div>
+<ul><li>
+<div><strong>options</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>A map of option-value pairs to set.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the  method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"option"</span>, { disabled: <span class="literal">true</span> } );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+</div>
+<div id="method-previous"><div class="api-item">
+<h3>previous(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Moves active state to previous menu item.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the focus to move.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the previous method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"previous"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-previousPage"><div class="api-item">
+<h3>previousPage(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Moves active state to first menu item above the top of a scrollable menu or the first item if not scrollable.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the focus to move.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the previousPage method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"previousPage"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-refresh"><div class="api-item">
+<h3>refresh()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Initializes sub-menus and menu items that have not already been 
+initialized. New menu items, including sub-menus can be added to the 
+menu or all of the contents of the menu can be replaced and then 
+initialized with the <code>refresh()</code> method.
+			</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the refresh method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"refresh"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-select"><div class="api-item">
+<h3>select(  [event ] )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a> (<a href="http://learn.jquery.com/jquery-ui/widget-factory/widget-method-invocation/">plugin only</a>)</span>
+</h3>
+<div>
+				Selects the currently active menu item, collapses all sub-menus and triggers the menu's <a href="#event-select"><code>select</code></a> event.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div>What triggered the selection.</div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the select method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu( <span class="string">"select"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-widget"><div class="api-item">
+<h3>widget()<span class="returns">Returns: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+</h3>
+<div>
+		Returns a <code>jQuery</code> object containing the menu.
+	</div>
+<ul><li><div class="null-signature">This method does not accept any arguments.</div></li></ul>
+<div>
+<strong>Code examples:</strong><p>Invoke the widget method:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> widget = $( <span class="string">".selector"</span> ).menu( <span class="string">"widget"</span> );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div></section><section id="extension-points"><header><h2>Extension Points</h2></header><p>
+				The menu widget is built with the
+				<a href="http://api.jqueryui.com/jQuery.widget/">widget factory</a> and can be
+				extended. When extending widgets, you have the ability to override or add to the
+				behavior of existing methods. The following methods are provided as extension points
+				with the same API stability as the <a href="#methods">plugin methods</a> listed
+				above. For more information on widget extensions, see
+				<a href="http://learn.jquery.com/jquery-ui/widget-factory/extending-widgets/">Extending
+				Widgets with the Widget Factory</a>.
+			</p>
+<hr>
+<div id="method-_closeOnDocumentClick"><div class="api-item first-item">
+<h3>_closeOnDocumentClick( event )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#Boolean">Boolean</a></span>
+</h3>
+<div>
+				Method that determines whether clicks on the document should close 
+any open menus. By default, menus are closed unless the click occurred 
+on the menu.
+			</div>
+<ul><li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Never close menus on document click.</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>_closeOnDocumentClick: <span class="keyword">function</span>( event ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">return</span> <span class="literal">false</span>;</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div>
+<div id="method-_isDivider"><div class="api-item">
+<h3>_isDivider( item )<span class="returns">Returns: <a href="http://api.jquery.com/Types/#Boolean">Boolean</a></span>
+</h3>
+<div>
+				Determines whether an item should acually be represented as a 
+divider instead of a menu item. By default any item that contains just 
+spaces and/or dashes is considered a divider.
+			</div>
+<ul><li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a>
+</div>
+<div></div>
+</li></ul>
+<div>
+<strong>Code examples:</strong><p>Treat all items as menu items with no dividers.</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>_isDivider: <span class="keyword">function</span>( item ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">return</span> <span class="literal">false</span>;</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></div></section><section id="events"><header><h2>Events</h2></header><div id="event-blur" class="api-item first-item">
+<h3>blur( event, ui )<span class="returns">Type: <code>menublur</code></span>
+</h3>
+<div>
+				Triggered when the menu loses focus.
+			</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul><li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a>
+</div>
+<div>
+						The currently active menu item.
+					</div>
+</li></ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Initialize the menu with the blur callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({</code></div></div><div class="container"><div class="line"><code>  blur: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the menublur event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"menublur"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-create" class="api-item">
+<h3>create( event, ui )<span class="returns">Type: <code>menucreate</code></span>
+</h3>
+<div>
+		Triggered when the menu is created.
+	</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+</li>
+</ul>
+<p><em>Note: The <code>ui</code> object is empty but included for consistency with other events.</em></p>
+<div>
+<strong>Code examples:</strong><p>Initialize the menu with the create callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({</code></div></div><div class="container"><div class="line"><code>  create: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the menucreate event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"menucreate"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-focus" class="api-item">
+<h3>focus( event, ui )<span class="returns">Type: <code>menufocus</code></span>
+</h3>
+<div>
+				Triggered when a menu gains focus or when any menu item is activated.
+			</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul><li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a>
+</div>
+<div>
+						The currently active menu item.
+					</div>
+</li></ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Initialize the menu with the focus callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({</code></div></div><div class="container"><div class="line"><code>  focus: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the menufocus event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"menufocus"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div>
+<div id="event-select" class="api-item">
+<h3>select( event, ui )<span class="returns">Type: <code>menuselect</code></span>
+</h3>
+<div>
+				Triggered when a menu item is selected.
+			</div>
+<ul>
+<li>
+<div><strong>event</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Event">Event</a>
+</div>
+<div></div>
+</li>
+<li>
+<div><strong>ui</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div></div>
+<ul><li>
+<div><strong>item</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#jQuery">jQuery</a>
+</div>
+<div>
+						The currently active menu item.
+					</div>
+</li></ul>
+</li>
+</ul>
+<div>
+<strong>Code examples:</strong><p>Initialize the menu with the select callback specified:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).menu({</code></div></div><div class="container"><div class="line"><code>  select: <span class="keyword">function</span>( event, ui ) {}</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Bind an event listener to the menuselect event:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$( <span class="string">".selector"</span> ).on( <span class="string">"menuselect"</span>, <span class="keyword">function</span>( event, ui ) {} );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+</div></section><section class="entry-examples" id="entry-examples"><header><h2>Example:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">A simple jQuery UI Menu</span></h4>
+<div class="syntaxhighlighter xml ">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+						<div class="line n16">16</div>
+					
+						<div class="line n17">17</div>
+					
+						<div class="line n18">18</div>
+					
+						<div class="line n19">19</div>
+					
+						<div class="line n20">20</div>
+					
+						<div class="line n21">21</div>
+					
+						<div class="line n22">22</div>
+					
+						<div class="line n23">23</div>
+					
+						<div class="line n24">24</div>
+					
+						<div class="line n25">25</div>
+					
+						<div class="line n26">26</div>
+					
+						<div class="line n27">27</div>
+					
+						<div class="line n28">28</div>
+					
+						<div class="line n29">29</div>
+					
+						<div class="line n30">30</div>
+					
+						<div class="line n31">31</div>
+					
+						<div class="line n32">32</div>
+					
+						<div class="line n33">33</div>
+					
+						<div class="line n34">34</div>
+					
+						<div class="line n35">35</div>
+					
+						<div class="line n36">36</div>
+					
+						<div class="line n37">37</div>
+					
+						<div class="line n38">38</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>menu demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.ui-menu</span> <span class="rules">{</span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/ui/1.11.2/jquery-ui.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"menu"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3</code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-3<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-4<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3-5<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 4<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 5<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">"#menu"</span> ).menu();</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"><iframe height="250" width="100%"></iframe></div>
+</div></section>
+</div></article>	</div><!-- .entry-content -->
+
+</article><!-- #post-53 -->
+			</div>
+
+	
+<div id="sidebar" class="widget-area" role="complementary">
+	<aside id="categories" class="widget">
+		<h3 class="widget-title">jQuery UI 1.11</h3>
+		<ul>
+				<li class="cat-item cat-item-2"><a href="http://api.jqueryui.com/category/effects/">Effects</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://api.jqueryui.com/category/effects-core/">Effects Core</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://api.jqueryui.com/category/interactions/">Interactions</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://api.jqueryui.com/category/overrides/">Method Overrides</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://api.jqueryui.com/category/methods/">Methods</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://api.jqueryui.com/category/selectors/">Selectors</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://api.jqueryui.com/category/theming/">Theming</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://api.jqueryui.com/category/ui-core/">UI Core</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://api.jqueryui.com/category/utilities/">Utilities</a>
+</li>
+	<li class="cat-item cat-item-3 current-cat"><a href="http://api.jqueryui.com/category/widgets/">Widgets</a>
+</li>
+		</ul>
+	</aside>
+
+	<aside id="categories" class="widget">
+		<h3 class="widget-title">Other Versions</h3>
+		<ul>
+			<li><a href="http://api.jqueryui.com/1.10/">jQuery UI 1.10</a></li><li><a href="http://api.jqueryui.com/1.9/">jQuery UI 1.9</a></li><li><a href="http://api.jqueryui.com/1.8/">jQuery UI 1.8</a></li>		</ul>
+	</aside>
+</div>
+</div>
+	</div>
+</div>
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<!--<li>
+						<a href="http://link.packtpub.com/SHnqUf">
+							<img src="//api.jqueryui.com/jquery-wp-content/themes/jquery/content/books/jquery-ui-1.8.jpg" alt="jQuery UI 1.8: The User Interface Library for jQuery by Dan Wellman" width="92" height="114">
+							<span class="book-title">jQuery UI 1.8: The User Interface Library for jQuery</span>
+							<cite>Dan Wellman</cite>
+						</a>
+					</li>-->
+					<li>
+						<a href="http://www.manning.com/vantoll/">
+							<span><img src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery-ui-in-action.jpg" alt="jQuery UI in Action by TJ VanToll" height="114" width="92"></span>
+							<strong>jQuery UI in Action</strong><br>
+							<cite>TJ VanToll</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://link.packtpub.com/PG9pAC">
+							<img src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery-ui-themes.jpg" alt="jQuery UI Themes by Adam Boduch" height="114" width="92">
+							<span class="book-title">jQuery UI Themes</span>
+							<cite>Adam Boduch</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.packtpub.com/jquery-userinterface-cookbook/book">
+							<img src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/jquery-ui-cookbook.jpg" alt="jQuery UI Cookbook by Adam Boduch" height="114" width="92">
+							<span class="book-title">jQuery UI Cookbook</span>
+							<cite>Adam Boduch</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/using-jquery-ui/">Forum</a></li>
+			<li><a class="icon-wrench" href="http://api.jqueryui.com/">API</a></li>
+			<li><a class="icon-twitter" href="https://twitter.com/jqueryui">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2014 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://mediatemple.net/" rel="nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com/" rel="nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1076265-1']);
+    _gaq.push(['_setDomainName', 'api.jqueryui.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script type="text/javascript" src="Menu%20Widget%20%7C%20jQuery%20UI%20API%20Documentation_files/comment-reply.js"></script>
+
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

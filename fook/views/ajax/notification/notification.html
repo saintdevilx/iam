@@ -1,0 +1,38 @@
+{%spaceless%}
+{%load thumbnail%}
+{%load static from staticfiles%}
+{%load fook_tags%}
+{%for n in notification%}
+<span class="_noti_row {%ifequal n.row.unread '1' %}unread{%endifequal%}">
+	<a href="/post/view?post_id={{n.post.id}}&post_type={{n.row.post_type}}">
+		<span class='actor'>
+			{%thumbnail n.actor.image|default:'no_profile_pic.jpg' 50x50 crop as thumb%}
+			<img src="{%static thumb%}" width="40" height="40">
+			<div class="block">
+				<span class='time' title="{{n.row.created}}">{{n.row.created | mytimesince}}</span>
+			</div>
+		</span>	
+		<span class='desc'>
+			<span href="#">
+				<span>
+					<b>{{n.actor.user.first_name}}{{n.actor.user.last_name}}</b>
+				</span>
+			</span>  
+			<span class='desc-text'>{{n.activity}} Your {{n.post_type}}</span>
+			<span class='_nimg'>
+				{%ifequal n.row.post_type 109979992%} {%thumbnail n.post.image 50x50 crop as th%}
+					<img src="{%static th%}" width="{{th.width}}" height="{{th.height}}" /> 
+				{%endifequal%}
+				{%ifequal n.row.post_type 109979988%} 
+					<span class='_ntext'>"{{n.post.post_description | truncatechars:100}}"</span> 
+				{%endifequal%}</span>
+		</span>	
+	</a>
+	{%ifequal n.row.unread '1'%}
+		<a href="javascript:void(0);" class="inline-block" title="mark as read" onclick='Notification.mark_read(this,{{n.row.id}});'>
+			<span class='ui-icon ui-icon-note block' ></span>
+		</a>
+	{%endifequal%}		
+</span>
+{%endfor%}
+{%endspaceless%}

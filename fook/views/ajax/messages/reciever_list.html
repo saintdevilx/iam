@@ -1,0 +1,26 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+{%if results%}
+<div id="recieverresults">
+<span>
+		{%for r in results%}
+		<span class='list-item uiSelectorItem' id='rslt_item' data-lbl="{{r.first_name}} {{r.last_name}}" data-val="{{r.id}}">
+			<a href='#' class="uiSelectorItemAdd" >	
+				<span class='result-item'>
+					<span class='result-item-image' style='max-height:50px;overflow:hidden;'>
+						{%thumbnail r.image|default:"no_profile_pic.jpg" 45x45 crop as thumb %}
+						<img src='{%static thumb%}'  class='result-image' style='max-width:30px;'/>				
+					</span>
+					<span class='result-info  '>
+						<span class='page-type item'>
+							{{r.first_name}} {{r.last_name}}
+						</span>
+						<span class='item'></span>
+					</span>
+				</span>
+			</a>
+		</span>
+		{%endfor%}		
+</span>
+</div>
+{%endif%}

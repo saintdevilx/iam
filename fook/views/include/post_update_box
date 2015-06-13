@@ -1,0 +1,46 @@
+<div class="postbox" class="block border-all">
+	<form action="/add_post" enctype="multipart/form-data" method="POST" onsubmit="return PostTextBOX.post(this);">
+		<div class="post" >						
+			<div class="border-btm" id='postUpdateBox' >
+				<div class="list-item hdlne hidden"> 
+					<div class=''>Pull it out what's you got.</div>
+				</div>
+				<div class="list-item" onclick="PostTextBOX.init(this)" id='txt_bx_wrap'>	
+						<div class="placeholder" id='pl_postBox'>Write to share</div>						
+						<span>
+							<textarea onfocus="PostTextBOX.init(this)" name="post_description" id='post-description' onkeypress="PostTextBOX.keypress(event)" onkeyup="PostTextBOX.keyup(event)" onkeydown="PostTextBOX.keydown(event)" value="" text="" required="true"></textarea>						
+						</span>
+						<span class='hidden'>
+							<input type="hidden" name="mention[]" value="" id="mention_list" />
+							<input name="attached[]" type="hidden" value="" id='attached' />					
+							{{post_form.post_description.errors | striptags}}				
+							<input type="hidden" name="target_id" value="{{user_id}}" />							
+							<input type="hidden" name="visibility" />
+							<!--input type="hidden" name="unpublished"  id='unpublished_post' /-->						
+							<input type="hidden" name="attachment" value="[]" />
+						</span>
+						<div id='attachment-img-thmb' class="border-top"></div>
+				</div>
+				<div class="list-item">		
+					<div style="position: absolute; border: 1px solid rgb(238, 238, 238); padding: 5px; background: none repeat scroll 0px 0px rgb(226, 227, 255); overflow-y: auto; width: 150px; max-height: 250px;" class='hidden' id="mentionList">	</div>	
+					<div class='post-button _bckf8' >							
+						<div class=" inline-block" style="padding: 6px 4px; margin: 3px; cursor: pointer;">
+							<div style="display:none;">
+								<style type="text/css">textarea#id_post_description{padding:5px;}</style>
+								<input type="file" class="hidden" id='post_attachment' name='attachment' />
+							</div>
+							<span onclick=" PostTextBOX.attach();" class="icon-camera" style="padding:2px 9px;" title='add images'></span>
+						</div>
+						<div class=" inline-block"><input type="submit" class='btn' value="Post"></div>
+						<span class='emo'>
+							<span class='_fr'>
+								<a href="javascript:void(0);" onclick="emo.toggle(this)"><img alt=":(" src="/media/emoticons/sadsmile.gif" class="emoticon emoticon-3a28"></a>
+								<span id="emo_list">{%include 'ajax/emo/list.html'%}</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>	

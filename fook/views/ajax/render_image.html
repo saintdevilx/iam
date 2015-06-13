@@ -1,0 +1,9 @@
+{%load static from staticfiles%}
+{% load thumbnail%}
+{%if image%}
+<div id="img_th{{datetime}}" class="inline-block ">
+	{% thumbnail file 100x80 crop as thumb %}
+	<img src="{%static thumb.url%}" />	
+	<input type="hidden" name="gry[]" value="{{image}}" />
+</div>
+{%endif%}

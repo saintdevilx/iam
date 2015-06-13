@@ -1,0 +1,22 @@
+{%load static from staticfiles %}
+{%load thumbnail%}
+	{%for al in albums%}
+	<a href="/gallery/{{al.id}}" onclick="return nva.open('/gallery/{{al.id}}')">
+		<div class="album_wrap">
+			<div class="album">				
+				<div class="capt">{{al.name}}</div>
+				{%thumbnail al.image|default:"no_profile_pic.jpg" 150x100 crop as thumb%}
+				<div class="thumb"><img src="{%static thumb%}" /></div>				
+				<div class="al_des">					
+					<div class=""><div class="_likes">{{al.likes}} Likes</div><div class="im_cnt">{{al.image_count}} Photos</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</a>
+	{%endfor%}
+	{%if empty%}
+		<div class="album">
+			No Album Found
+		</div>
+	{%endif%}

@@ -1,0 +1,15 @@
+{%if found%}
+{%for l in location%}
+	<div class="locRow">
+		<div class="label lbw">
+			<a class="uiSelectorItem" href="javascript:void(0);" data-lbl="{{l.state_name}} {{l.country_name}}" data-val="{{l.id}},{{l.country_id}}" >
+				<div>{{l.state_name}} {{l.country_name}}</div>
+			</a>
+		</div>
+	</div>
+{%endfor%}
+{%else%}
+	<div class="notFound">
+		<a href="#" class="">No state found "{{name}}"" </a>
+	</div>
+{%endif%}

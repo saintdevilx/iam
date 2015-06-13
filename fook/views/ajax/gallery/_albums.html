@@ -1,0 +1,25 @@
+{%spaceless%}
+{%load static from staticfiles%}
+{%load thumbnail%}
+{%for g in gallery%}					
+	<div class="inline-block albm small_padd" >{{g.user_id}}
+		{%ifequal uid author %}
+			<a href="#" id='evnt' data-event='al_dl' data-category='album' data-al='{{g.album.id}}' warn='delete' data-user='{{g.album.user.id}}'>
+				<i class='ui-icon ui-icon-trash float_right' title='Delete Album'></i>
+			</a>
+		{%endifequal%}
+		<a href="{%if friend%}/{{g.album.user_id}}{%endif%}/gallery/{{g.album.id}}" class="block">
+			<div class="list-item " style="margin:5px 0;">
+				{{g.album.name}}
+			</div>
+			<div class="list-item  al_thmb" style="padding:5px 0;"> 
+				{%thumbnail g.image 150x100 crop as thumb%}
+				{%if thumb%}
+				<img src="{%static thumb%}"/>
+				{%endif%}
+			</div>
+			<div class="small-font list-item"> {{g.album.created}}</div>
+		</a>
+	</div>											
+{%endfor%}
+{%endspaceless%}	

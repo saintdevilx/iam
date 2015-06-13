@@ -1,0 +1,29 @@
+{% extends 'layout/default'%}
+
+{% block title %}Fook login | User Login{% endblock%}
+{% block main%}
+
+	<form action="/signin" method="POST">
+		<div class="row">
+			<div class="col">
+				User Login or Email
+			</div>
+			<div class="col">
+				{{ form.page_email }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				Password
+			</div>
+			<div class="col">
+				{{ form.page_password}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<input type="submit" value="Login">
+			</div>
+		</div>
+	</form>
+{% endblock%}

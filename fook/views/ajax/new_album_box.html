@@ -1,0 +1,16 @@
+{%load static from staticfiles%}
+{%load thumbnail%}
+<div class="inline-block ui-state-default ui-corner-all small_padd" >
+	<a href="/gallery/{{album.id}}">
+	<div class="list-item heading" style="margin:5px 0;">
+		{{album.name}}
+	</div>
+	<div class="list-item heading" style="padding:5px 0;"> 
+		{%thumbnail album.image 150x100 crop as thumb%}
+		{%if thumb%}
+		<img src="{%static thumb%}"/>
+		{%endif%}
+	</div>
+	<div class="small-font list-item"> created : {{album.created}}</div>
+	</a>
+</div>	

@@ -1,0 +1,37 @@
+{%load static from staticfiles%}
+<div id="pic_viewer">
+  <div style="margin:0 9px" class="float_left">
+    <span style="">
+      <div id="im_ls">	
+        <span class="hidden" id="im_ls2">
+          <img src="{{STATIC_URL}}/profile_images/4.jpg">
+        </span>
+        <span class="" id="im_ls6">
+          <img src="{%static 'profile_images/5.jpg%}">
+        </span>
+
+        <span class="hidden" id="im_ls7">
+          <img src="/media/profile_images/6.jpg">
+        </span>
+  		</div>
+    </span>
+    <div class="nav_btn">
+      <button class="prv-btn label ui-icon ui-icon-triangle-1-w padd_all" title="Previous"></button>
+      <button class="nxt-btn label ui-icon ui-icon-triangle-1-e padd_all" title="Next"></button>
+    </div>
+    <div id="al-info">
+      <div class="inline-block float_left">
+      	<div class="block link-btn">Mead Culpa</div>
+      	<div class="block">13 Jan 2015</div>
+      </div>  
+      <div style="border: 1px solid rgb(238, 238, 238); height: 50px; margin: 0px 15px; width: 400px;" class="inline-block padd_all ">
+      </div>
+      <div class="inline-block float_right">
+      	<div class="block link-btn">Devil Axe</div>
+      </div>
+    </div>
+  </div>
+   <span class="inline-block  ">
+    <span style="height: 500px; width: 300px; background: none repeat scroll 0px 0px rgb(246, 246, 246);" class="inline-block border-all small_padd"></span>
+  </span>
+</div>

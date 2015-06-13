@@ -1,0 +1,102 @@
+{%load thumbnail%}
+{%load static from staticfiles%}
+{%load fook_tags%}
+<div class="_post border-btm small_padd">
+		    <div class="act">
+	    	<div class="poster_info">
+			    <span class="pr_img">
+			      	<a href="/viewprofile/{{post.post.user_id}}" class=""><span class='poster-img'>{%thumbnail post.profile.profile_image|default:'no_profile_pic.jpg' 50x50 crop as thumb%}<img src="{%static thumb%}"  ></span></a>
+			    </span>
+			</div>
+		    <div class="feed-info feed-bx">
+		        <span class="poster-info">
+		        	<a href="/viewprofile/{{post.post.user_id}}">
+		          		<span class='poster-name block'>{{post.profile.user__first_name}} {{post.profile.user__last_name}}</span>
+		          	</a>
+		        </span>
+		        <span class="feed">
+		          <span class="feed-text">	{{post.post.post_description | truncatechars:300 }}</span>
+				  <span>
+					{%ifequal post.post_type '109979990'%}		    
+				    	{%thumbnail post.post.image 480x280 crop as thumb%}				
+				    	<a href="javascript:void(0);" onclick="var ph =new window.ph_viewer(this,{'title':'' });ph.show( );ph.load( 'this._photoviewer({{post.post.id}})' );" data-category="gallery" data-event="im_vw" data-al="{{post.post.id}}" data-title="xxxxx" data-user="{{uid}}">
+				    	<div class="block"><img src="{%static thumb%}" /></div>
+				    	</a>
+				    {%endifequal%}
+
+					{%ifequal post.post_type '109979993'%}
+				    	{%thumbnail post.post.thumbnail 480x280 crop as thumb%}				
+				    	<a href="javascript:void(0);" onclick="Player.play(this);" data-vid="{{post.post.token}}" data-title="{{post.post.title}}" >
+				    	<div class="block"><img src="{%static thumb%}" width="{{thumb.width}}" height="{{thumb.height}}" /></div>
+				    	<span class='vid_title'>{{post.post.title}}</span>
+				    	<span class='vid_duration _fr'>{{post.post.duration}}</span>
+				    	</a>
+				    {%endifequal%}
+			    	{%if post.attachments%}
+						{%for at in post.attachments%}									
+							{% thumbnail at.attachment 480x280 crop as thumb%}	
+							<span class='inline-block small_padd'>
+								<a href="javascript:void(0);" onclick="viewPhoto(this,{'user':{{uid}},'al':'{{at.id}}','type':'109979988','post':'{{post.posts.id}}' })" >
+									<div class="block"><img src="{%static thumb.url%}" alt="{{post.posts.post_description}}"></div>
+								</a>
+							</span>
+						{%endfor%}																
+					{%endif%}					
+					{%if post.post.image%}
+					<div class="profile-img thmb">
+						<a href="javascript:void(0);" onclick="viewPhoto(this,{'user':{{post.post.user_id}},'al':'{{post.post.id}}','type':'109979992' })" >
+						{%thumbnail post.post.image 480x280 crop as thumb%}
+						<img src="{%static thumb.url%}" />
+						</a>
+					</div>
+					{%endif%}
+				  </span>          
+		        </span>
+				<div class="feed_opt">
+				  <span>
+				    <span class="_time">{{post.post.created | mytimesince}}</span>
+				    <span class="_fr">
+					  <span>
+					    <span class='like-action'>								
+						{% if post.liked%}							
+						<a id="et" onclick="return likers.unlike(this)" href="#" onclick="return false;"  data-category='post'  data-type='' data-type_id='{{post.post_type}}' data-act='{{post.act}}' data-post='{{post.liked.post_id}}' data-count='{{post.post.likes}}' data-likeid='{{post.liked.id}}'>Unlike</a>							
+						{% else%}
+							<span class="ui-icon ui-icon-carat-1-n"></span>
+							<a onclick=" return likers.like(this)" href="#" onclick="return false;"  data-category='post'  data-post='{{post.post.post_id}}'  data-type_id='{{post.post_type}}'>Like </a>
+						{% endif %}								
+						</span>
+						<span class='like-count inline-block '>
+							<span class='inline-block'>
+							{%if post.post.likes%}	
+								{%ifequal post.post.likes 0%}{%else%}
+								<a href="#"  onclick="likers.get({{post.post.id}}, {{post.post_type}}); return false;">
+									<span id='likecounts'>{{post.post.likes}}</span>
+								</a>
+								{%endifequal%}										
+							{%endif%}									
+							</span>
+						</span>
+					  </span>
+					  <span>
+						<a href="javascript:void(0);" onclick="lstcomment({{post.post.id}},this,'{{post.post_type}}','{{post.post.comments}}');">
+							<div class="inline-block">comment </div>
+							<span class='small_padd inline-block'>{{post.post.comments}} </span>
+						</a>
+					  </span>
+					  <span>
+					    <a>Share</a>
+					  </span>
+					</span>
+				  </span>
+				</div>
+				<span id='cmt_ar'  class='cmnt inline-block hidden' >
+					<span id='cmnt_lst' class='hidden'></span>
+					<span class='cmnt small_padd block'>
+						<span class='placeholder small_padd' id='pl_cmt{{post.post.post_id}}'>Your comment</span>
+						<textarea placehodler='Add comment...' name='cmt_txt' class=" inline-block small_padd" rows='1' data-label="pl_cmt{{post.post.post_id}}"></textarea>						
+						<a  class="nrml-font inline-block small_padd" style="background:#f6f6f6;border:1px solid #CCC;padding:5px 3px;vertical-align:top;" href="javascript:void(0);" onclick="comment(this)"  data-post='{{post.post.post_id}}' data-user='{{uid}}' data-post_type="{{post.post_type}}">comment</a>
+					</span>
+				</span>	
+		    </div>
+	    </div>
+</div>
